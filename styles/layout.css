@@ -1,0 +1,45 @@
+body {
+    scroll-padding-top: 82px;
+
+    /* eslint-disable-next-line kebab-case  selector-class-pattern */
+    &:has(form.IS_Journey) {
+        .header-wrapper {
+            height: 168px;
+
+            @media (width <=767px) {
+                height: 108px;
+            }
+        }
+
+        /* .header {
+            position: sticky;
+            top: 0;
+        }
+
+        .header-wrapper {
+            position: sticky;
+            top: -60px;
+        } */
+
+        &:has(.field-wizard[data-visible="true"]) {
+            .header-wrapper {
+                height: 162px;
+
+                @media (width <=767px) {
+                    height: 140px;
+                }
+            }
+        }
+
+        &:has(.field-thankyoupanel[data-visible="true"]) {
+            .header-wrapper {
+                height: 184px;
+            }
+        }
+
+        main>.section>div.form-wrapper {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+    }
+}

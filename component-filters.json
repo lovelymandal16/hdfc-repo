@@ -1,0 +1,93 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "form",
+      "embed-adaptive-form"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "form",
+    "components": [
+      "captcha",
+      "checkbox",
+      "checkbox-group",
+      "countdown-timer",
+      "date-input",
+      "drop-down",
+      "dynamic-dropdown",
+      "email",
+      "file-input",
+      "file-input-v2",
+      "regex-text-input",
+      "form-accordion",
+      "form-button",
+      "form-fragment",
+      "form-image",
+      "form-modal",
+      "form-reset-button",
+      "form-submit-button",
+      "hdfc-card-digit",
+      "analytics",
+      "hdfc-mobile-input",
+      "loan-term-slider",
+      "loan-range-slider",
+      "loan-range-slider-with-ticks",
+      "number-input",
+      "panel",
+      "password",
+      "plain-text",
+      "radio-group",
+      "review",
+      "rating",
+      "state-button",
+      "telephone-input",
+      "text-input",
+      "tnc",
+      "wizard",
+      "kyc-consent",
+      "dob-input",
+      "consent-popup",
+      "consent-popup-with-goToBottom",
+      "card-choice",
+      "single-account-card",
+      "custom-text",
+      "range"
+    ]
+  }
+]

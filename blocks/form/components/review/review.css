@@ -1,0 +1,13 @@
+main .form form .review-container {
+    display: block;
+}
+
+main .form .review-container label {
+    margin:0;
+    position: relative;
+}
+
+main .form .review-container .field-wrapper:not(.panel-wrapper, .plain-text-wrapper) {
+    border-left: 3px solid var(--color-action-border-primary-disabled);
+    padding-left: 1rem;
+}

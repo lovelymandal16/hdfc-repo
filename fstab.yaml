@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p153560-e1607906.adobeaemcloud.com/bin/franklin.delivery/hdfc-forms/forms-engine/main"
+    type: "markup"
+    suffix: ".html"

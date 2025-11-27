@@ -1,0 +1,2554 @@
+/* stylelint-disable */
+@import url('./layout.css');
+/* @import url('./login.css'); */
+
+body:has(.IS_Journey) .form-container {
+    padding: 0;
+}
+
+body:has(main .form form.IS_Journey) div.form-wrapper {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: -18px;
+    position: relative;
+    z-index: 3;
+
+    @media (width <=640px) {
+        padding-bottom: 6rem;
+        margin-top: -18px;
+    }
+}
+
+
+.IS_Journey p {
+    margin: 0;
+}
+
+.IS_Journey .field-loginpanel {
+    position: relative;
+}
+
+.IS_Journey .field-loginpanel .field-mobilenumberwrapper {
+    position: relative;
+    display: flex;
+    border: 1px solid var(--color-interface-border-secondary);
+    border-radius: 12px;
+    height: 60px;
+    width: 100%;
+
+    @media (width <=768px) {
+        margin-bottom: 2rem;
+    }
+
+    @media (width <=640px) {
+        height: 52px;
+    }
+
+    &:has(.field-description) {
+        .field-help-text {
+            margin-top: 25px;
+        }
+
+        &~fieldset {
+            @media (max-width: 768px) {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    &:has(.field-invalid) {
+        border-color: var(--color-input-border-error);
+    }
+}
+
+.IS_Journey .field-loginpanel .field-countrycode {
+    max-width: 108px;
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../icons/select_arrow.svg') no-repeat right center;
+        width: 20px;
+        height: 20px;
+        right: 8px;
+        top: 20px;
+
+        @media (width <=1024px) {
+            right: 5px;
+        }
+
+        @media (width <=640px) {
+            top: 17px;
+        }
+    }
+
+    &::after {
+        content: '|';
+        color: #f0f0f0;
+        margin-left: 7px;
+        position: absolute;
+        top: 20px;
+        border-width: .5px;
+        z-index: 1;
+
+        @media (width <=640px) {
+            top: 10px;
+        }
+    }
+}
+
+.IS_Journey .field-loginpanel .field-countrycode select {
+    background: url("../icons/india-flag.png") no-repeat 20px center;
+    appearance: none;
+    pointer-events: none;
+    width: 100px;
+    border-color: var(--color-interface-border-secondary);
+    border: none;
+    font-size: var(--body-lg-font-size);
+    color: var(--color-interface-text-secondary);
+    font-weight: var(--font-weight-regular);
+    padding: 0 0 0 45px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.IS_Journey .field-loginpanel .field-mobilenumber {
+    position: absolute;
+    margin: 1px;
+    padding-left: 30px;
+    left: 90px;
+    height: 58px;
+    top: 0;
+    width: calc(100% - 90px);
+
+    @media (width <=767px) {
+        margin-bottom: 2rem;
+    }
+
+    &[data-empty="false"],
+    &[data-active="true"] {
+        label {
+            left: -72px;
+            top: 17px;
+            opacity: 1;
+            font-size: var(--body-fd-sm-font-size);
+
+            @media (width <=640px) {
+                font-size: var(--body-x-sm-font-size);
+            }
+        }
+    }
+
+
+}
+
+.IS_Journey .field-loginpanel .field-mobilenumber label {
+    top: 5px;
+    font-size: var(--body-fd-lg-font-size);
+    font-weight: var(--font-weight-regular);
+    line-height: 28px;
+    margin: 0;
+    color: var(--color-interface-text-secondary);
+    opacity: 0;
+}
+
+.IS_Journey .field-loginpanel .field-mobilenumber input {
+    height: 99%;
+    width: 98%;
+    padding-left: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    letter-spacing: .5rem;
+
+    @media (width >=480px) {
+        width: 93%;
+    }
+
+    @media (width <=640px) {
+        width: 99%;
+        height: 85%;
+    }
+
+    @media (width <=480px) {
+        &::placeholder {
+            font-size: var(--body-x-sm-font-size);
+        }
+    }
+}
+
+.IS_Journey .field-loginpanel .field-mobilenumber .field-description {
+    margin-top: 1px;
+    position: absolute;
+    left: -88px;
+}
+
+.IS_Journey .field-loginpanel .field-registermobilenumbererror {
+    margin-top: -16px;
+
+    p {
+        color: var(--color-input-text-msg-error);
+        font-weight: var(--font-weight-regular);
+        font-size: var(--body-sm-font-size);
+        margin: 0;
+    }
+}
+
+.IS_Journey .field-loginpanel .field-help-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+
+    p {
+        font-size: var(--body-sm-font-size);
+    }
+}
+
+.IS_Journey .field-loginpanel .field-dateofbirth {
+    position: relative;
+
+    @media (width <=767px) {
+        margin-bottom: 0;
+    }
+
+    label {
+        top: 19px;
+        margin: 0;
+    }
+}
+
+
+.IS_Journey .field-loginpanel .checkbox-wrapper {
+    margin-left: 0;
+    column-gap: 12px;
+    margin-bottom: 1rem;
+
+    @media (width <=767px) {
+        margin-bottom: 12px;
+    }
+
+    a {
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+.IS_Journey .field-loginpanel .field-consentpanel {
+    margin-top: 60px;
+
+    @media (width <=768px) {
+        margin-top: 40px;
+    }
+}
+
+.IS_Journey .field-loginpanel .field-requiredconsentpopuppanel {
+    .close-button {
+        display: none;
+    }
+
+    &:has(dialog) .field-consent1 .field-description {
+        display: none;
+    }
+}
+
+.IS_Journey .field-loginpanel .field-consent3.checkbox-wrapper {
+    &~.plain-text-wrapper {
+        p {
+            font-size: var(--body-sm-font-size);
+            color: var(--color-input-text-primary);
+            font-weight: var(--font-weight-regular);
+
+            a {
+                font-weight: var(--font-weight-bold);
+                color: var(--color-action-text-secondary-default);
+            }
+
+            @media (width <=480px) {
+                font-size: var(--body-x-sm-font-size);
+            }
+        }
+    }
+}
+
+.IS_Journey .field-loginpanel .field-terms-privacy-text {
+
+    p,
+    a {
+        font-size: var(--body-sm-font-size);
+        font-weight: var(--font-weight-regular);
+        line-height: var(--font-linehight-sm);
+    }
+
+    a {
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+/* Login screen end */
+
+.IS_Journey .field-otppanel {
+    text-align: left;
+    display: initial;
+
+    @media (350px <=width <=767px) {
+        padding: 0;
+    }
+}
+
+.IS_Journey .field-otppanel .panel-wrapper.field-wrapper {
+    @media (width <=480px) {
+        display: flex;
+    }
+}
+
+.IS_Journey .field-otppanel .panel-wrapper.field-wrapper.field-panelcontainer1744785729610 {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    gap: 5px;
+
+    @media (width <=992px) {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+}
+
+.IS_Journey .field-otpinfotext.field-wrapper {
+    margin-bottom: 0;
+}
+
+.IS_Journey .field-editmobilenumber.button-wrapper {
+    margin-top: 0;
+}
+
+
+
+.IS_Journey .field-editmobilenumber.button-wrapper button {
+    @media (width <=480px) {
+        font-size: var(--body-x-sm-font-size);
+        line-height: var(--font-linehight-regular);
+    }
+}
+
+.IS_Journey .field-otpinput {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: 50%;
+
+    @media (width <=767px) {
+        margin-top: 1.5rem;
+    }
+
+    @media (width <=640px) {
+        width: 100%;
+    }
+
+    i {
+        position: absolute;
+        top: 33%;
+        right: 15px;
+    }
+}
+
+.IS_Journey .field-otpinput input {
+    font-size: var(--body-xx-lg-font-size);
+    line-height: var(--font-linehight-regular);
+    letter-spacing: 55px;
+
+    @media (width >=992px) {
+        letter-spacing: 55px;
+    }
+
+    @media (width <=991px) {
+        letter-spacing: 35px;
+    }
+
+    @media (width <=480px) {
+        letter-spacing: 25px;
+    }
+
+    &[type="password"] {
+        letter-spacing: 20px;
+
+        @media (width >=992px) {
+            letter-spacing: 55px;
+        }
+
+        @media (width <=640px) {
+            letter-spacing: 50px;
+        }
+
+        @media (width <=480px) {
+            letter-spacing: 35px;
+        }
+
+        &::-ms-reveal {
+            display: none;
+        }
+    }
+
+    &::placeholder {
+        color: var(--color-interface-border-primary);
+        font-size: var(--body-xx-lg-font-size);
+
+        @media (width >=992px) {
+            letter-spacing: 55px;
+        }
+
+        @media (width <=991px) {
+            letter-spacing: 35px;
+        }
+
+
+        @media (width <=640px) {
+            letter-spacing: 55px;
+        }
+
+        @media (width <=480px) {
+            letter-spacing: 35px;
+        }
+    }
+}
+
+.IS_Journey .field-otppanel .field-otpsubpanel {
+    display: flex;
+    text-align: center;
+    width: 50%;
+    flex-flow: row;
+
+    @media (width <=640px) {
+        width: 100%;
+    }
+}
+
+.IS_Journey .field-otpsubpanel .plain-text-wrapper.field-wrapper {
+    margin-bottom: 0;
+
+    p {
+        font-size: var(--body-sm-font-size);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-interface-text-secondary);
+        background: none;
+        border: none;
+        height: auto;
+        width: auto;
+
+        @media (width <=767px) {
+            font-size: var(--body-sm-font-size);
+        }
+    }
+}
+
+.IS_Journey .field-otpsubpanel .field-maxattempts {
+    position: relative;
+
+    @media (width >=640px) {
+        left: 8px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../icons/error_i_icon.svg') no-repeat left center;
+        width: 24px;
+        height: 24px;
+        top: -3px;
+        left: -27px;
+    }
+}
+
+
+.IS_Journey .field-otpsubpanel .field-maxattempts input {
+    position: absolute;
+    line-height: normal;
+    letter-spacing: 0;
+    padding: 0;
+    top: 0;
+    font-size: var(--body-sm-font-size);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-interface-text-secondary);
+    background: none;
+    border: none;
+    height: auto;
+    width: auto;
+    max-width: 15px;
+    left: 5px;
+
+    @media (max-width:767px) {
+        font-size: var(--body-sm-font-size);
+    }
+
+    @media (max-width:640px) {
+        left: 12px;
+    }
+}
+
+.IS_Journey .field-otpsubpanel .field-resendotp {
+    text-align: left;
+    margin: 8px 0 0 0;
+    bottom: initial;
+    width: 50%;
+
+    &:has(.countdown-timer-number) {
+        button {
+            color: var(--color-interface-text-secondary);
+            font-size: var(--body-sm-font-size);
+            font-weight: var(--font-weight-regular);
+        }
+    }
+}
+
+.IS_Journey .field-otpsubpanel .field-resendotp button {
+    background: transparent;
+    padding: 0;
+    border: none;
+    text-align: left;
+    display: block;
+    color: var(--color-action-text-secondary-default);
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-weight-bold);
+    height: auto;
+    width: auto;
+
+    @media (width <=767px) {
+        font-size: var(--body-sm-font-size);
+    }
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+.IS_Journey .field-otpsubpanel .field-attemptsleftpanel {
+    flex: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-flow: row;
+    margin-top: 8px;
+}
+
+.IS_Journey .field-otpsubpanel .field-submitbutton {
+    margin-top: 60px;
+}
+
+/* OTP panel End */
+
+main .form form.IS_Journey .field-wizard {
+    padding: 0;
+
+    &:has(.field-selectaccountvariant[data-visible="true"]) {
+
+        .wizard-menu-items {
+            display: none;
+        }
+    }
+}
+
+.IS_Journey .wizard-menu-items.hdfc-wizard {
+    margin-top: -100px;
+    z-index: 2;
+
+    @media (width <=767px) {
+        margin-top: -85px;
+        width: calc(100% - 40px);
+    }
+}
+
+.IS_Journey .menu-items-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &:nth-child(1).wizard-menu-active-item {
+        .wizard-step-text {
+            &::after {
+                background-image: linear-gradient(90deg, #4F6FDF 33.3%, #202E4D 0%)
+            }
+        }
+
+        .wizard-current-step {
+            &::after {
+                right: -8px;
+            }
+        }
+    }
+
+    &:nth-child(2).wizard-menu-active-item {
+        .wizard-step-text {
+            &::after {
+                background-image: linear-gradient(90deg, #4F6FDF 66.6%, #202E4D 0%)
+            }
+        }
+
+        .wizard-current-step {
+            &::after {
+                right: -25px;
+            }
+        }
+    }
+
+    &:nth-child(3).wizard-menu-active-item {
+        .wizard-step-text {
+            &::after {
+                background-image: linear-gradient(90deg, #4F6FDF 100%, #202E4D 0%)
+            }
+        }
+
+        .wizard-current-step {
+            &::after {
+                right: -25px;
+            }
+        }
+    }
+}
+
+.IS_Journey .wizard-step-text,
+.IS_Journey .wizard-up-next-label {
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-weight-regular);
+    color: #838B9C;
+    margin-bottom: 2px;
+
+    @media (width <=640px) {
+        font-size: var(--body-x-sm-font-size);
+    }
+}
+
+.IS_Journey .wizard-step-text {
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100px;
+        height: 5px;
+        border-radius: 20px;
+        background: #202E4D;
+        position: absolute;
+        top: 7px;
+        margin-left: 8px;
+
+        @media (width <=640px) {
+            width: 60px;
+            top: 6px;
+        }
+    }
+}
+
+.IS_Journey .wizard-current-step,
+.IS_Journey .wizard-up-next-content {
+    position: relative;
+    font-size: var(--body-x-lg-font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-interface-text-tertiary);
+
+    @media (width <=640px) {
+        font-size: var(--body-md-font-size);
+    }
+
+    /*  &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: url('../icons/info-circle.svg') no-repeat right center;
+            background-size: 100%;
+            top: 8px;
+            right: 0;
+            opacity: .5;
+
+            @media (width <=640px) {
+                width: 16px;
+                height: 16px;
+                top: 4px;
+            }
+        } */
+}
+
+/* Wizard menu end */
+
+.IS_Journey .field-kycpanel {
+    p {
+        margin: 0;
+    }
+
+    .field-aadhaarpanel {
+        display: initial;
+        padding: 0;
+    }
+}
+
+.IS_Journey .field-aadhaarpanel,
+.IS_Journey .field-kycpanel .field-ovdpanel {
+    border: 1px solid var(--color-interface-border-secondary);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    flex-direction: column;
+
+    @media (width <=767px) {
+        margin-bottom: 1.5rem;
+    }
+
+    &:has(.field-kycchoice[data-active="true"]),
+    &:has(.field-aadhardbtpanel[data-visible="true"]) {
+        background-color: var(--color-interface-background-primary);
+        border: 1px solid var(--color-action-border-primary-default);
+
+        .field-aadharcardviewheader {
+            background-color: var(--color-interface-background-quinary);
+            border-radius: 24px;
+        }
+
+    }
+}
+
+.IS_Journey .field-kycchoice {
+    justify-content: right;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+
+    div {
+        text-align: right;
+        justify-content: right;
+    }
+
+    input[type="radio"] {
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        accent-color: var(--color-interface-icon-highlight);
+    }
+
+    label {
+        display: none;
+    }
+}
+
+.IS_Journey .field-aadhaartitle,
+.IS_Journey .field-ovdtitle {
+    display: flex;
+    column-gap: 12px;
+
+    p {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--body-x-lg-font-size);
+        color: var(--color-interface-background-quaternary);
+        line-height: var(--font-linehight-large);
+
+        @media (width <=480px) {
+            font-size: var(--body-md-font-size);
+            line-height: var(--font-linehight-medium);
+        }
+    }
+}
+
+.IS_Journey .field-aadhaartitle {
+    &::before {
+        content: '';
+        background: url('../../../icons/aadhar_icon.svg') no-repeat center center;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: middle;
+    }
+}
+
+.IS_Journey .field-aadhaarsubtext,
+.IS_Journey .field-ovdsubtitle {
+    margin-left: 9%;
+    width: 80%;
+
+    p {
+        font-weight: var(--font-weight-regular);
+        font-size: var(--body-md-font-size);
+        color: var(--color-input-text-primary);
+        line-height: var(--font-linehight-medium);
+
+        @media (width <=480px) {
+            font-size: var(--body-x-sm-font-size);
+            line-height: var(--font-linehight-regular);
+        }
+    }
+}
+
+/* Adhar panel block */
+
+.IS_Journey .field-aadharcardviewheader {
+    padding: 24px;
+    border-radius: 24px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+    @media (width <=480px) {
+        padding: 20px 1rem;
+    }
+}
+
+/*
+                 .field-aadhardbtpanel {
+                    padding: 24px;
+                }
+               .field-dbtcheckbox,
+                .field-dbtradio {
+
+                    label,
+                    legend {
+                        line-height: var(--font-linehight-large);
+                        font-size: var(--body-x-lg-font-size);
+                        color: var(--color-interface-text-primary);
+                        font-weight: var(--font-weight-bold);
+                        flex-basis: auto;
+
+                        @media (width <=480px) {
+                            font-size: var(--body-md-font-size);
+                            line-height: var(--font-linehight-medium);
+                        }
+                    }
+                }
+
+                .field-dbtradio {
+                    margin: 1.5rem 0;
+
+                    .radio-wrapper {
+                        margin-left: 0;
+
+                        label {
+                            font-weight: var(--font-weight-medium);
+                            font-size: var(--body-x-lg-font-size);
+
+                        }
+
+                        input[type="radio"] {
+                            accent-color: var(--color-interface-icon-highlight);
+                        }
+
+                        &:last-child {
+                            margin-left: 2rem;
+                        }
+                    }
+                }
+
+               */
+
+.IS_Journey .field-kycpanel .field-ovdpanel {
+    flex-direction: column;
+
+    .field-ovdtitle {
+        display: flex;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            background-image: url('../../../icons/ovd_icon.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 2rem;
+            height: 2rem;
+            vertical-align: center;
+        }
+    }
+}
+
+.IS_Journey .field-kycchoicepanel .field-help-text-ovd {
+    margin-top: 32px;
+    background-color: var(--color-interface-background-quinary);
+    border-radius: 8px;
+    padding: 10px 16px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    p {
+        font-size: var(--body-x-sm-font-size);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-action-text-secondary-default);
+        padding-left: 15px;
+    }
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url('../icons/i_icon.svg');
+        position: absolute;
+    }
+}
+
+.IS_Journey .field-kycpanel .consent-popup-wrapper {
+    .close-button {
+        display: none;
+    }
+
+    &:has(dialog) .field-tnccheckbox .field-description {
+        display: none;
+    }
+}
+
+/*  .field-banknamedropdown {
+        margin-bottom: 0;
+    }
+*/
+
+.IS_Journey .field-kyclanguagepanel {
+    .checkbox-wrapper.field-wrapper {
+        gap: 12px;
+    }
+}
+
+/* KYC LANGUAGE PANEL END */
+.IS_Journey .field-modal-title {
+    margin-bottom: 1.5rem;
+
+    p {
+        font-size: var(--body-xx-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-interface-text-primary);
+        line-height: var(--font-linehight-m-large);
+        margin-bottom: 8px;
+
+        @media (max-width: 480px) {
+            font-size: var(--body-lg-font-size);
+            line-height: var(--font-linehight-medium);
+        }
+    }
+}
+
+.IS_Journey .field-ekyclanguagedropdown {
+    margin-bottom: 30px;
+
+    @media (width <=768px) {
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+.IS_Journey .field-aadharnondbtconsentpopup,
+.IS_Journey .field-aadhardbtconsentpopup {
+    .modal {
+        dialog {
+            padding: 0;
+        }
+
+        .modal-content {
+            padding: 30px 20px 30px 30px;
+
+            select {
+                border: none;
+                border-bottom: 1px solid var(--color-interface-border-secondary);
+                border-radius: 0;
+                padding: 0 0 10px 0;
+                height: auto;
+                background-position-x: 99%;
+            }
+        }
+
+        .close-button {
+            display: none;
+        }
+
+        .field-aadhaarnondbtconsentdeclaration,
+        .field-aadhaarconsentdeclarationtext {
+            p {
+                font-size: var(--body-x-lg-font-size);
+                font-weight: var(--font-weight-medium);
+
+                p {
+                    background: url('../icons/aadhar_icon.svg') no-repeat right;
+                    background-size: 50px;
+                }
+            }
+        }
+
+        /*  .field-dbtconsentcheck1,
+            .field-dbtconsentcheck2 {
+                gap: 20px;
+
+                .field-label {
+                    padding-top: 0;
+                    text-align: left;
+                    line-height: 20px;
+                }
+
+                &.field-dbtconsentcheck1 {
+                    margin-bottom: 20px;
+                }
+            } */
+    }
+}
+
+.IS_Journey .field-tnccheckbox {
+    gap: 12px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+/* KYC PANEL END */
+
+.IS_Journey .field-yourdetailspanel {
+    p {
+        margin-bottom: 0;
+    }
+
+    /*  .field-wrapper {
+            grid-column: span 4;
+
+            @media (width <=768px) {
+                grid-column: span 12;
+                margin-bottom: 1.5rem;
+            }
+        } */
+}
+
+.IS_Journey .field-yourdetailssubpanel {
+
+    legend.field-label,
+    .field-communicationaddresstitle p,
+    .field-branchdetailsstitle p {
+        margin-bottom: 2rem;
+        font-size: var(--body-x-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-interface-text-primary);
+        line-height: var(--body-fd-xx-xlg-font-size);
+
+        @media (width <=640px) {
+            font-size: var(--body-md-font-size);
+            margin-bottom: 1.5rem;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            background-size: contain;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 24px;
+            vertical-align: middle;
+
+            @media (width <=480px) {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    .field-communicationaddresstitle p,
+    .field-branchdetailsstitle p {
+        margin-bottom: 4px;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.IS_Journey .field-communicationaddresssubtext p {
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-linehight-medium);
+    color: var(--color-input-text-primary);
+}
+
+.IS_Journey .field-communicationaddress {
+    margin: 24px 0 32px 0;
+}
+
+.IS_Journey .field-contactdetailsfragment .field-mailingaddress.col-8 {
+    grid-column: span 12;
+}
+
+/* .field-yourresidencesummary{
+    position: relative;
+    margin-top: -92px;
+    margin-left: 388px;
+    width: 100%;
+
+    @media (width <=767px) {
+        position: initial;
+        margin: auto auto 32px auto;
+    }
+} */
+
+.IS_Journey .field-yourdetailssubpanel .field-yourdetailssubtext {
+    border-top: 1px dashed var(--color-input-border-default);
+    padding-top: 2rem;
+}
+
+.IS_Journey .field-yourdetailssubtext,
+.IS_Journey .field-familydetails,
+.IS_Journey .field-birthplacedetailstitle,
+.IS_Journey .field-addressdetailssubtext {
+    margin-bottom: 2rem;
+
+    @media (width <=640px) {
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: var(--body-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-interface-text-primary);
+        line-height: var(--font-linehight-medium);
+
+        @media (width <=640px) {
+            font-size: var(--body-sm-font-size);
+            line-height: var(--font-linehight-regular);
+        }
+    }
+}
+
+.IS_Journey .field-familydetails {
+    .field-checkbox1750337112733 {
+        margin-bottom: 10px;
+    }
+}
+
+.IS_Journey .field-contactdetailssubtext {
+    border-left: 3px solid #CDBBFD;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+
+    p {
+        font-size: var(--body-fd-sm-font-size);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-input-text-primary);
+        line-height: var(--font-linehight-regular);
+    }
+}
+
+.field-permanentaddresstext {
+    font-size: var(--body-lg-font-size);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-interface-text-primary);
+    line-height: var(--font-linehight-large);
+    border-left: 3px solid #CDBBFD;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    height: 32px;
+}
+
+.IS_Journey .field-maritalstatus.radio-group-wrapper {
+    legend {
+        margin-bottom: 2rem;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    @media (width <=480px) {
+        .radio-wrapper {
+            border-radius: 20px;
+            border: 1px solid var(--color-interface-border-secondary);
+            padding: 8px 12px;
+            margin: 0;
+            cursor: pointer;
+
+            input {
+                display: none;
+            }
+
+            label {
+                font-size: var(--body-sm-font-size);
+                font-weight: var(--font-weight-regular);
+                color: var(--color-input-text-primary);
+                line-height: var(--font-linehight-regular);
+            }
+
+            &:has(:checked) {
+                background: var(--color-action-background-primary-default);
+                border: 1px solid var(--color-action-border-primary-default);
+
+                label {
+                    color: var(--color-interface-text-tertiary)
+                }
+
+            }
+        }
+    }
+}
+
+.IS_Journey .field-spousename{
+    margin-top: 2rem;
+}
+
+main .form form.IS_Journey .field-yourdetailstablayout {
+    padding: 0;
+
+    .button-wrapper {
+        margin-top: 60px;
+    }
+}
+
+/* Tab menu css start */
+
+.IS_Journey .field-yourdetailstablayout .wizard-menu-items {
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: initial;
+    margin-bottom: 40px;
+}
+
+.IS_Journey .field-yourdetailstablayout .wizard-menu-item {
+    font-size: var(--body-x-lg-font-size);
+    font-weight: var(--font-weight-regular);
+    border-bottom: 1px solid var(--color-interface-border-secondary);
+    width: 100%;
+    text-align: center;
+    color: var(--color-input-text-primary);
+    padding: 16px 0;
+}
+
+.IS_Journey .field-yourdetailstablayout .wizard-menu-active-item {
+    font-weight: var(--font-weight-bold);
+    color: #030612;
+    border-bottom: 2px solid var(--color-action-border-primary-default);
+    position: relative;
+
+    &::after {
+        display: none;
+    }
+
+    &~.wizard-menu-item {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+main .form form.IS_Journey .wizard .wizard-menu-item::before {
+    display: none;
+}
+
+main .form form.IS_Journey .wizard .wizard-menu-item::after {
+    content: "";
+    position: absolute;
+    background: url('../icons/green_tick_circle_icon.svg');
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+}
+
+/* Tab menu css end */
+
+.IS_Journey .field-personaldetailsfragment {
+    background-color: #E6DDFE;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.IS_Journey .field-personaldetails.panel-wrapper {
+    &>legend.field-label {
+        &::before {
+            background: url('../../../icons/personal_details_icon.svg') no-repeat center center;
+        }
+    }
+
+    .field-fullname,
+    .field-gender,
+    .field-dateofbirth {
+        label {
+            margin: 0;
+            background-color: transparent;
+            position: initial;
+            transform: none;
+            padding-left: 16px;
+            color: var(--color-interface-text-secondary);
+        }
+
+        input,
+        select {
+            background: transparent;
+            border: none;
+            color: var(--color-interface-text-primary);
+            padding: 0;
+            height: auto;
+            line-height: 34px;
+            padding-left: 16px;
+            opacity: 1;
+        }
+
+        &.field-fullname,
+        &.field-gender,
+        &.field-dateofbirth {
+            border-left: 3px solid #CDBBFD;
+        }
+    }
+}
+
+.field-familydetailsfragment .field-familydetails {
+    &>legend.field-label {
+        margin-bottom: 60px;
+
+        &::before {
+            background: url('../../../icons/personal_details_icon.svg') no-repeat center center;
+        }
+    }
+}
+
+.IS_Journey .field-contactdetailsfragment {
+    border-top: 1px dashed var(--color-input-border-default);
+    margin-top: 40px;
+    padding-top: 60px;
+
+    @media (max-width: 640px) {
+        border-top: 1px dashed var(--color-input-border-default);
+        padding-top: 40px;
+        margin-top: 14px;
+    }
+
+    .checkbox-wrapper.field-wrapper {
+        margin-bottom: 2rem;
+        column-gap: 20px;
+        display: flex;
+        align-items: center;
+
+        @media (width <=640px) {
+            margin-bottom: 1.5rem;
+        }
+
+        label.field-label {
+            p {
+                font-size: var(--body-lg-font-size);
+                font-weight: var(--font-weight-bold);
+                color: var(--color-interface-text-primary);
+                line-height: var(--font-linehight-medium);
+
+                &~p {
+                    font-weight: var(--font-weight-regular);
+                    color: var(--color-input-text-primary);
+                    font-size: var(--body-x-sm-font-size);
+                }
+            }
+
+        }
+    }
+}
+
+.IS_Journey .field-contactdetails {
+    margin-bottom: 2rem;
+
+    @media (width <=640px) {
+        margin-bottom: 0;
+    }
+
+    &>legend.field-label {
+        font-size: var(--body-xx-lg-font-size);
+        line-height: var(--font-linehight-m-large);
+
+        &::before {
+            background: url('../../../icons/contact_details_icon.svg') no-repeat center center;
+        }
+    }
+}
+
+.IS_Journey .field-contactaddress,
+.IS_Journey .field-mailingaddress,
+.IS_Journey .field-financialdetails {
+
+    .text-wrapper,
+    .drop-down-wrapper {
+        margin-bottom: 2rem;
+
+        @media (width <=767px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .drop-down-wrapper {
+        grid-column: span 4;
+    }
+}
+
+.IS_Journey .field-contactaddress {
+    .col-4.field-wrapper {
+        grid-column: span 6;
+    }
+}
+
+.IS_Journey .field-acctypeselection {
+    margin-bottom: 2rem;
+    gap: 12px;
+
+    @media (width <=640px) {
+        margin-bottom: 1.5rem;
+    }
+
+    legend {
+        &::before {
+            background: url('../../../icons/select_acc_type.svg') no-repeat center center;
+        }
+    }
+
+    .radio-wrapper {
+        border-radius: 20px;
+        border: 1px solid var(--color-interface-border-secondary);
+        padding: 8px 12px;
+        margin: 0;
+
+        input {
+            display: none;
+        }
+
+        label {
+            font-size: var(--body-sm-font-size);
+            font-weight: var(--font-weight-regular);
+            color: var(--color-input-text-primary);
+            line-height: var(--font-linehight-regular);
+            flex-basis: auto;
+        }
+
+        &:has(:checked) {
+            background: var(--color-action-background-primary-default);
+            border: 1px solid var(--color-action-border-primary-default);
+
+            label {
+                color: var(--color-interface-text-tertiary)
+            }
+
+        }
+    }
+
+}
+
+.IS_Journey .field-selectyouraccountpanel {
+    border-bottom: 1px dashed var(--color-input-border-default);
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+
+}
+
+.IS_Journey .field-financialdetails {
+    .field-selectyouraccountpanel {
+        legend.field-label {
+            margin-top: 40px;
+
+            &::before {
+                background: url('../../../icons/select_acc_type.svg') no-repeat center center;
+            }
+        }
+    }
+
+    .field-financialdetails {
+         legend.field-label {
+
+            &::before {
+                background: url('../../../icons/financial_profile_icon.svg') no-repeat center center;
+            }
+        }
+    }
+}
+
+.IS_Journey .field-verifyemailpanel {
+    position: relative;
+
+    legend.field-label {
+        &::before {
+            background: url('../../../icons/email_id_icon.svg') no-repeat center center;
+        }
+    }
+}
+
+.IS_Journey .field-emailinputcomponent {
+    input {
+        max-width: 32%;
+
+        @media (width <=768px) {
+            max-width: 100%;
+        }
+    }
+
+    .field-description {
+        p {
+            font-size: var(--body-md-font-size);
+            font-weight: var(--font-weight-regular);
+            color: var(--color-interface-text-secondary);
+            margin-top: 12px;
+
+            @media (width <=640px) {
+                margin-top: 8px;
+                margin-bottom: 24px;
+            }
+
+            &:last-child {
+                background: #E7EEFD;
+                border-radius: .5rem;
+                padding: 10px 1rem;
+                font-size: var(--body-x-sm-font-size);
+                font-weight: var(--font-weight-bold);
+                color: var(--color-action-text-secondary-default);
+                position: relative;
+                padding-left: 3rem;
+
+                @media (width <=640px) {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &::before {
+                    content: '';
+                    background: url('../icons/i_icon.svg') no-repeat left center;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+main .form .IS_Journey .field-yourdetailstablayout .field-verifybutton.button-wrapper,
+main .form .IS_Journey .field-yourdetailstablayout .field-emaileditbutton.button-wrapper {
+    max-width: fit-content;
+    margin-top: 0;
+    position: absolute;
+    top: 20px;
+    right: 70%;
+
+    @media (width <=768px) {
+        top: 0.5rem;
+        right: 12px;
+    }
+}
+
+main .form .IS_Journey .field-yourdetailstablayout .field-emaileditbutton.button-wrapper{
+    display: none;
+}
+
+.IS_Journey .field-verifiedtext {
+    margin-top: 12px;
+
+    @media (width <=640px) {
+        display: none;
+    }
+
+    p {
+        color: var(--color-interface-toaster-text-primary);
+        font-size: var(--body-sm-font-size);
+        font-weight: var(--font-weight-medium);
+        line-height: var(--font-linehight-regular);
+        padding-left: 12px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: url('../icons/verify_green_icon.svg') no-repeat left center;
+        margin-right: .5rem;
+    }
+}
+
+.IS_Journey .field-emailpopup {
+    .modal-content {
+        legend {
+            display: block;
+            font-size: var(--body-xxx-lg-font-size);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 8px;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .field-emailpopupinfotext {
+        p {
+            font-size: var(--body-md-font-size);
+            font-weight: var(--font-weight-regular);
+            color: var(--color-input-text-primary);
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+
+    .field-editemailbutton {
+        margin-top: 8px;
+        margin-bottom: 40px;
+        text-align: center;
+        max-width: none;
+    }
+
+    .text-wrapper.field-wrapper {
+        margin-bottom: 0;
+    }
+
+    .button-wrapper.field-wrapper {
+        margin-top: 12px;
+    }
+
+    .button-wrapper.field-wrapper.field-verifyemailsubmit {
+        margin: 40px auto 0;
+    }
+}
+
+.IS_Journey .field-otherinfopanel {
+    legend.field-label {
+        &::before {
+            background: url('../../../icons/other_information_icon.svg') no-repeat center center;
+        }
+
+        @media (width <=640px) {
+            margin-bottom: 36px;
+        }
+    }
+
+    .checkbox-wrapper.switch.right {
+        justify-content: space-between;
+
+        input {
+            display: none;
+        }
+
+        label {
+            font-size: var(--body-x-lg-font-size);
+            font-weight: var(--font-weight-medium);
+            line-height: var(--font-linehight-large);
+            color: var(--color-interface-text-primary);
+            padding-right: 0;
+            flex: auto;
+
+            @media (width <=640px) {
+                font-size: var(--body-sm-font-size);
+                line-height: var(--font-linehight-regular);
+            }
+
+            &::before {
+                width: 40px;
+                height: 24px;
+            }
+
+            &::after {
+                right: 18px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+
+            @media (width <=640px) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.IS_Journey .field-financialdetailsfragment,
+.IS_Journey .field-verifyemailpanel {
+    border-bottom: 1px dashed var(--color-input-border-default);
+    margin-bottom: 60px;
+    padding-bottom: 2rem;
+
+    @media (width <=640px) {
+        padding-bottom: 16px;
+        margin-bottom: 40px;
+    }
+}
+
+.IS_Journey .field-maritalstatus,
+.IS_Journey .field-birthplacedetailstitle {
+    margin-top: 60px;
+
+    @media (width <=640px) {
+        margin-top: .5rem;
+    }
+}
+
+/* Your Details Panel End */
+
+.IS_Journey .field-panelcontainer1744179114538 {
+    padding: 24px 0;
+    column-gap: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: -60px;
+
+    @media (max-width: 767px) {
+        margin-right: -20px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.IS_Journey .field-featureswrapper {
+    width: 180px;
+
+    /*  .field-label p {
+            font-size: var(--body-sm-font-size);
+            font-weight: 600;
+            color: var(--color-interface-text-primary);
+            min-height: 68px;
+            max-height: 84px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            @media (max-width: 768px) {
+                font-size: var(--body-x-sm-font-size);
+            }
+        } */
+
+    .plain-text-wrapper {
+        min-height: 68px;
+        max-height: 84px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* border-top: 1px dashed var(--color-interface-background-box-shadow-primary); */
+        background: url('../icons/border-line-feature.svg') no-repeat left top;
+        color: var(--color-interface-text-primary);
+        cursor: pointer;
+        padding: 16px 0;
+
+        font-size: var(--body-x-sm-font-size);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-interface-text-primary);
+
+        @media (max-width: 768px) {
+            font-size: var(--body-x-xs-font-size);
+        }
+
+        position: relative;
+        padding-top: 20px;
+        line-height: 16px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 0px;
+        }
+
+        &:nth-of-type(2) {
+            &::after {
+                background: url(../../../../icons/features_aqb_icon.svg) no-repeat 0% 15%;
+            }
+        }
+
+        &:nth-of-type(3) {
+            &::after {
+                background: var(--color-interface-background-primary) url(../../../../icons/features_epicure_icon.svg) no-repeat 0% 15%;
+            }
+        }
+
+        &:nth-of-type(4) {
+            &::after {
+                margin-bottom: 10px;
+                background: var(--color-interface-background-primary) url(../../../../icons/feature_voucher_icon.svg) no-repeat 0% 15%;
+            }
+        }
+
+        &:nth-of-type(5) {
+            &::after {
+                background: var(--color-interface-background-primary) url(../../../../icons/feature_airport_icon.svg) no-repeat 0% 15%;
+            }
+        }
+
+        &:nth-of-type(6) {
+            &::after {
+                background: var(--color-interface-background-primary) url(../../../../icons/features_debitcard_icon.svg) no-repeat 0% 15%;
+            }
+        }
+
+        &:nth-of-type(7) {
+            &::after {
+                background: var(--color-interface-background-primary) url(../../../../icons/feature_freecard_icon.svg) no-repeat 0% 15%;
+            }
+        }
+    }
+}
+
+.IS_Journey .field-accountwapper {
+    margin-left: 12px;
+}
+
+.IS_Journey .card-choice-container {
+    margin: 0;
+    gap: 15px;
+    max-width: 920px;
+    overflow-x: auto;
+    padding-top: 15px;
+}
+
+.IS_Journey .card-choice-title {
+    margin: 0;
+    padding: 15px 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--body-sm-font-size);
+    font-weight: var(--font-weight-bold);
+}
+
+
+.IS_Journey .card-choice-card {
+    position: relative;
+    width: 300px;
+    color: var(--color-interface-text-primary);
+    background: var(--color-interface-background-quinary);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    @media (max-width: 767px) {
+        width: 160px;
+    }
+
+    &:has(input[type="radio"]:checked) {
+        background-image: linear-gradient(var(--color-action-background-primary-default),
+                var(--color-action-background-tertiary-default));
+        margin: -10px 0;
+        min-height: 70px;
+        box-shadow: 0 0 0 2px var(--color-interface-background-primary),
+            0 0 0 4px var(--color-action-background-primary-default);
+
+        .card-choice-title,
+        .card-choice-features .feature-value {
+            color: var(--color-interface-background-primary);
+        }
+
+        .radio-wrapper {
+            margin-bottom: 20px;
+        }
+
+
+        .card-choice-features li {
+            background: url('../icons/border-line-selected.svg') no-repeat left top;
+        }
+
+        .field-accountvariantselected {
+            height: 118px;
+        }
+
+    }
+
+    input[type="radio"] {
+        border-radius: 100%;
+        border: 1.5px solid var(--color-interface-border-secondary);
+        background-color: var(--color-interface-background-primary);
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        margin: 0 auto;
+
+        @media (320px <=width <=767px) {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:checked {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid var(--color-action-border-primary-default);
+
+            &::before {
+                content: '';
+                border-radius: 100%;
+                width: 12px;
+                height: 12px;
+                background-color: var(--color-action-background-primary-default);
+                position: absolute;
+            }
+        }
+    }
+}
+
+.IS_Journey .field-accountvariantselected .radio-wrapper {
+    margin: auto;
+    flex-flow: column;
+    min-height: 65px;
+    gap: 0;
+    margin-bottom: var(--body-x-sm-font-size);
+
+    @media (max-width: 768px) {
+        margin-bottom: var(--body-x-sm-font-size);
+    }
+
+    .field-label {
+        color: var(--color-interface-background-quaternary);
+        font-size: var(--body-sm-font-size);
+        font-weight: 600;
+
+        @media (max-width: 768px) {
+            font-size: var(--body-x-sm-font-size);
+        }
+    }
+
+    & input[type="radio"] {
+        border: 1.5px solid var(--color-input-border-default);
+
+        &:checked {
+            border: 1.5px solid var(--color-interface-background-primary);
+            background-color: var(--color-interface-icon-highlight);
+
+            &::before {
+                background-color: var(--color-interface-background-primary);
+            }
+        }
+    }
+}
+
+.IS_Journey .card-choice-features li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../icons/border-line-default.svg') no-repeat top left;
+    color: var(--color-interface-text-primary);
+    cursor: pointer;
+    font-size: var(--body-x-sm-font-size);
+    font-weight: var(--font-weight-medium);
+    padding: 16px 0;
+    min-height: 68px;
+
+    @media (max-width: 768px) {
+        font-size: var(--body-x-xs-font-size);
+
+        &:nth-of-type(3) {
+            line-height: 1;
+            padding: 20px 0;
+        }
+    }
+
+    .feature-value {
+        font-size: var(--body-x-sm-font-size);
+        color: var(--color-interface-text-primary);
+
+        @media (max-width: 768px) {
+            font-size: var(--body-x-xs-font-size);
+            line-height: 1;
+            padding: 20px 0;
+        }
+    }
+}
+
+.IS_Journey .field-featurestitlepanel,
+.IS_Journey .field-accountfeatures .repeat-wrapper .panel-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: none;
+}
+
+.IS_Journey .field-accountvariantselected {
+    height: calc(120px - 12px);
+}
+
+/* .field-accountwapper .repeat-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex: none;
+    } */
+
+/* Select Account Varient Panel End */
+
+.IS_Journey .field-nomineedetails {
+    margin-top: 1.5rem;
+
+    &>legend,
+    .checkbox-wrapper .field-label {
+        font-size: var(--body-x-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-linehight-large);
+        color: var(--color-interface-text-primary);
+        margin-bottom: 0;
+
+        @media (width <=480px) {
+            font-size: var(--body-fd-md-font-size);
+        }
+    }
+
+    &>legend {
+        position: relative;
+        padding-left: 54px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: url('../icons/personal_details_icon.svg') no-repeat left center;
+            left: 0;
+        }
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        @media (width <=640px) {
+            margin: 1.5rem 0;
+        }
+
+        &.field-addnomineecheckbox {
+            margin: 2rem 0;
+        }
+
+        &.field-sameaspermanentaddr,
+        &.field-sameaspermanentaddrguardian {
+            margin: 1rem 0;
+
+            .field-label {
+                font-size: var(--body-sm-font-size);
+                font-weight: var(--font-weight-regular);
+            }
+        }
+    }
+}
+
+.IS_Journey .field-text1744108050248,
+.IS_Journey .field-guardianmailingpanel {
+    margin-top: 28px;
+
+    @media (width <=640px) {
+        margin-top: 1.5rem;
+    }
+
+    p,
+    .field-label {
+        font-size: var(--body-x-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-linehight-large);
+        color: var(--color-interface-text-primary);
+        margin-bottom: 0;
+
+        @media (width <=480px) {
+            font-size: var(--body-fd-md-font-size);
+        }
+    }
+}
+
+.IS_Journey .field-sameaddressnomineepanel,
+.IS_Journey .field-sameaddressguardianpanel {
+    margin-bottom: 5px;
+    background-color: var(--color-interface-background-quinary);
+    padding: 20px 12px;
+}
+
+.IS_Journey .field-sameaddressdetailsnomineetext,
+.IS_Journey .field-sameaddressdetailsguardiantext {
+    p {
+        font-size: var(--body-x-sm-font-size);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-interface-text-secondary);
+    }
+}
+
+.IS_Journey .field-samenomineeadrdetails,
+.IS_Journey .field-sameguardianadrdetails {
+    font-size: var(--body-x-sm-font-size);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-interface-text-primary);
+
+    p {
+        font-size: var(--body-x-sm-font-size);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-interface-text-primary);
+    }
+}
+
+.IS_Journey .field-nomineeguadianinfotext {
+    background: #E7EEFD;
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 45px;
+    border-radius: 8px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        background: url("../icons/i_icon.svg") no-repeat center center;
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+    }
+
+    p {
+        color: var(--color-action-text-secondary-default);
+        font-size: var(--body-x-sm-font-size);
+        font-weight: var(--font-weight-bold);
+        margin-bottom: 0;
+    }
+}
+
+/* Nominee detals panel */
+
+/* Doc-Upload Screen Start */
+.IS_Journey .field-document-title.field-wrapper p {
+    font-size: var(--body-x-lg-font-size);
+    line-height: var(--font-linehight-large);
+
+    @media (width <=767px) {
+        font-size: var(--body-md-font-size);
+        line-height: var(--font-linehight-medium);
+    }
+}
+
+
+.IS_Journey .field-document-subtitle p,
+.IS_Journey .field-document-title p,
+.IS_Journey .field-upload-selfi-label p {
+    font-size: var(--body-lg-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-linehight-medium);
+    color: var(--color-interface-text-primary);
+
+    @media (width <=767px) {
+        font-size: var(--body-md-font-size);
+        line-height: var(--font-linehight-medium);
+    }
+}
+
+
+.IS_Journey .field-document-subtitle,
+.IS_Journey .field-upload-selfi-label {
+    margin-bottom: 1.5rem;
+}
+
+.IS_Journey .field-passport-info-panel {
+    background-color: var(--color-interface-background-quinary);
+    padding: 10px 16px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    min-height: 92px;
+}
+
+.IS_Journey .field-passport-info-panel ul {
+    margin: 0 0 0 16px;
+    padding: 0;
+}
+
+.IS_Journey .field-passport-info-panel li {
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-action-text-secondary-default);
+    padding-left: 5px;
+    line-height: var(--font-linehight-medium);
+}
+
+.IS_Journey .field-document-type {
+    margin: 45px 0 2rem 0;
+
+    @media (width <=767px) {
+        margin: 40px 0;
+    }
+}
+
+.IS_Journey .field-documentdata {
+    border-bottom: 1px dashed var(--color-input-border-default);
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+
+    .text-wrapper:not(:last-child),
+    .date-wrapper {
+        @media (width <=767px) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.IS_Journey .field-image-upload {
+    border-top: 1px dashed var(--color-input-border-default);
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+.IS_Journey .field-passportpanel,
+.IS_Journey .field-drivinglicensepanel,
+.IS_Journey .field-voteridpanel {
+    margin-top: 2rem;
+    column-gap: 2rem;
+
+    @media (width <=767px) {
+        margin-top: 40px;
+    }
+}
+
+.IS_Journey .field-address-proof,
+.IS_Journey .field-address-proof .field-wrapper {
+    margin-top: 32px;
+}
+
+.IS_Journey .field-upload-passport-front,
+.IS_Journey .field-upload-passport-back,
+.IS_Journey .field-upload-selfie,
+.IS_Journey .field-upload-dl-front,
+.IS_Journey .field-upload-voterid-front,
+.IS_Journey .field-upload-voterid-back,
+.IS_Journey .field-upload-front {
+    border: 1px dashed var(--color-input-border-default);
+    background-color: #F9FAFF;
+    border-radius: 20px;
+    grid-column: span 4;
+    padding-bottom: 2rem;
+
+    @media (width <=767px) {
+        grid-column: span 12;
+        margin-bottom: 1.5rem;
+    }
+
+    /*  &:not(:last-child) {
+            margin-bottom: 2rem;
+        } */
+
+    .field-description,
+    .field-label {
+        display: none;
+    }
+}
+
+.IS_Journey .field-upload-selfie .file-input-v2-label,
+.IS_Journey .field-upload-selfie .file-input-v2-description {
+    display: none;
+}
+
+.IS_Journey .field-upload-selfie .file-input-v2-icon {
+    background: url('../icons/camera_icon.svg') no-repeat center center;
+}
+
+.IS_Journey .file-input-v2-initial,
+.IS_Journey .file-input-v2-file {
+    padding: 28px 2rem 0 2rem;
+    border-radius: 20px;
+    min-height: initial;
+    gap: 0;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+
+    @media (width <=767px) {
+        padding: 16px 20px 0 20px;
+    }
+}
+
+.IS_Journey .file-input-v2-icon {
+    margin-bottom: 20px;
+}
+
+.IS_Journey .file-input-v2-label {
+    font-size: var(--body-md-font-size);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background: url('../icons/info_icon_16.svg') no-repeat center right;
+        top: 2px;
+        right: -25px;
+    }
+}
+
+.IS_Journey .file-input-v2-description {
+    font-size: var(--body-x-sm-font-size);
+    line-height: var(--font-linehight-regular);
+    margin-bottom: 20px;
+
+    @media(width <=767px) {
+        font-size: var(--body-x-sm-font-size);
+    }
+}
+
+.IS_Journey .file-input-v2-cta {
+    padding: 0;
+}
+
+.IS_Journey .file-input-v2-file-info {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.IS_Journey .file-input-v2-file-name,
+.IS_Journey .file-input-v2-file-size {
+    font-size: var(--body-x-sm-font-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-linehight-regular);
+    color: var(--color-interface-text-secondary);
+}
+
+.IS_Journey .file-input-v2-file-size {
+    margin-left: 1.5rem;
+}
+
+.IS_Journey .file-input-v2-uploaded {
+    gap: 0;
+}
+
+.IS_Journey .file-input-v2-reupload-btn {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* FIELD-WIZARD END */
+
+.IS_Journey .field-thankyoupanel {
+    .text-wrapper.field-wrapper {
+        border-left: 3px solid var(--color-action-border-primary-disabled);
+        padding-left: 1rem;
+
+        @media (width <=640px) {
+            padding-left: 12px;
+        }
+
+        label {
+            transform: none;
+            position: inherit;
+            margin: 0;
+            font-size: var(--body-sm-font-size);
+            font-weight: var(--font-weight-regular);
+            transition: none;
+
+            @media (width <=640px) {
+                font-size: var(--body-x-sm-font-size);
+            }
+        }
+
+        input {
+            padding: 0;
+            border: none;
+            height: auto;
+            line-height: normal;
+
+            @media (width <=640px) {
+                font-size: var(--body-sm-font-size);
+                font-weight: var(--font-weight-medium);
+            }
+        }
+    }
+}
+
+.IS_Journey .field-text1744607197239 {
+    margin-top: -90px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+
+    @media (width <=640px) {
+        margin-top: -75px;
+    }
+
+    p {
+        font-size: var(--body-x-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-linehight-large);
+        color: var(--color-interface-text-tertiary);
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../icons/green_tick_icon.svg') no-repeat center center;
+        width: 40px;
+        height: 40px;
+        top: -45px;
+    }
+}
+
+.IS_Journey .field-text-7047280451745986995080 {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px dashed var(--color-interface-border-secondary);
+
+    @media (width <=640px) {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../icons/acc_detail_icon.svg') no-repeat left center;
+        width: 32px;
+        height: 28px;
+
+        @media (width <=480px) {
+            transform: scale(0.8);
+        }
+    }
+
+    p {
+        font-size: var(--body-x-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-interface-text-primary);
+        padding-left: 1.5rem;
+        margin-bottom: 0;
+
+        @media (width <=640px) {
+            font-size: var(--body-fd-md-font-size);
+        }
+    }
+}
+
+.IS_Journey .field-thankyousubmitpanel {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    margin-top: 28px;
+
+    .button-wrapper {
+        margin-top: 0;
+
+        &.field-button1744607388884 {
+            @media (width <=640px) {
+                bottom: 120px;
+            }
+        }
+    }
+}
+
+/* THANKYOU PAGE SCREEN END */
+
+/* common overwrite css */
+/*     .field-wrapper {
+         border-color: initial;
+    margin: 0;
+    text-align: left;
+    gap: 0 24px;
+
+        @media (width <=480px) {
+            column-gap: 12px;
+        }
+    }
+
+    .field-wrapper.button-wrapper {
+        margin-top: 2rem;
+    }*/
+
+.IS_Journey .field-title p {
+    font-size: var(--body-xx-lg-font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-interface-text-primary);
+    line-height: var(--font-linehight-m-large);
+    margin-bottom: 8px;
+
+    @media (width <=640px) {
+        font-size: var(--body-lg-font-size);
+        line-height: var(--font-linehight-medium);
+        margin-bottom: 0;
+    }
+}
+
+.IS_Journey .field-subtitle,
+.IS_Journey .field-otpinfotext {
+    margin-bottom: 2rem;
+
+    @media (width <=767px) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.IS_Journey .field-subtitle p,
+.IS_Journey .field-otpinfotext p {
+    font-size: var(--body-md-font-size);
+    color: var(--color-input-text-primary);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-linehight-medium);
+    margin-bottom: 0;
+
+    @media (width <=640px) {
+        font-size: var(--body-x-sm-font-size);
+        line-height: var(--font-linehight-regular);
+    }
+}
+
+.IS_Journey .field-loginpanel {
+
+    input[type="text"],
+    input[type="date"] {
+        letter-spacing: .5rem;
+    }
+
+    .field-consentpopup1 {
+        .close-button {
+            display: none;
+        }
+    }
+}
+
+/* .form form.IS_Journey .text-wrapper.field-wrapper,
+.form form.IS_Journey .drop-down-wrapper.field-wrapper,
+.form form.IS_Journey .number-wrapper.field-wrapper,
+.form form.IS_Journey .date-wrapper.field-wrapper {
+    margin-bottom: 2rem;
+
+    @media (width <=767px) {
+        margin-bottom: 1.5rem;
+    }
+} */
+
+.IS_Journey .field-loginpanel,
+.IS_Journey .field-otppanel,
+.IS_Journey .field-selectaccountvariant {
+    &>legend.field-label {
+        font-size: var(--body-x-lg-font-size);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-linehight-large);
+        margin-top: -95px;
+        position: absolute;
+        color: var(--color-interface-text-tertiary);
+        z-index: 3;
+        max-width: 1320px;
+
+        @media (width <=767px) {
+            font-size: var(--body-md-font-size);
+            line-height: var(--font-linehight-medium);
+            margin-top: -60px;
+        }
+    }
+}
+
+.IS_Journey .field-description,
+.IS_Journey .field-description p {
+    font-size: var(--body-sm-font-size);
+    line-height: var(--font-linehight-medium);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-input-text-msg-error);
+}
+
+.IS_Journey .field-yourdetailssubmitbutton,
+main .form form.IS_Journey .wizard .wizard-button-wrapper {
+    display: none;
+}
+
+/* main body end  */

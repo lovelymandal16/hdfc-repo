@@ -1,0 +1,103 @@
+{
+  "definitions": [
+    {
+      "title": "Consent Popup with Go To Bottom",
+      "id": "consent-popup-with-goToBottom",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+            "template": {
+              "jcr:title": "Consent Popup with Go To Bottom",
+              "fieldType": "panel",
+              "fd:viewType": "consent-popup-with-goToBottom",
+              "hideTitle": true,
+              "checkbox": {
+                "checkedValue": "Yes",
+                "uncheckedValue": "No",
+                "enableUncheckedValue": true,
+                "sling:resourceType": "core/fd/components/form/checkbox/v1/checkbox",
+                "fieldType": "checkbox",
+                "jcr:title": "<p>Consent Summary. <a href=\"#open-modal\">here</a></p>",
+                "isTitleRichText": true
+              },
+              "modal": {
+                "name": "consentmodal",
+                "sling:resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "fd:viewType": "modal",
+                "visible": false,
+                "fieldType": "panel",
+                "termsAndConditions": {
+                  "name": "termsAndConditions",
+                  "fieldType": "plain-text",
+                  "sling:resourceType": "core/fd/components/form/text/v1/text",
+                  "value": "Enter Consent text here",
+                  "textIsRich": true
+                },
+                "button": {
+                  "name": "consentbutton",
+                  "sling:resourceType": "core/fd/components/form/button/v1/button",
+                  "fieldType": "button",
+                  "jcr:title": "Accept"
+                },
+                "goToBottomButton": {
+                  "name": "gotobottombutton",
+                  "sling:resourceType": "core/fd/components/form/button/v1/button",
+                  "fieldType": "button",
+                  "jcr:title": "Go to Bottom"
+                }
+              },
+              "consentType": {
+                "name": "consentType",
+                "visible": false,
+                "type": "string",
+                "fieldType": "text-input",
+                "sling:resourceType": "core/fd/components/form/textinput/v1/textinput"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "consent-popup-with-goToBottom",
+      "fields": [
+        {
+          "component": "container",
+          "name": "basic",
+          "label": "Basic",
+          "collapsible": false,
+          "...": "../../models/form-common/_basic-input-fields.json"
+        },
+        {
+          "component": "select",
+          "label": "Choose the type of consent",
+          "name": "consentType",
+          "required": true,
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Account Related",
+              "value": "accountRelatedservicesCaptureconsent"
+            },
+            {
+              "name": "Other Related Services",
+              "value": "otherRelatedServicesCaptureConsent"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "name": "contentURL",
+          "label": "Specify the URL to fetch dynamic content",
+          "valueType": "string"
+        },
+        {
+          "...": "../../models/form-common/_help-container.json"
+        }
+      ]
+    }
+  ]
+}

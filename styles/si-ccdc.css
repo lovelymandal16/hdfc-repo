@@ -1,0 +1,2531 @@
+/* Header + Footer */
+body:has(.siccdc) header .nav-wrapper {
+  background: var(--color-interface-fd-background-primary);
+  height: 72px;
+}
+body:has(.siccdc) header form { 
+  display: flex; 
+  padding: 10px 0 0;
+}
+body:has(.siccdc) header nav .nav-hamburger { display: none; }
+body:has(.siccdc) header form .field-hdfclogo { 
+  padding-right: 24px; 
+  border-right: solid 1px var(--color-interface-fd-title-border);
+}
+body:has(.siccdc) header form .field-splogo { padding-left: 24px; }
+body:has(.siccdc) header form .field-hdfclogo img {
+  aspect-ratio: 166 / 32;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body:has(.siccdc) header form .field-splogo img {
+  aspect-ratio: 101 / 32;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body:has(.siccdc) .footer-wrapper {
+  position: fixed;
+  background: var(--color-interface-fd-background-primary);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99999;
+}
+body:has(.siccdc) .footer-wrapper > div > div {
+  text-align: center;
+  padding: 10px;
+}
+body:has(.siccdc) .footer-wrapper > div > div p { color: var(--color-interface-text-tertiary); }
+/* End of Header + Footer */
+body:has(.siccdc) {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body main .siccdc .form:is([data-active="true"], [data-empty="false"]) > label { padding: 0 5px; }
+body .siccdc .field-invalid:is([data-active="true"], [data-empty="false"]):has(.field-description) label, body .siccdc .date-wrapper.field-invalid:is([data-active="true"], [data-empty="true"]):has(.field-description) label {
+  color: var(--color-input-text-msg-error);
+  font-size: var(--body-fd-sm-font-size);
+  font-weight: var(--font-weight-regular);
+}
+body .siccdc .text-wrapper:not(:focus) > label, body .siccdc .text-wrapper:not(:focus) label p, body .drop-down-wrapper:not(:focus) > label, body .siccdc .drop-down-wrapper:not(:focus) label p, body .multiline-wrapper:not(:focus) > label, body .multiline-wrapper:not(:focus) label p, body .number-wrapper:not(:focus) > label, body .number-wrapper:not(:focus) label p { color: transparent; }
+body main .siccdc .form input[type="text"], body main .siccdc .form input[type="number"], body main .siccdc .form input[type="password"], body main .siccdc .form input[type="date"], body main .siccdc .form .drop-down-wrapper select {
+  height: 60px;
+  border-radius: 12px;
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-lg-font-size);
+  border-color: var(--color-interface-border-secondary);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+body main .siccdc .form input[type="password"] { font-size: 28px; }
+body main .siccdc .form [data-required="true"]>label::after { content: ""; }
+body main .siccdc .form input[type="text"], body main .siccdc .form input[type="number"], body main .siccdc .form input[type="date"] { letter-spacing: 8px; }
+body main .siccdc .form input:focus, body main .form select:focus { outline: none; }
+/* Remove number field up down arrow */
+body main .siccdc .form input[type="number"]::-webkit-outer-spin-button, body main .siccdc .form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox / Edge */
+@-moz-document url-prefix() {
+.siccdc input[type="number"] { -moz-appearance: textfield !important; }
+.siccdc [type="date"],
+.siccdc [type="datetime-local"],
+.siccdc [type="month"],
+.siccdc [type="time"],
+.siccdc [type="week"] {
+  padding-right: 5px !important;
+  background-image: none !important;
+}
+}
+body main .siccdc .form input::placeholder, body main .form select::placeholder {
+  text-transform: none;
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: normal;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+/* Floating labels */
+.siccdc .form .field-dateofbirth.date-wrapper:is([data-active='true'], [data-empty='false']) label { top: 32px; font-size: var(--body-fd-sm-font-size); } 
+/* Label - normal, not floating */
+body main .siccdc .form :is(.field-setupsmartpaycccard) > label {
+  transform: translateY(6px);
+  margin: 0;
+  position: relative;
+}
+.siccdc .form .field-invalid:has(.field-description) input[type="text"], .siccdc .form .field-invalid:has(.field-description) input[type="number"], .siccdc .form .field-invalid:has(.field-description) input[type="password"], .siccdc .form .field-invalid:has(.field-description) input[type="date"], .siccdc .form .field-invalid:has(.field-description) select {
+  border: solid 1px var(--color-input-border-error);
+  box-shadow: 0 0 0 2px var(--color-input-box-shadow-error-default);
+  outline: none;
+}
+body .siccdc .field-invalid:has(.field-description) .field-description {
+  color: var(--color-input-text-msg-error);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+}
+body .siccdc .form .checkbox-wrapper input[type="checkbox"] {
+  width: 23px;
+  height: 23px;
+}
+body main .siccdc .form .radio-group-wrapper .radio-wrapper label {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-interface-text-primary);
+  line-height: var(--font-linehight-medium);
+}
+body main .siccdc .form .button-wrapper.field-wrapper {
+  margin: 0;
+  max-width: 272px;
+}
+body main .siccdc .form .button-wrapper.field-wrapper button, body main .siccdc .form .button-wrapper.field-wrapper button:hover { color: var(--color-interface-text-tertiary); }
+body .siccdc .modal dialog .modal-content { overflow-x: hidden; padding: 23px 6px 23px 0; max-height: calc(100vh - 180px);}
+body .siccdc .modal .close-button img { display: none; }
+body .siccdc .modal dialog::backdrop { pointer-events: none; }
+body .siccdc .modal dialog { width: 90vw; padding: 30px; }
+body main .section.siccdc.form-container {
+  padding: 0;
+  background-color: var(--light-color);
+}
+body main .siccdc div.form-wrapper {
+  padding: 0;
+  max-width: 1280px;
+}
+/* Scrollbar */
+.siccdc .field-setupsmartpaywrapper .field-eligibleforsprepeatable .repeat-wrapper::-webkit-scrollbar, .siccdc .field-setupsmartpaywrapper .field-spenabledrepeatablesection .repeat-wrapper::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.siccdc .field-setupsmartpaywrapper .field-eligibleforsprepeatable .repeat-wrapper::-webkit-scrollbar-track, .siccdc .field-setupsmartpaywrapper .field-spenabledrepeatablesection .repeat-wrapper::-webkit-scrollbar-track {
+  background: var(--color-action-scroll-background-primary);
+  cursor: pointer;
+}
+
+.siccdc .field-setupsmartpaywrapper .field-eligibleforsprepeatable .repeat-wrapper::-webkit-scrollbar-thumb, .siccdc .field-setupsmartpaywrapper .field-spenabledrepeatablesection .repeat-wrapper::-webkit-scrollbar-thumb {
+  background: var(--color-action-scroll-primary);
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* End of scrollbar */
+/* Banner Panel */
+body main .section.siccdc.form-container .field-bannerpanel .field-bannerpaneltext { display: none; }
+body main .section.siccdc.form-container .field-bannerpanel, body main .section.siccdc.form-container .field-bannerinnersection { 
+  margin: 0; 
+  background-color: var(--color-interface-fd-background-secondary);
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper .field-countrycode::after {
+  position: absolute;
+  content: url(../icons/select_arrow.svg);
+  color: green;
+  top: 15px;
+  right: -9px;
+  height: 20px;
+  width: 20px;
+  z-index: 10;
+}
+/* Login Panel */
+body main .section.siccdc.form-container .field-loginwrapper { padding: 32px 49px 32px 0; }
+body main .siccdc .field-loginwrapper .field-ccloginfragment { 
+  grid-template-rows: auto auto; 
+  margin: 0;
+}
+body main .siccdc .field-loginwrapper .field-welcometext p {
+  color: var(--color-interface-text-primary);
+  font-size: var(--body-xxx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-typeofcard { display: flex; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-typeofcard .radio-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-typeofcard legend {
+  color: var(--color-interface-text-primary);
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 18px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper {
+  gap: 0;
+  position: relative;
+  margin-bottom: 25px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper .field-mobilenumber:is([data-active='true'], [data-empty='false'])>label {
+  padding: 0 6px 0 10px;
+  margin-left: -66px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper .field-countrycode {
+  position: relative;
+  left: -2px;
+  cursor: pointer;
+  pointer-events: none;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper .field-countrycode input {
+  text-align: right;
+  border-radius: 12px 0 0 12px;
+  width: 112%;
+  background: var(--color-interface-background-primary);
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  pointer-events: none;
+  margin-top: 0;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  padding: 0 20px 0 10px;
+  color: var(--color-interface-text-primary);
+  border-color: var(--color-interface-border-secondary);
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumber input {
+  position: relative;
+  margin-top: 0;
+  left: -4px;
+  width: 139%;
+  border-radius: 0 12px 12px 0;
+  padding-left: 10px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumber .field-description {
+  position: absolute;
+  left: 9px;
+  top: 75px;
+  width: max-content;
+}
+body main .siccdc .field-description p {
+  color: var(--color-interface-text-secondary);
+  font-size: var(--body-md-font-size);
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumber.field-invalid:has(.field-description) input { height: 59px; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-ccdigits input {
+  font-size: var(--body-lg-font-size);
+  margin: 5px 0 11px;
+  height: 60px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-ccdigits label {
+  margin-top: 24px;
+  padding: 0 10px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-pandobpanel {
+  margin: -16px 0 0 3px;
+  position: relative;
+  padding-bottom: 15px;
+}
+body main .field-loginwrapper .field-loginpanel .field-pandobpanel input { 
+  width: 50%; 
+  margin-top: 17px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-pandobpanel input { width: 50%; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-pandobpanel label {
+  padding: 0 10px;
+  margin: 9px 11px 0;
+}
+body main .siccdc .field-loginpanel .field-requiredconsentpopuppanel .close-button { display: none; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel {
+  padding: 45px 0 0;
+  border-top: dashed 1px var(--color-interface-border-secondary);
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-consentmodal .field-consentbutton1 { max-width: 100%; text-align: center; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-consentmodal .field-consentbutton1 button { max-width: 272px; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-landingconsent { 
+  position: relative;
+  display: -webkit-box;
+  width: 90%;
+  margin: -12px 0 0 -8px;
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-landingconsent label { display: contents;}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-landingconsent .field-description { display: none; }
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel label p {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+}
+body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel input[type="checkbox"] {
+  display: block;
+  border-color: var(--color-interface-border-secondary);
+  box-shadow: none;
+}
+/* body main .siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinks p {
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0;
+} */
+.siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper .field-wrapper.plain-text-wrapper, .siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper .field-wrapper.button-wrapper { width: max-content; margin: 0; }
+.siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper .field-wrapper.button-wrapper button, .siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper p {
+  margin: 0;
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0;
+  background-color: var(--color-interface-background-primary);
+  height: fit-content;
+  margin-top: 5px;
+}
+.siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper .field-wrapper.button-wrapper button { color: var(--color-action-text-secondary-default); }
+.siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper .field-wrapper.button-wrapper button::after { display: none; }
+body main .siccdc .form .field-loginwrapper .field-prerequisitepanel {
+  border: solid 1px var(--color-interface-border-secondary);
+  border-radius: 16px;
+  margin: 0 0 20px;
+  padding: 16px;
+  position: relative;
+}
+body main .siccdc .form .field-loginwrapper .field-prerequisitepanel > legend {
+  font-size: 22px;
+  color: var(--color-interface-text-primary);
+  position: absolute;
+  margin-bottom: 0;
+  position: absolute;
+  top: 16px;
+  left: 17px;
+}
+body main .siccdc .form .field-loginwrapper .field-prerequisitepanel .plain-text-wrapper { padding: 38px 0 0; }
+body main .siccdc .form .field-loginwrapper .field-prerequisitepanel .plain-text-wrapper p {
+  margin: 0 0 0 -2px;
+  font-size: var(--body-sm-font-size);
+  color: var(--color-input-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+body main .siccdc .field-loginwrapper .field-stepstofollow {
+  background-color: var(--color-interface-background-quinary);
+  border-radius: 20px;
+  padding-bottom: 12px;
+}
+body main .siccdc .form .field-loginwrapper .field-stepstofollow > legend {
+  padding: 0 0 30px;
+  font-size: var(--body-fd-xx-lg-font-size);
+  color: var(--color-interface-text-primary);
+  position: relative;
+  top: 10%;
+  left: 6%;
+  margin: 0 0 16px;
+}
+body main .siccdc .field-stepstofollow fieldset[class*="field-stepstofollowpanel"] {
+  display: block;
+  align-items: center;
+  margin: 12px 0 -10px;
+}
+body main .siccdc .field-stepstofollow fieldset[class*="field-stepstofollowpanel"] .image-wrapper {
+  height: fit-content;
+  justify-self: center;
+  margin-bottom: -8px;
+}
+body main .siccdc .form fieldset[class*="field-stepstofollowpanel"] .plain-text-wrapper p {
+  text-align: center;
+  margin: 0;
+  color: var(--color-input-text-primary);
+  padding: 0 20px;
+  font-size: var(--body-sm-font-size);
+}
+body main .siccdc .form .field-consentpopup1 .close-button { display: none; }
+body main .siccdc .form .field-mandatoryconsentpopup .modal dialog,
+body main .siccdc .form .field-navigationalertpopup .modal dialog { padding: 16px 16px 16px 10px; }
+body main .siccdc .form .field-mandatoryconsentpopup .modal dialog .modal-content,
+body main .siccdc .form .field-navigationalertpopup .modal dialog .modal-content {
+  padding: 0;
+  overflow-x: hidden;
+}
+body main .siccdc .form .field-navigationalertpopup .modal dialog .modal-content { display: grid; padding-left: 15px; }
+body main .siccdc .form .field-mandatoryconsentpopup .modal dialog .plain-text-wrapper p,
+body main .siccdc .form .field-navigationalertpopup .modal dialog .plain-text-wrapper p {
+  text-align: center;
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-interface-text-primary);
+  margin-bottom: 0;
+}
+body main .siccdc .form .field-mandatoryconsentpopup .modal dialog .field-mandatorymodallabel p,
+body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertlabel p {
+  font-size: var(--body-lg-font-size);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-input-text-msg-error);
+}
+body main .siccdc .field-loginwrapper .field-mandatoryconsentpopup .modal dialog .field-mandatorymodalconfirm {
+  text-align: center;
+  padding: 15px 0 10px;
+  max-width: 100%;
+}
+body main .siccdc .field-loginwrapper .field-mandatoryconsentpopup .modal dialog .field-mandatorymodalconfirm button {
+  width: 127px;
+  border-radius: 40px;
+  height: 38px;
+}
+body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertcontinue, .siccdc .form .field-navigationalertpopup .modal dialog .field-privacypolicybtn {
+  grid-column: span 6;
+  justify-self: baseline;
+  align-content: center;
+  padding: 28px 0 0;
+}
+body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertcontinue button, body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertcontinue button:hover, .siccdc .form .field-navigationalertpopup .modal dialog .field-privacypolicybtn button, .siccdc .form .field-navigationalertpopup .modal dialog .field-privacypolicybtn button:hover {
+background: none !important;
+color: var(--color-action-text-secondary-default);
+font-size: var(--body-md-font-size);
+font-weight: var(--font-weight-bold);
+width: auto;
+height: auto;
+text-decoration: underline;
+}
+body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertclose {
+  grid-column : span 6;
+  justify-self: end;
+  padding: 20px 0 0;
+  max-width: 153px;
+}
+body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertclose button, body main .siccdc .form .field-navigationalertpopup .modal dialog .field-navigationalertclose button:hover {
+  font-size: var(--body-fd-sm-font-size);
+  font-weight: var(--font-weight-medium);
+  padding: 0 30px 0 20px;
+  border-radius: 40px;
+  height: 36px;
+  border: 1px solid var(--color-action-border-primary-default);
+  background: var(--color-action-background-primary-default);
+  color: var(--color-action-text-primary-default);
+}
+/* ISD panel */
+.isd-drop-down {
+  max-height: 264px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: solid 1px var(--color-interface-border-secondary);
+  border-radius: 12px;
+}
+.isd-drop-down li {
+  height: 52px;
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+  color: var(--color-interface-text-primary);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.isd-drop-down li:not(:last-child) { border-bottom: 1px solid var(--color-interface-border-secondary); }
+.siccdc .field-countrycodesearch {
+  z-index: 2;
+  position: absolute;
+  background: var(--color-interface-background-primary);
+  top: 58px;
+  width: 100%;
+}
+.siccdc .field-countrycodesearch input { background: url(../icons/search.svg) 95% no-repeat; }
+/* End of login panel */
+/* OTP Panel */
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel { 
+  max-height: 385px; 
+  margin-bottom: 35px;
+  margin: 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-enterotpheading.plain-text-wrapper p { margin-bottom: -25px; }
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-enterotpheading.plain-text-wrapper p strong {
+  color: var(--color-interface-text-primary);
+  font-size: var(--body-xxx-lg-font-size);
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otptextpanel.panel-wrapper.field-wrapper {
+  display: block;
+  margin-left: 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-editmobilenumber {
+  width: fit-content;
+  margin-left: 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .field-description  { margin: 10px 0 -6px; }
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-editmobilenumber.button-wrapper.field-wrapper button, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-editmobilenumber.button-wrapper.field-wrapper button:hover {
+  height: fit-content;
+  background: var(--color-interface-background-primary);
+  color: var(--color-action-text-secondary-default);
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .plain-text-wrapper {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .plain-text-wrapper p {
+  margin-bottom: 7px;
+  font-size: var(--body-fd-md-font-size);
+  color: var(--color-input-text-primary);
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput {
+  margin: 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput i {
+  display: inline-table;
+  position: relative;
+  z-index: 10;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .bi-eye-slash { margin-bottom: 0; }
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input {
+  max-width: 445px;
+  padding: 0;
+  text-align: center;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input[type="text"] { letter-spacing: 31px; padding-top: 4px; }
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input[type="password"] { letter-spacing: 30px; }
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input::placeholder {
+  font-size: 28px;
+  letter-spacing: 30px;
+  margin-top: 10px;
+  color: var(--color-input-text-placeholder-default);
+}
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel { margin-left: 0; }
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp {
+  text-align: left;
+  margin-left: 0;
+  margin-top: -11px;
+}
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp.button-wrapper.field-wrapper button, body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp.button-wrapper.field-wrapper button:hover {
+  background-color: var(--color-interface-background-primary) !important;
+  color: var(--color-action-text-secondary-default);
+  font-weight: var(--form-button-font-weight);
+}
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp.button-wrapper.field-wrapper button:disabled:not(:has(span)) {
+  margin-top: 6px;
+  color: var(--color-input-text-msg-error) !important;
+  font-weight: var(--font-weight-regular);
+}
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp:has(span.countdown-timer-number) button {
+  color: var(--color-input-text-placeholder-disabled) !important;
+  font-weight: var(--font-weight-regular);
+}
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-limitexhausttext {
+  grid-column: span 6;
+  margin-top: -13px;
+  font-size: var(--body-fd-md-font-size);
+  color: var(--color-input-text-primary);
+}
+.siccdc .field-otppanel .field-otpsubpanel:has(.field-limitexhausttext[data-visible="true"]) .field-attemptsleftpanel { grid-column: span 4;}
+body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp:has(span.countdown-timer-number) button span:hover {
+  background-color: var(--color-interface-background-primary) !important;
+  color: var(--color-interface-text-primary);
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel {
+  margin-top: -15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-maxattempts {
+  text-align: right;
+  direction: rtl;
+  margin: -16px -18px 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-maxattempts input {
+  height: fit-content;
+  padding: 0;
+  width: 24px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  pointer-events: none;
+  color: var(--color-interface-text-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-md-font-size);
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-attemptslefttxt {
+  width: fit-content;
+  margin-top: 1px;
+  color: var(--color-interface-text-secondary);
+  font-size: var(--body-md-font-size);
+}
+/* End of OTP Panel */
+/* SmartPay - Biller Home Page */
+body main .siccdc .form .field-setupsmartpaysection.field-wrapper, body main .siccdc .form .field-setupspsectionfragment.field-wrapper, body main .siccdc .form .field-setupsmartpaysection.field-wrapper, body main .siccdc .form .field-mobnumsuccessmessagetext.field-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay, .siccdc .form .field-setupsmartpaysection .panel-wrapper { margin: 0; }
+body main .siccdc .form .field-setupsmartpaywrapper { margin: -1px; overflow-x: hidden; }
+body main .siccdc .form .field-setupsmartpaywrapper .field-setupsmartpay {
+  background-color: var(--color-interface-fd-background-primary);
+  padding: 30px;
+  display: block;
+  min-height: 800px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .plain-text-wrapper {
+  margin: 0; 
+  width: fit-content;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-gobackmobtext { display: none; }
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay p, .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-disclaimertext1 p, .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-disclaimertext2 p { 
+  color: var(--color-interface-text-tertiary); 
+  margin: 0;
+  font-size: var(--body-md-font-size);
+}
+.siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaytitle p, .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-firsttimeuserlabel p {
+  color: var(--color-interface-text-tertiary); 
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-linehight-m-large);
+  padding-bottom: 15px;
+}
+.siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-firsttimeuserlabel p { padding: 0; }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection { margin: 0; }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeusertext p { font-size: var(--body-lg-font-size); }
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaycccard, body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaydccard, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-ccnumber, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-dcnumber { 
+  position: relative; 
+  width: 100%;
+  margin: 6px 0 0;
+  z-index: 200;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaycccard input, body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaydccard input, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-ccnumber input, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-dcnumber input {
+  pointer-events: none;
+  margin-bottom: 0;
+  color: var(--color-action-text-primary-default);
+  background: linear-gradient(86.59deg, #1D86FF 0%, #005ECB 113.93%);
+  border-color: transparent;
+  box-shadow: 0px 7.41px 14.82px 0px #00000026;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-md-font-size);
+  letter-spacing: 0;
+  text-align: end;
+  padding-right: 18px;
+  font-family: system-ui;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaycccard label, body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaydccard label, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-ccnumber label, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-dcnumber label {
+  position: absolute;
+  align-self: anchor-center;
+  color: var(--color-action-text-primary-default);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-lg-font-size);
+  z-index: 10;
+  background: none;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaycccard label { margin: -7px 0 0 17px; }
+body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaydccard label { margin: 48px 0 0 17px; }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-ccnumber label, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-dcnumber label { margin: 49px 0 0 17px; }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-ccnumber, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-dcnumber { margin: 0 0 30px; }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper {
+  border: solid 1px #EFE0C0;
+  border-radius: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px 15px;
+  padding: 10px 0;
+  margin: 0;
+}
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymentchargesbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationsbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeesbtn {
+  padding: 0 10px 0 32px;
+  width: fit-content;
+}
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymentchargesbtn button, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationsbtn button, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeesbtn button {
+  width: 22px;
+  height: 21px;
+  border-radius: 50%;
+  border: transparent;
+  background: transparent;
+  background-repeat: no-repeat;
+  color: transparent;
+  font-size: var(--body-sm-font-size);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeesbtn button { background-image: url('../icons/biller_icons/first-time-icon-1.png');}
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationsbtn button { background-image: url('../icons/biller_icons/first-time-icon-2.png'); }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymentchargesbtn button { background-image: url('../icons/biller_icons/first-time-icon-3.png'); }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymentchargesbtn button::after, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-returnjourneymodal .field-resumejourneyno button::after, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationsbtn button::after, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeesbtn button::after { display: none; }
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext p, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext p, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext p {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-lg-font-size);
+  color: var(--color-interface-background-primary);
+}
+.siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext { 
+  border-left: 1px solid var(--color-interface-text-secondary);
+  padding-left: 30px;
+}
+.siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard {
+  background-color: var(--color-interface-text-quaternary);
+  border-radius: 16px;
+  padding: 15px;
+}
+.siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard .field-setupsmaprtpaysectiontxt1 p {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-xx-lg-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="false"]) .field-disclaimertextenabledsection { display: none; }
+body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-smartpayenabledsection { display: block; margin-top: 37px; }
+body main .siccdc .form .field-setupsmartpaysection .field-disclaimertextenabledsection::before {
+  content: url('../icons/ovd_icon2.png');
+  position: absolute;
+  left: 14px;
+  top: 7px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-disclaimertextenabledsection {
+  background-color: #D0DDFC;
+  padding: 13px 16px 12px 61px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-sm-font-size);
+  position: relative;
+  z-index: 9;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-disclaimertextenabledsection p { 
+  margin: 0; 
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-sm-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-gobackeligibleforsp button, body main .siccdc .form .field-setupsmartpaysection .field-gobackeligibleforsp button:hover, body main .siccdc .form .field-setupsmartpaysection .field-gobacksetupsp button, body main .siccdc .form .field-setupsmartpaysection .field-gobacksetupsp button:hover, body main .siccdc .form .field-setupsmartpaysection .field-gobackenabledsp button, body main .siccdc .form .field-setupsmartpaysection .field-gobackenabledsp button:hover {
+  height: fit-content;
+  width: fit-content;
+  background-color: var(--color-interface-fd-background-primary);
+  margin: 8px 0 33px 33px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-gobackeligibleforsp::before, body main .siccdc .form .field-setupsmartpaysection .field-gobackenabledsp::before, body main .siccdc .form .field-setupsmartpaysection .field-gobacksetupsp::before {
+  content: url("../../../../icons/right-arrow.png");
+  position: absolute;
+  margin-top: 10px;
+  transform: scaleX(-1);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-gobackeligibleforsp button::after, body main .siccdc .form .field-setupsmartpaysection .field-gobackenabledsp button::after, body main .siccdc .form .field-setupsmartpaysection .field-gobacksetupsp button::after { display: none; }
+body main .siccdc .form .field-setupsmartpaysection .field-successmessagepanel { 
+  margin: 0;
+  text-align: center;
+  margin: 10px 0 -10px;
+}
+.siccdc .form .field-setupsmartpaysection .field-successmessagepanel .field-mobnumsuccessmessagetext { background-color: var(--color-interface-toaster-background-primary); }
+body main .siccdc .form .field-setupsmartpaysection .field-successmessagepanel p {
+  color: var(--color-interface-toaster-text-primary);
+  font-weight: 600;
+  margin: 0;
+  padding: 4px 0;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-successmessagepanel p p::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  vertical-align: middle;
+  background-color: var(--color-interface-toaster-text-primary);
+  background-image: url(../icons/verify_green_icon.svg);
+  background-size: 110%;
+  background-position: center;
+  border-radius: 50%;
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsp legend, body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-smartpayenabledsection legend { display: none; }
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable, body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection { 
+  display: block; 
+  max-height: 644px;
+  overflow: auto;
+  margin: 0;
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper, body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .repeat-wrapper { 
+  display: grid;
+  background-color: var(--color-interface-background-quinary);
+  padding: 24px 24px 11px 24px;
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .repeat-wrapper { gap: 7px 20px; border-radius: 16px; }
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard), body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard) {
+  grid-column: span 6;
+  max-width: max-content;
+  width: fit-content;
+  position: relative;
+  padding-bottom: 10px;
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsp { margin-top: 40px; }
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper { 
+  gap: 7px 24px; 
+  margin: 0;
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard) { max-width: fit-content; grid-auto-rows: max-content; }
+body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .field-enabledsectionview {
+  position: absolute;
+  margin: 0;
+  right: 16px;
+  top: 16px;
+}
+.siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders { 
+  display: grid;
+  margin-top: 54px;
+  position: relative;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders {
+  position: relative; 
+  margin-top: 40px;  
+}
+body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforsplabel,
+body main .siccdc .form .field-setupsmartpaysection .field-setupspheaders .field-setupspheading, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledheading {
+  width: max-content;
+  position: absolute;
+  bottom: 0;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforsplabel p,
+body main .siccdc .form .field-setupsmartpaysection .field-setupspheaders .field-setupspheading p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledheading p { 
+  margin: 0; 
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-lg-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforspcount, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledcount {
+  position: absolute;
+  bottom: 0;
+  left: 181px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledcount { left: 160px; }
+body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforspcount input, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledcount input {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  background-color: var(--color-action-background-primary-default);
+  color: var(--color-interface-text-tertiary);
+  letter-spacing: 0;
+  border-radius: 47%;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforspviewall, body main .siccdc .form .field-setupsmartpaysection .field-setupspheaders .field-setupspviewallbtn.button-wrapper.field-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledviewallbtn {
+  max-width: 100%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 4px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforspviewall button, body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforspviewall button:hover, body main .siccdc .form .field-setupsmartpaysection .field-setupspheaders .field-setupspviewallbtn button, body main .siccdc .form .field-setupsmartpaysection .field-setupspheaders .field-setupspviewallbtn button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledviewallbtn button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledviewallbtn button:hover {
+  border-radius: 0;
+  max-width: fit-content; 
+  height: fit-content;
+  color: var(--color-action-text-secondary-default);
+  background-color: var(--color-interface-background-primary);
+  font-weight: var(--font-weight-bold);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledviewallbtn { padding-right: 9px; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection {
+  padding: 0 40px 30px 15px;
+  margin: 0 0 7px;
+  display: block;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsp, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-smartpayenabledsection { margin-top: 20px; }
+.siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection {
+  background-color: var(--color-interface-background-quinary);
+  padding: 16px;
+  border-radius: 20px;
+  margin-top: 14px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .panel-wrapper { 
+  margin: 0; 
+  position: relative;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .field-setupspheaders { margin: 32px 0 -4px; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .field-setupspviewallbtn {
+  max-width: 100%;
+  grid-column: span 9;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .field-setupspviewallbtn button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .field-setupspviewallbtn button:hover { background-color: var(--color-interface-background-quinary); }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .field-setupspviewallbtn button::after { content: ""; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable { overflow: hidden; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper { 
+  display: flex;
+  overflow: auto;
+  gap: 24px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-wrapper, .siccdc .field-billerregistrationsection .panel-wrapper { margin: 0; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard),
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard) {
+  position: relative;
+  width: 270px;
+  max-width: 270px;
+  border: solid 1px #D0DDFC;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-auto-rows: max-content;
+  background-color: var(--color-interface-background-primary);
+  max-height: 180px;
+  gap: 0 16px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-wrapper:not(.field-spenablebillercard) .field-eligiblesmartpaycategorywrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard) .field-enabledsmartpaycategorywrapper {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  height: 26px;
+  margin: 10px 0 10px 15px;
+  padding-right: 11px;
+  background-color: var(--color-interface-error-cta-background);
+  border: none;
+  grid-column: span 12;
+}
+body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard) .field-eligiblesmartpaycategorywrapper, body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard) .field-enabledsmartpaycategorywrapper { grid-column: span 12; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-eligiblesmartpaycategory, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-enabledsmartpaycategory {
+  padding: 2px 0 0 11px;
+  width: 25px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-billlercategorytitle, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-billlercategorytitle {
+  width: fit-content;
+  margin: -3px 0 0 -9px;
+  color: var(--color-interface-promotion-text-primary);
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-eligiblebilllogo, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-enabledbilllogo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  grid-column: span 1;
+  margin: 0 0 0 16px;
+  border: 2px solid #e0e0e0;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-spenablebillercard, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard {
+  grid-column: span 9;
+  margin-left: 37px;
+  display: block;
+  margin-bottom: 59px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-spenablebillercard .field-eligiblebillername, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-spenablebillercard .field-eligiblebillername p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard .field-enabledbillername, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard .field-enabledbillername p {
+  margin: 0;
+  color: #333333;
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard .field-enabledbillername p { margin: 19px 0 -23px; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-spenablebillercard .field-eligibleconsumerid, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-spenablebillercard .field-eligibleconsumerid p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard .field-enabledconsumerid, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard .field-enabledconsumerid p {
+  color: #666666;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-sm-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper .field-enablespbtn { 
+  padding-bottom: 0; 
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper .field-enablespbtn button {
+  border-radius: 0 0 12px 12px;
+  height: 48px;
+  max-width: 100%;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper .field-enablespbtn button::before {
+  content: url(../icons/biller_icons/eye-icon.png);
+  position: absolute;
+  margin: 1px 0 0 -24px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper .field-enablespbtn button::after { display: none; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  height: fit-content;
+}
+body main .siccdc .form .field-setupspicons [class*="field-setupspiconwrapper"] {
+  grid-column: span 2;
+  align-items: center;
+  display: block;
+  justify-items: center;
+  height: fit-content;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons [class*="field-setupspicontxt"] p {
+  color: var(--color-interface-text-primary); 
+  text-align: center;
+  margin: 0;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .button-wrapper { 
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0;
+  margin-top: 5px;
+}  
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons  button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons button:hover, body main .siccdc .form .field-setupsmartpaysection .field-setupspfirsttime button, body main .siccdc .form .field-setupsmartpaysection .field-setupspfirsttime button:hover {
+  width: 48px;
+  height: 48px;
+  color: transparent;
+  &::after { display: none; }
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon1 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon1 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-setupspfirsttime .field-mostpopularsection1 .field-mostpopularimage1 button, body main .siccdc .form .field-setupsmartpaysection .field-setupspfirsttime .field-mostpopularsection1 .field-mostpopularimage1 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-setupspfirsttime .field-utilitysection1 .field-utilityimage1 button, body main .siccdc .form .field-setupsmartpaysection .field-setupspfirsttime .field-utilitysection1 .field-utilityimage1 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/electricity.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon2 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection2 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection2 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/mobile_recharge.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon3 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon3 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection3 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection3 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection1 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection1 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/insurance.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon4 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon4 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection6 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection6 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection1 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection1 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/dth_cable.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon11 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon11 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection11 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection11 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-utilitysection3 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-utilitysection3 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/water.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon6 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon6 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection4 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection4 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection3 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection3 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/broadband.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon9 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon9 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection4 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection4 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection9 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection9 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/landline_postpaid.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon10 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon10 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection10 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection10 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection5 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rechargessection5 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/cable.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon8 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon8 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection8 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection8 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-utilitysection2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-utilitysection2 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/gas.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-utilitysection4 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-utilitysection4 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/lpg_cylinder.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rentsection1 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rentsection1 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/society.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon5 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon5 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection5 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection5 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rentsection2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-rentsection2 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/rent.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection2 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/loan.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon7 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons .field-setupspicon7 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection7 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-mostpopularsection7 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection3 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection3 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/credit_card.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection4 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-financesection4 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/tax.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection1 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection1 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/clubs.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection2 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection2 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/donation.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection3 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection3 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/education.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection4 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection4 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection5 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection5 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/hospital.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection6 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection6 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/loan.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection7 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection7 button:hover, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection8 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection8 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/municipal.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection9 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection9 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/pension.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection10 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection10 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/ncmc_recharge.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection11 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection11 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/recurring_deposit.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection12 button, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othersection12 button:hover { background: var(--color-interface-fd-background-secondary) url('../icons/biller_icons/subscription.png') no-repeat center center / 100% 100%; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-spenabledbillercard { margin-bottom: 0; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-enabledsectionview { 
+  margin: 8px 0 0px 16px;
+  padding-bottom: 7px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection { padding-bottom: 3px; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .field-enabledsectionview > p { display: flex; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .field-enabledsectionview > p::before { 
+  content: url('../icons/tick-circle.png'); 
+  margin-right: 5px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .field-enabledsectionview p { 
+  margin: 0; 
+  color: var(--color-interface-toaster-text-primary);
+  font-size: var(--body-x-sm-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-mostpopulariconslabel, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-rechargesiconslabel, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-utilityiconslabel, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-financeiconslabel, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-renticonslabel, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-othericonslabel { width: 100%; text-align: left; }
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-mostpopulariconslabel p {
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-x-lg-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-mostpopulariconslabel p p { 
+  padding-top: 0; 
+  color: #333333;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-lg-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection:has(.field-setupspheadingmidsection[data-visible='false']) .field-mostpopulariconslabel p p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-rechargesiconslabel p p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-utilityiconslabel p p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-financeiconslabel p p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-renticonslabel p p, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-othericonslabel p p {
+  color: #333333;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-lg-font-size);
+  padding-top: 32px;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-setupspheadingmidsection.plain-text-wrapper.field-wrapper p {
+  padding-top: 20px;
+  color: #333333;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-xx-lg-font-size);
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .plain-text-wrapper p { 
+  margin: 0; 
+  font-size: var(--body-x-sm-font-size);
+  margin-top: -7px;
+  color: #333333;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime { 
+  display: flex;
+  margin-bottom: 55px;
+  flex-flow: row wrap;
+}
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .panel-wrapper.field-wrapper {
+  max-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding-top: 7px;
+}
+/* body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-otherssectionwraper.panel-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othericonswrapper.panel-wrapper.field-wrapper { max-width: 100%; flex-direction: row; grid-column: span 12;} */
+body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .button-wrapper { max-width: fit-content; }
+.siccdc .field-smartpayvariationssection .field-enableddotrepeatable, .siccdc .field-smartpayvariationssection .field-eligibledotrepeatable { display: none; }
+/* End of SmartPay - Biller Home Page */
+/* Biller Registration Page */
+.siccdc .field-billerregistrationsection.panel-wrapper, .siccdc .field-billerregistrationsection .panel-wrapper, .siccdc .field-billerregistrationsection .field-wrapper, .siccdc .field-billerregistrationsection .repeat-wrapper, .siccdc .field-billerregistrationsection .plain-text-wrapper p, .siccdc .field-billerregistrationsection .field-description p, body main .siccdc .form .field-billerregistrationsection input[type="text"], body main .siccdc .form .field-billerregistrationsection .drop-down-wrapper select, body main .siccdc .form .field-billerregistrationsection input[type="number"], .siccdc .field-newbillerfragment.panel-wrapper, .siccdc .field-newbillerfragment .field-addnewbillermainsection.panel-wrapper, .siccdc .field-newbillerfragment .field-wrapper { 
+  margin: 0; 
+  letter-spacing: 0;
+  font-size: var(--body-lg-font-size);
+}
+.siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper .panel-wrapper {margin-top: 1px;}
+.siccdc .field-billerregistrationsection { padding: 30px 60px 60px; overflow-x: hidden; }
+.siccdc .field-newbillerfragment .field-gobackfromnewbiller { padding: 30px 60px 0; }
+.siccdc .field-newbillerfragment .field-newbillercategory, .siccdc .field-newbillerfragment .field-newbillersearch, .siccdc .field-newbillerfragment .field-newbillerrepeatablesection { padding: 0 60px; }
+.siccdc .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper button, .siccdc .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper button:hover, .siccdc .field-billerregistrationsection  .field-gobacktobillerregistration.button-wrapper.field-wrapper button, .siccdc .field-billerregistrationsection  .field-gobacktobillerregistration.button-wrapper.field-wrapper button:hover, .siccdc .field-newbillerfragment  .field-gobackfromnewbiller.button-wrapper.field-wrapper button, .siccdc .field-newbillerfragment  .field-gobackfromnewbiller.button-wrapper.field-wrapper button:hover, .siccdc .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper button, .siccdc .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper button:hover {
+  height: fit-content;
+  width: fit-content;
+  color: var(--color-action-text-secondary-default);
+  background-color: var(--color-interface-background-primary);
+  margin: 8px 0 13px 33px;
+}
+.siccdc .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper button::before, .siccdc .field-billerregistrationsection  .field-gobacktobillerregistration.button-wrapper.field-wrapper button::before, .siccdc .field-billerregistrationsection  .field-gobackfromnewbiller.button-wrapper.field-wrapper button::before, .siccdc .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper button::before, .siccdc .field-newbillerfragment .field-gobackfromnewbiller.button-wrapper.field-wrapper button::before {
+  content: '<';
+  position: absolute;
+  margin: -2px 0 0 -25px;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-action-text-secondary-default);
+}
+.siccdc .field-billerregistrationsection .field-billerregistrationlabel.plain-text-wrapper.field-wrapper p {
+  font-size: var(--body-xx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-interface-text-primary);
+  margin-bottom: 5px;
+}
+.siccdc .field-billerregistrationsection .field-reviewdetailslabel.plain-text-wrapper.field-wrapper p {
+  font-size: var(--font-linehight-regular);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-input-text-default);
+  margin: 10px 0 15px;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection {
+  border: solid 1px var(--color-interface-border-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  gap: 16px;
+  position: relative;
+}
+.siccdc .field-billerregistrationsection .field-billerlogoregistration {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  grid-column: span 1;
+}
+
+.siccdc .field-billerregistrationsection .field-registrationbillercategorypanel {
+  width: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px 15px;
+  align-items: center;
+  max-width: fit-content;
+  height: 26px;
+  margin: 0;
+  padding-right: 11px;
+  background-color: var(--color-interface-error-cta-background);
+  border: none;
+  grid-column: span 12;
+  border-radius: 12px;
+  position: relative;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-helpiconauthenticator.button-wrapper.field-wrapper {
+  top: 6px;
+  position: absolute;
+  z-index: 50;
+  left: 308px;
+  width: fit-content;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-helpiconauthenticator.button-wrapper.field-wrapper button {
+  background: url('../icons/i_icon_tooltip.png') no-repeat center center / 24px;
+  color: transparent;
+  width: fit-content;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-helpiconauthenticator.button-wrapper.field-wrapper button::after { display: none; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel { margin: -23px 0 -3px; position: relative; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection:has(.field-authenticatorpanel > legend[data-visible="true"]) .field-authinputrepetablesection .repeat-wrapper { margin-bottom: 3px; gap: 24px; }
+.siccdc .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="false"]) .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-listrepetablesection .field-dropdownauthenticator { margin: 12px 0 8px; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection:has(.field-authenticatorpanel > legend[data-visible="false"]) .field-authinputrepetablesection .repeat-wrapper, .siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper {     gap: 21px; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-smartpaystartdate { position: relative; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-invalid:has(.field-description) .field-description { margin-top: 8px; line-height: normal; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .panel-wrapper, .siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper .panel-wrapper{ 
+  position: relative;
+  grid-column: span 4;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .text-wrapper { 
+  grid-column: span 12; 
+  position: inherit;
+  z-index: 10;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .text-wrapper input { background-color: transparent; }
+.siccdc .field-billerregistrationsection .field-listrepetablesection > 
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .panel-wrapper .text-wrapper { grid-column: span 12; }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection:disabled .repeat-wrapper input { 
+  border-color: var(--color-interface-background-primary);
+  background-color: var(--color-interface-background-primary);
+  padding: 0;
+  color: var(--color-interface-text-primary);
+  pointer-events: none;
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .panel-wrapper:has(.text-wrapper[data-active="true"], [data-empty="false"]) .field-parameter-name {
+  left: 15px;
+  background-color: var(--color-interface-background-primary);
+  padding: 0 5px;
+  position: absolute;
+  top: -10px;
+  z-index: 100;
+  font-size: var(--body-sm-font-size);
+}
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-wrapper.col-4 label { font-size: var(--body-sm-font-size); }
+.siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection:not(:disabled) .repeat-wrapper .panel-wrapper:not(:has(.text-wrapper[data-active="true"], [data-empty="false"])) .field-parameter-name {
+  left: 15px;
+  background-color: var(--color-interface-background-primary);
+  padding: 0 5px;
+  position: absolute;
+  top: 15px;
+  z-index: 10;
+}
+.siccdc .field-billerregistrationsection:not(:has(.field-reviewdetailslabel[data-visible="true"])) .field-authenticatorpanel .field-authinputrepetablesection:disabled .repeat-wrapper .panel-wrapper:has(.text-wrapper[data-active="true"], [data-empty="false"]) .field-parameter-name { left: -3px; }
+
+.siccdc .field-billerregistrationsection .field-registeredbillerlogowrapper {
+  grid-column: span 11;
+  display: block;
+  margin: -2px 0 0 -34px;
+}
+
+.siccdc .field-billerregistrationsection .field-registeredbillercategory {
+  width: 13px;
+  height: 16px;
+  margin: -11px -11px 0 13px;
+}
+.siccdc .field-billerregistrationsection .field-regsiteredbillercategoryname {
+  color: var(--color-action-text-secondary-default);
+  font-size: var(--body-x-sm-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 1px 0 0;
+  text-transform: uppercase;
+}
+.siccdc .field-billerregistrationsection .field-registrationbillername {
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-interface-text-primary);
+}
+.siccdc .field-billerregistrationsection .plain-text-wrapper p {
+  color: var(--color-action-text-secondary-default);
+  font-size: var(--body-x-sm-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: -1px 0 0;
+}
+.siccdc .field-billerregistrationsection .field-description p {
+  font-size: var(--body-md-font-size);
+  color: var(--color-interface-text-secondary);
+  margin-top: 3px;
+}
+.siccdc .field-billerregistrationsection .field-frequency label, .siccdc .field-billerregistrationsection .field-listrepetablesection .field-dropdownauthenticator label { color: var(--label-color); }
+.siccdc .field-billerregistrationsection .field-billamounthelptext, .siccdc .field-billerregistrationsection .field-billamounthelptext p {
+  background-color: var(--color-interface-background-primary);
+  padding: 13px 15px 12px 50px;
+  border-radius: 12px;
+  margin-top: 12px;
+  position: relative;
+  color: var(--color-interfave-errorpopup-text-primary);  
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+}
+/* .siccdc .field-billerregistrationsection .field-billamounthelptext p {} */
+.siccdc .field-billerregistrationsection .field-billamounthelptext > p { display: flex; padding: 0; margin: 0; }
+.siccdc .field-billerregistrationsection .field-billamounthelptext p p {
+  color: var(--color-interfave-errorpopup-text-primary);  
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  width: max-content;
+  margin: -1px 0 0 9px;
+}
+.siccdc .field-billerregistrationsection .field-billamounthelptext::before { 
+  content: url(../icons/i_icon_gray.svg);
+  position: absolute;
+  top: 15px;
+  left: 18px;
+}
+.siccdc .field-billerregistrationsection .field-splimitsection legend {
+  margin: 0;
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-medium);
+  color: #333;
+  width: max-content;
+}
+.siccdc .field-billerregistrationsection .field-splimitsectionlabel { margin: 0 0 10px; }
+.siccdc .field-billerregistrationsection .field-splimitsectionlabel p, .siccdc .field-billerregistrationsection .field-splimitsectionlabel {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  color: #444;
+}
+.siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper, .siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper {
+  border: solid 1px var(--color-interface-border-secondary);
+  padding: 16px;
+  border-radius: 12px;
+  width: 32.5%;
+  margin-left: 0;
+  margin-bottom: 12px;
+}
+.siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper:has(input[type='radio']:checked), .siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper:has(input[type='radio']:checked) {
+  background-color: var(--color-interface-background-quinary);
+  border: solid 1px var(--color-action-border-primary-default);
+}
+.siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper:has(input[type='radio']:checked) label, .siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper:has(input[type='radio']:checked) label {
+  font-weight: var(--font-weight-bold);
+  color: #333;
+  line-height: 25px;
+}
+.siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper { 
+  padding: 10px; 
+  height: fit-content;
+  align-items: flex-start;
+}
+.siccdc .field-billerregistrationsection .field-billerrelationshippanel {
+  border: solid 1px var(--color-interface-border-secondary);
+  padding: 26px 24px;
+  border-radius: 16px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--form-columns), minmax(0, 1fr));
+  gap: var(--form-field-vert-gap) var(--form-field-horz-gap);
+}
+.siccdc .field-billerregistrationsection .field-promocode.col-6 { 
+  grid-column: span 4;
+  margin: 11px 0;
+}
+main .siccdc .form .field-billerregistrationsection .field-bankusetoggle { display: block; }
+main .siccdc .form .field-billerregistrationsection .field-bankusetoggle label {
+  font-size: var(--body-md-font-size);
+  flex-basis: 100%;
+  height: 31px;
+  display: inline-table;
+  width: 55%;
+  margin: 9px 0 -29px;
+  width: fit-content;
+  padding-right: 62px;
+  padding-top: 5px;
+}
+main .siccdc .form .field-billerregistrationsection .field-bankusewrapper { margin: 0 0 10px; }
+.siccdc .field-billerregistrationsection .field-bankusetoggle label::before { top: 0; }
+.siccdc .field-billerregistrationsection .field-bankusetoggle label::after { top: 4px; }
+.siccdc .field-billerregistrationsection .field-promocode.col-6 .field-description p { margin: 12px 0; }
+.siccdc .field-billerregistrationsection .field-bankuseaction .field-channel label { color: var(--label-color); }
+body main .siccdc .field-billerregistrationsection .field-tandcpanel {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  position: relative;
+}
+body main .siccdc .field-billerregistrationsection .field-tandcpanel input[type="checkbox"] { margin-top: 3px; }
+body main .siccdc .field-billerregistrationsection .field-tncreviewdetails label {
+  max-width: fit-content;
+  display: contents;
+}
+body main .siccdc .field-billerregistrationsection .field-tncreviewdetails label p { margin-top: 8px; width: max-content; font-size: 14px; }
+body main .section.siccdc.form-container .field-billerregistrationsection .field-termsandconditionlink.button-wrapper.field-wrapper {
+  position: absolute;
+  left: 116px;
+  top: 0;
+}
+body main .siccdc .field-billerregistrationsection .field-termsandconditionlink.button-wrapper.field-wrapper button {
+  height: fit-content;
+  width: fit-content;
+  margin-left: 6px;
+  background-color: var(--color-interface-text-tertiary);
+  color: var(--color-action-text-secondary-default);
+  font-size: var(--body-sm-font-size);
+  line-height: 16px;
+  font-weight: var(--font-weight-medium);
+  border-radius: 0;
+}
+.siccdc .field-billerregistrationsection .field-tncreviewdetails label::after { display: none; }
+.siccdc .field-billerregistrationsection .checkbox-wrapper.field-invalid input[type="checkbox"] { border-color: red; }
+.siccdc .field-billerregistrationsection .checkbox-wrapper.field-invalid .field-description { width: 100%; }
+.siccdc .field-billerregistrationsection .field-billerrelationshippanel .field-customerbillownershiplabel p {
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-input-text-default);
+}
+.siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper:nth-of-type(2):has(input[type='radio']:checked) { height: 119px; }
+.siccdc .field-billerregistrationsection .field-billerrelationship {
+  position: absolute;
+  left: 36.2%;
+  top: 124px;
+  width: 28.3%;
+}
+.siccdc .field-billerregistrationsection .field-billerrelationship.drop-down-wrapper select { height: 52px; }
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection { 
+  background-color: var(--color-action-scroll-background-primary); 
+  position: relative;
+}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .repeat-wrapper { margin: -40px 0 0 20px; }
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .repeat-wrapper .panel-wrapper{ grid-column: span 4; display: block; }
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .field-reviewfieldlabel { font-size: var(--body-sm-font-size);}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .field-reviewfieldvalue { color: var(--color-interface-text-primary); font-weight: 500; word-break: break-all; }
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-billerdetailspanel, .siccdc .field-billerregistrationsection .field-billerdetailspanel { 
+  background-color: var(--color-interface-background-primary);
+  padding: 17px;
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  border-top: solid 1px var(--color-interface-border-secondary);
+  transform: translateY(-35px);
+  margin-left: -24px;
+  width: calc(100% + 48px);
+}
+.siccdc .field-billerregistrationsection .field-billerdetailspanel { 
+  display: grid; 
+  background-color: #F9FAFF;
+  transform: translateY(-25px);
+}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-helpiconauthenticator { display: none; }
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection input, .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection select, .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-authinputrepetablesection:disabled .repeat-wrapper input, .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-authinputrepetablesection:disabled .repeat-wrapper .panel-wrapper .field-parameter-name {
+  background-color: var(--color-action-scroll-background-primary);
+  border-color: var(--color-action-scroll-background-primary);
+  pointer-events: none;
+}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection input, .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection select::-ms-expand {
+  display: none;
+}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection label {
+  transform: translateY(-28px);
+  color: var(--color-interface-text-secondary);
+  z-index: 100;
+  max-width: fit-content;
+  background-color: var(--color-action-scroll-background-primary);
+  pointer-events: none;
+}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .repeat-wrapper .panel-wrapper:has(.text-wrapper[data-active="true"], [data-empty="false"]) .field-parameter-name { background-color: var(--color-action-scroll-background-primary); }
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .repeat-wrapper .panel-wrapper input { padding-left: 18px; }
+/* .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-authinputrepetablesection:disabled .repeat-wrapper .panel-wrapper .field-parameter-name { left: 20px; } */
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;  
+}
+.siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .date-wrapper input { background: none; }
+/* End of Biller Registration Page */
+/* Add/Modify Biller */
+.siccdc .field-newbillerfragment .field-gobackmobaddnewbiller, .siccdc .field-billerregistrationsection .field-gobackmobtextsetupsp { display: none; } 
+.siccdc .field-newbillerfragment .field-newbillercategory {
+  font-size: var(--body-xx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+  color: var(--color-interface-text-primary);
+}
+.siccdc .field-newbillerfragment .field-newbillersearch input[type="text"] {
+  background: url(../icons/search.svg) 5% no-repeat;
+  padding-left: 53px;
+  max-width: 354px;
+  letter-spacing: 0;
+  z-index: 1;
+}
+.siccdc .field-newbillerfragment .field-newbillerrepeatablesection { 
+  margin: 15px 0 15px; 
+  padding-right: 0;
+}
+.siccdc .field-newbillerfragment .field-newbillername {
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-x-sm-font-size);
+}
+.siccdc .field-newbillerfragment .field-newbillername::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 24px;
+  right: 0;
+  top: 9px;
+  height: 0.5px;
+  background-color: #E5E7EB;
+}
+.siccdc .field-newbillerfragment .field-parentsearchpanel .field-newbillerrepeatablesection .repeat-wrapper { display: block; }
+.siccdc .field-newbillerfragment .panel-wrapper:has(.field-newbillerlogo):not(.field-parentsearchpanel), .siccdc .field-billerregistrationsection { position: relative; margin-bottom: 20px; }
+.siccdc .field-newbillerfragment .field-newbillerlogo { 
+  grid-column: span 1; 
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  grid-column: span 1;
+  border: 2px solid #e0e0e0;
+}
+body main .section.siccdc.form-container .field-newbillerfragment .field-newbillerstatebutton.button-wrapper.field-wrapper {
+  position: absolute;
+  top: -8px;
+  max-width: 147%;
+  text-align: left;
+}
+.siccdc .field-newbillerfragment .field-newbillerstatebutton.button-wrapper.field-wrapper button, .siccdc .field-newbillerfragment .field-newbillerstatebutton.button-wrapper.field-wrapper button:hover {
+  background-color: transparent;
+  color: var(--color-interface-text-primary);
+  text-align: left;
+  padding-left: 60px;
+  white-space: normal;
+  word-break: break-word;
+  max-width: fit-content;
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.siccdc .field-billerregistrationsection .field-billdesklogoregistrationscreen {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 36px;
+  width: 100%;
+  z-index: 99999;
+  background-color: #F9FAFF;
+  padding: 20px 0;
+  margin: 0;
+}
+.siccdc .field-billerregistrationsection .field-continuetoreviewscreen, .siccdc .field-billerregistrationsection .field-continuetoidcom { padding: 6px 0 73px; }
+.siccdc .field-newbillerfragment .field-parentsearchpanel .field-rightalphabetsearch {
+  top: 22px;
+  right: 0;
+  display: block;
+  margin-top: -50px;
+  padding: 60px 26px 0 10px;
+  grid-column: none;
+  height: 81vh;
+  position: sticky;
+  width: fit-content;
+  background-color: var(--color-interface-background-primary);
+}
+.siccdc .field-newbillerfragment .field-parentsearchpanel .field-rightalphabetsearch .radio-wrapper { justify-self: end; }
+.siccdc .field-newbillerfragment .field-parentsearchpanel .field-rightalphabetsearch .radio-wrapper input, .siccdc .field-newbillerfragment .field-parentsearchpanel .field-rightalphabetsearch .radio-wrapper input:checked { display: none; }
+.siccdc .field-newbillerfragment .field-parentsearchpanel .field-rightalphabetsearch .radio-wrapper label { 
+  font-size: var(--body-x-xs-font-size); 
+  cursor: pointer;
+  color: var(--color-interface-border-secondary);
+  line-height: 20px;
+}
+.siccdc .field-newbillerfragment .field-parentsearchpanel .field-rightalphabetsearch .radio-wrapper:has(input:checked) label {
+  color: #1D86FF;
+  font-weight: var(--font-weight-bold);
+}
+/* End of add/modify biller
+/* Thank you screen */
+.siccdc .field-thankyousection.field-wrapper, .siccdc .field-thankyousection .field-wrapper, .siccdc .field-thankyousection .plain-text-wrapper p { margin: 0; }
+.siccdc .field-thankyousection .field-thankyousuccesssection { 
+  padding: 0 84px; 
+  margin-top: -45px;
+}
+.siccdc .field-thankyousection { padding: 0 0 60px; }
+.siccdc .field-thankyousection .field-successlabeltextwrapper {
+  background-color: #08173A;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.siccdc .field-thankyousection .field-successlabeltextwrapper .field-successtext1 p, .siccdc .field-thankyousection .field-successlabeltextwrapper .field-successtext2 p {
+  font-size: 30px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-interface-background-primary);
+  line-height: 30px;
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails { 
+  border: solid 1px #ECEDF3; 
+  border-radius: 12px;
+  padding: 30px 0 6px;
+  background-color: var(--color-interface-background-primary);
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper:not(.field-referencenumbertq) {position: relative;display: block;}
+.siccdc .field-thankyousection .field-referencenumbertq {
+  border-bottom: solid 1px #D9D9D9;
+  margin: 0 16px 24px;
+  padding-bottom: 24px;
+}
+.siccdc .field-thankyousection .field-referencenumbertq::before { content: url('../icons/ovd_ref_no.png'); }
+.siccdc .field-thankyousection .field-referencenumbertq label { margin-top: 26px; }
+.siccdc .field-thankyousection .field-referencenumbertq input {
+  position: absolute;
+  margin-top: 4px;
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper input {
+  background: none;
+  border-color: var(--color-interface-background-primary);
+  pointer-events: none;
+  letter-spacing: 0;
+  width: auto;
+  font-weight: 600;
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper label {
+  transform: translateY(-28px);
+  color: #6B7280;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: none;
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billerlabeltq p, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamelabeltq p {
+  color: #6B7280;
+  font-size: 14px;
+  margin-top: -7px;
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel { margin-left: 19px; }
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billerlabeltq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billervaluetq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamelabeltq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamevaluetq { height: fit-content; grid-column: span 12; }
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billervaluetq p, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamevaluetq p {
+  color: var(--color-interface-text-primary);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.siccdc .field-thankyousection .field-tqsuccessdetails .field-referencenumbertq label { margin: -17px 0 0 56px; }
+.siccdc .field-thankyousection .field-tqhelplabel {
+  margin: 11px 0;
+  border-radius: 12px;
+  background-color: #EBF9EF;
+  width: fit-content;
+  padding: 0 13px;
+}
+.siccdc .field-thankyousection .field-tqhelplabel p {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-medium);
+  color: #555555;
+  padding: 2px 0;
+}
+.siccdc .field-thankyousection .field-loginbacktqscreen.button-wrapper.field-wrapper button, .siccdc .field-thankyousection .field-loginbacktqscreen.button-wrapper.field-wrapper button:hover {
+  background-color: var(--color-interface-text-tertiary);
+  color: var(--color-action-background-primary-default);
+  border: solid 1px var(--color-action-background-primary-default);
+}
+.siccdc .field-thankyousection .field-loginbacktqscreen.button-wrapper.field-wrapper button::after {
+  content: ">";
+  margin: -1px 0 0 12px;
+}
+/* End of thank you screen */ 
+/* Error Panels and popups */
+/* 1) Incorrect Details -- login panel */
+.siccdc .field-returnjourneymodal .field-returnjourneytext { margin: 0; }
+.siccdc .field-returnjourneymodal .field-rjcurrentdatetime { margin-top: 0; font-size: medium; text-align: center;}
+.siccdc .field-returnjourneymodal .modal-content .plain-text-wrapper p {
+  font-size: var(--form-paragraph-font-size);
+  font-weight: 500;
+  color: var(--form-paragraph-color);
+  margin: 0;
+  text-align: center;
+}
+.siccdc .field-returnjourneymodal .field-rjoptions {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.siccdc .field-returnjourneymodal .field-rjoptions label {
+  padding: 0;
+  text-align: start;
+}
+.siccdc .field-returnjourneymodal .field-rjproceedclick {
+  max-width: 100%;
+  text-align: end;
+}
+.siccdc .field-returnjourneymodal .field-rjproceedclick button { max-width: 282px; }
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-returnjourneywrapper {
+  border: none !important;
+  border-radius: 0 !important;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  background-color: var(--color-interface-popup-background);
+  margin: 0;
+}
+body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-returnjourneypopup {
+  border: none !important;
+  background-color: var(--color-interface-background-primary);
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 408px;
+  width: 100%;
+  justify-self: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+}
+body main .section.siccdc.form-container .field-returnjourneymodal .modal-content { 
+  display: grid; 
+  padding: 0;
+  justify-content: space-around;
+}
+body main .section.siccdc.form-container .field-returnjourneymodal dialog {
+  max-width: 503px;
+}
+body main .section.siccdc.form-container .field-returnjourneymodal .field-returnjourneyyes, body main .section.siccdc.form-container .field-returnjourneymodal .field-returnjourneyno { grid-column: span 6; }
+body main .section.siccdc.form-container .field-returnjourneymodal .field-rjproceedclick { max-width: 100%; text-align: end; } 
+body main .section.siccdc.form-container .field-returnjourneymodal button { max-width: 245px; max-height: 48px; font-weight: var(--font-weight-bold); }
+body main .section.siccdc.form-container .field-returnjourneymodal .field-resumejourneytext, body main .section.siccdc.form-container .field-returnjourneymodal .field-resumejourneytext p {
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-extra-bold);
+  margin: 0 0 6px;
+}
+body main .section.siccdc.form-container .field-errorpanel {
+  text-align: center;
+  padding: 40px 40px 80px;
+  max-width: 577px;
+  margin: 0 auto;
+}
+.siccdc .field-errorpanel .field-invaliddetailspanel, .siccdc .form .field-ntberrorscreen { display: grid; margin: 0; }
+.siccdc .field-invaliddetailspanel .field-invaliddetailspanellabel, .siccdc .field-invaliddetailspanel .field-invaliddetailspanellabel p, .siccdc .field-ntberrorscreen .field-errortext1 p {
+  margin: 0;
+  font-weight: var(--font-weight-extra-bold);
+  font-size: var(--body-x-lg-font-size);
+  color: #444;
+}
+.siccdc .field-invaliddetailspanel .field-invaliddetailserrortext, .siccdc .field-invaliddetailspanel .field-invaliddetailserrortext p, .siccdc .field-errorpanel .field-errortext2 p {
+  margin: -4px 0 -5px;
+  font-size: var(--body-sm-font-size);
+  color: #444444;
+}
+.siccdc .field-invaliddetailspanel .field-startagainbtn.button-wrapper.field-wrapper {
+  text-align: center;
+  max-width: 100%;
+  margin: 12px 0 0;
+}
+.siccdc .field-ntberrorscreen .field-ccportalbtn.button-wrapper.field-wrapper, .siccdc .field-ntberrorscreen .field-tryothercardbtn.button-wrapper.field-wrapper {
+  grid-column: span 6;
+  width: 251px;
+  margin: 12px 0 0;
+}
+.siccdc .field-ntberrorscreen .field-ccportalbtn.button-wrapper.field-wrapper button {
+  padding: 0 12px 0 0;
+  margin-left: -14px;
+} 
+.siccdc .field-ntberrorscreen .field-tryothercardbtn.button-wrapper.field-wrapper button, .siccdc .field-ntberrorscreen .field-tryothercardbtn.button-wrapper.field-wrapper button:hover, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-returnjourneypopup .field-resumejourneyno button, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-returnjourneypopup .field-resumejourneyno button:hover {
+  padding: 0 12px 0 0;
+  background-color: var(--color-interface-background-primary);
+  color: var(--color-action-border-primary-default);
+  border: solid 1px var(--color-action-border-primary-hover);
+}
+.siccdc .field-invaliddetailspanel .field-startagainbtn button { width: 272px; }
+.siccdc .field-billerregistrationsection .field-idcompopup dialog {
+  max-width: 520px;
+  text-align: center;
+  padding: 32px 32px 0;
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .modal-content { padding: 0; }
+.siccdc .field-billerregistrationsection .field-idcompopup .plain-text-wrapper p, .siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectionbutton.button-wrapper.field-wrapper, .siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectionbutton button {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0;
+  color: #444444;
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-billdesklogoidcom {
+  background-color: #F9FAFF;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-redirectinglabel { margin: 25px 0 15px; }
+.siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext1 p {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext2cc, .siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext2dc { 
+  display: flex;
+  position: relative;
+  margin-top: 18px;
+  padding: 0 3px 0 47px;
+  font-size: 14px;
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext2cc p, .siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext2dc p {
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 20px;
+  text-align: left;
+  color: var(--color-interface-text-primary);
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext2cc::before, .siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext2dc::before {
+  content: url(../icons/features_debitcard_icon.svg);
+  margin-top: 4px;
+  padding-right: 10px;
+  transform: scale(1.4);
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  margin-left: 6px;
+  transform: scale(1.4);
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext3 { 
+  margin: 26px 0 16px; 
+  border-radius: 12px;
+  background-color: #EBF9EF;
+}
+.siccdc .field-billerregistrationsection .field-idcompopup .field-idcomredirectiontext3 p {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  padding: 4px 16px;
+}
+body .siccdc .field-invalidbillerpopup .modal dialog { height: fit-content; max-width: 400px; }
+body .siccdc .field-invalidbillerpopup .modal dialog .modal-content, .siccdc .field-invalidbillerpopup .modal-content p { 
+  padding: 0; 
+  text-align: center;
+}
+.siccdc .field-invalidbillerpopup .modal-content .field-incorrectbillerdetailslabel p {
+  margin: 36px 0 0;
+  font-weight: 700;
+  font-size: 20px;
+  color: #444444;
+}
+.siccdc .field-invalidbillerpopup .field-incorrectbillerdetailstext1.plain-text-wrapper p p { 
+  font-size: var(--body-sm-font-size); 
+  color: var(--color-interface-text-quaternary);
+  font-weight: var(--font-weight-regular);
+  margin: -6px 0;
+}
+.siccdc .field-invalidbillerpopup .field-invalidbillerdetailsbutton.button-wrapper.field-wrapper, .siccdc .field-invalidbillerpopup .field-invalidbillerdetailsbutton.button-wrapper.field-wrapper button { 
+  max-width: 100%; 
+  margin: 16px 0 8px;
+}
+.siccdc .field-invalidbillerpopup .field-billdesklogoinvalidbillerdetails {
+  background-color: #F9FAFF;
+  margin: 0;
+}
+.siccdc .field-errorpanel .field-commonerrorpanel { margin: 0; }
+.siccdc .field-errorpanel .field-retryidcomerrorpanel { margin: 0; }
+.siccdc .field-errorpanel .field-commonerrorpanel .field-commonerrorimage img,
+.siccdc .field-errorpanel .field-retryidcomerrorpanel .field-commonerrorimage img { 
+  height: 190px; 
+  margin-top: -17px;
+}
+.siccdc .field-errorpanel .field-commonerrorpanel .field-commonerrortext1 p ,
+.siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryerrortext2  p
+.siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryerrortext1 p {
+  margin: -37px 0 0;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-xx-lg-font-size);
+  color: #444444;
+  line-height: normal;
+}
+.siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryerrortext1 p {
+  margin: 0;
+}
+.siccdc .field-errorpanel .field-commonerrorpanel .field-commonerrortext2 p {
+  margin: -18px 0 0;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-md-font-size);
+  color: #444444;
+}
+.siccdc .field-errorpanel .field-commonerrorpanel .field-commonerrorcta.button-wrapper.field-wrapper, .siccdc .field-errorpanel .field-commonerrorpanel .field-commonerrorcta.button-wrapper.field-wrapper button { max-width: 100%; }
+.siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryidcomerrorcta.button-wrapper.field-wrapper, .siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryidcomerrorcta.button-wrapper.field-wrapper button { max-width: 100%; }
+.siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryidcomerrordefaultcta.button-wrapper.field-wrapper, .siccdc .field-errorpanel .field-retryidcomerrorpanel .field-retryidcomerrordefaultcta.button-wrapper.field-wrapper button { max-width: 100%; }
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator .modal dialog { 
+  width: fit-content; 
+  padding: 30px 17.67px 14.08px;
+  /* background-color: #1F2937; */
+  /* border-color: transparent; */
+}
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator .modal-content { padding: 0; overflow-y: clip; }
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator dialog::backdrop { pointer-events: all; background-color: transparent; }
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator .field-helpsampleimagelabelwrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator .field-helpsampleimagelabelwrapper .field-helpsampleimagelabel1, .siccdc .field-billerregistrationsection .field-helppopupauthenticator .field-helpsampleimagelabelwrapper .field-helpsampleimagelabel1 p, .siccdc .field-billerregistrationsection .field-helppopupauthenticator .field-helpsampleimagelabelwrapper .field-helpsampleimagelabel2 {
+  margin: 0;
+  width: fit-content;
+  align-content: center;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+  color: var(--color-interface-text-primary);
+}
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator .field-helpsampleimage { margin-top: 5px; }
+.siccdc .field-billerregistrationsection .field-helppopupauthenticator .close-button { top: -6px; right: -7px; }
+.siccdc .field-invalidbillercategorypopup .modal dialog .modal-content { padding: 16px 10px 14px; overflow: hidden; }
+.siccdc .field-invalidbillercategorypopup .modal dialog { width: fit-content; }
+.siccdc .field-invalidbillercategorypopup .modal dialog .field-invalidbillercategorytext, .siccdc .field-invalidbillercategorypopup .modal dialog .field-invalidbillercategorytext p {
+  margin: 16px 0 0;
+  font-size: var(--body-sm-font-size);
+  line-height: 15px;
+}
+.siccdc .field-invalidbillercategorypopup .close-button { right: -10px; top: -4px; }
+/* End of error panels and popups */
+/* ios only styling */
+@supports (-webkit-touch-callout: none) {
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaycccard label { margin-top: 17px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input[type="password"] { font-size: var(--body-xx-lg-font-size); }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel input[type="checkbox"] { margin-right: 7px; }
+}
+/* end of ios only styling */
+/* Banner panel*/
+@media (width >= 1240px) {
+  body main .section.siccdc.form-container .field-bannerinnersection {
+  background: var(--color-interface-fd-background-secondary) url("../icons/biller_icons/header_banner_desktop.png") no-repeat center center / 100% 100%;
+  max-height: 900px;
+  min-height: 900px;
+  margin: 15px 0;
+  }
+  body main .siccdc .field-thankyousection .field-tqevouchersuccesscc {
+    background: url("../icons/biller_icons/cc-thank-you-banner-desktop.png") no-repeat center center / 100% 100%;
+    aspect-ratio: 1112 / 216;
+  }
+  body main .siccdc .field-thankyousection .field-tqevouchersuccessdc {
+    background: url("../icons/biller_icons/dc-thank-you-banner-desktop.png") no-repeat center center / 100% 100%;
+    aspect-ratio: 1112 / 216;
+  }
+}
+@media (767px <= width <= 1239px) {
+  body main .section.siccdc.form-container .field-bannerpanel {
+    background: var(--color-interface-fd-background-secondary) url("../icons/biller_icons/header_banner_tablet.png") no-repeat center center / 100% 100%;
+    min-height: 225px;
+    grid-column: span 12;
+    display: block;
+  }
+  body main .siccdc .field-thankyousection .field-tqevouchersuccesscc {
+    background: url("../icons/biller_icons/cc-thank-you-banner-tablet.png") no-repeat center center / 100% 100%;
+    aspect-ratio: 738 / 272;
+    grid-column: span 12;
+    display: block;
+  }
+  body main .siccdc .field-thankyousection .field-tqevouchersuccessdc {
+    background: url("../icons/biller_icons/dc-thank-you-banner-tablet.png") no-repeat center center / 100% 100%;
+    aspect-ratio: 738 / 272;
+    grid-column: span 12;
+    display: block;
+  }
+}
+@media (350px <=width <= 767px) {
+  body main .section.siccdc.form-container .field-bannerpanel {
+    background: url("../icons/biller_icons/header_banner_mobile.png") no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 480 / 220;
+    display: block;
+    margin: 0 auto;
+  }
+  body main .siccdc .field-thankyousection .field-tqevouchersuccesscc {
+    background: url("../icons/biller_icons/cc-thank-you-banner-mobile.png") no-repeat center center / 100% 100%;
+    aspect-ratio: 432 / 279;
+    grid-column: span 12;
+    display: block;
+  }
+  body main .siccdc .field-thankyousection .field-tqevouchersuccessdc {
+    background: url("../icons/biller_icons/dc-thank-you-banner-mobile.png") no-repeat center center / 100% 100%;
+    aspect-ratio: 432 / 279;
+    grid-column: span 12;
+    display: block;
+  }
+  body main .section.siccdc.form-container:has(.field-otppanel[data-visible="true"]) .field-bannerpanel { display: none; }
+  /* Header */
+  body:has(.siccdc) header nav { margin-left: -29px; }
+  body:has(.siccdc) .default-content-wrapper picture:first-of-type img {
+  width: 92px;
+  height: 24px;
+  }
+  body:has(.siccdc) .default-content-wrapper picture:nth-child(2) img {
+  width: 80px;
+  height: 24px;
+  }
+  body:has(.siccdc) header, body:has(.siccdc) header .nav-wrapper { height: 60px; }
+  body:has(.siccdc) header nav .section.nav-brand .default-content-wrapper { padding: 0; }
+  /* End of header */
+}
+/* Media Query */
+@media (min-width: 250px) and (max-width: 766px) {
+  body main .siccdc .form .radio-group-wrapper .radio-wrapper input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-landingconsent { width: 88%; }
+}
+@media (max-width: 1239px) {
+  body main .section.siccdc.form-container div.form-wrapper {
+  margin: 0;
+  width: 100%;
+  }
+  body main .section.siccdc.form-container div.form-wrapper .field-loginwrapper {
+  padding: 0 24px 36px;
+  grid-column: span 12;
+  margin: 0 auto;
+  max-width: 870px;
+  }
+  body main .section.siccdc.form-container div.form-wrapper .field-bannerinnersection {
+  grid-column: span 12;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-enterotpheading.plain-text-wrapper p {
+  margin-bottom: 0;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .field-description  { margin: 12px 0 -2px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input {
+  margin: 0; 
+  letter-spacing: 20px;
+  }
+  body main .siccdc .form .field-setupsmartpaywrapper .field-setupsmartpay {
+  margin-top: -10px;
+  grid-column: span 12;
+  min-height: 247px;
+  display: grid;
+  order: 1;
+  }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-firsttimeuserlatepayment, .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-getinstantnotificationstextwrapper, .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-zerotransactionfeetaxwraper { width: 100%; border-radius: 8px; display: flex; flex-flow: row;max-width: 32.7%; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymentchargesbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationsbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeesbtn { padding: 0 0 0 15px; margin-right: -7px; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext { padding: 0 10px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsp, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection { margin-top: 0; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext p, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext p, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext p { font-size: 14px; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimespuserfeature { display: flex; flex-direction: row; gap: 10px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-successmessagepanel { order: 2; margin-top: 0; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaytitle {
+  grid-column: span 6;
+  margin-top: 75px;
+  }
+  /* body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime { 
+    display: grid ;
+    grid-template-columns: repeat(10, 2.3rem);
+    gap: 15px;
+  } */
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection .field-setupspheaders { margin: 32px 0 -16px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .panel-wrapper.field-wrapper { grid-column: span 2; gap: 10px 15px; 
+    /* display: grid;  */
+  }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-otherssectionwraper.panel-wrapper { display: grid; grid-template-columns: repeat(15, 2.3rem); }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othericonswrapper.panel-wrapper.field-wrapper .panel-wrapper { display: flex; }
+  /* body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-otherssectionwraper.panel-wrapper { grid-column: span 12; display: grid; margin: 0 auto; width: fit-content; grid-template-columns: inherit; } */
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-disclaimertext2 { margin-top: -18px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-setupsmartpaytitle { margin-top: 0; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard {
+  max-width: 376px;
+  display: flex;
+  position: absolute;
+  right: 22px;
+  }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaytitle p { padding-bottom: 0; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection { grid-column: span 12; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard, .field-eligiblesmartpaycategorywrapper), body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard, .field-enabledsmartpaycategorywrapper) { flex: 0 0 270px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .field-eligiblesmartpaycategory, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .field-enabledsmartpaycategory { margin-top: -6px; }
+  main .siccdc .form form .field-setupsmartpaysection .field-eligibleforsprepeatable .panel-wrapper, main .siccdc .form form .field-setupsmartpaysection .field-spenabledrepeatablesection .panel-wrapper { 
+  gap: 10px 15px; 
+  flex-flow: row wrap;
+  }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable, body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection { max-height: fit-content; }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-ccnumber, .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-dcnumber {
+  position: absolute;
+  width: 35%;
+  right: 32px;
+  }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-firsttimeuserlabelwrapper { 
+  display: block; 
+  width: 60%;
+  }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-mobviewfirsttimeudsericon { display: none; }
+  .siccdc .form .field-setupsmartpaywrapper:has(.field-firsttimeusersection[data-visible="true"]) .field-setupsmartpay { min-height: auto; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-smartpayenabledsection { margin-top: 14px; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeusertext p { font-size: var(--body-md-font-size); }
+  .siccdc .field-billerregistrationsection { padding: 40px; }
+  .siccdc .field-newbillerfragment .field-gobackfromnewbiller { padding: 30px 40px 0; }
+  .siccdc .field-newbillerfragment .field-newbillercategory, .siccdc .field-newbillerfragment .field-newbillersearch { padding: 0 40px; }
+  .siccdc .field-newbillerfragment .field-newbillerrepeatablesection { padding: 0 0 8px 40px; width: 112%; }
+  .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard .field-setupsmaprtpaysectiontxt1 p {
+    font-size: var(--body-x-lg-font-size);
+    margin-bottom: -10px;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard .field-setupsmaprtpaysectiontxt2cc p, .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard .field-setupsmaprtpaysectiontxt2dc p { 
+    font-size: var(--body-sm-font-size);
+    margin-bottom: 5px;
+  }
+  .siccdc .field-billerregistrationsection .field-billerrelationshippanel .field-customerbillownershiplabel p { font-size: var(--body-md-font-size);}
+  .siccdc .field-billerregistrationsection .field-registeredbillerlogowrapper, .siccdc .field-billerregistrationsection .field-registeredbillerlogowrapper .field-registrationbillername {
+  margin: 0 0 6px 6px;
+  width: fit-content;
+  flex: 1;
+  }
+  .siccdc .field-billerregistrationsection .field-billerdetailspanel {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  margin-bottom: -15px;
+  }
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-wrapper.col-4, .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .panel-wrapper, .siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper .panel-wrapper, .siccdc .field-billerregistrationsection .field-promocode.col-4 { grid-column: span 6; display: block; }
+  .siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper, .siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper { width: 47.5%; margin-left: 0; }
+  .siccdc .field-billerregistrationsection .field-billerrelationship {
+    top: 133px;
+    left: 51.4%;
+    width: 40%;
+  }
+  .siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper .panel-wrapper { margin-top: 4px; }
+  .siccdc .field-thankyousection .field-successlabeltextwrapper { padding-left: 24px; padding-right: 24px; }
+  .siccdc .field-thankyousection .field-thankyousuccesssection { padding: 0 24px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-returnjourneypopup { padding: 24px; }
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper:not(.field-referencenumbertq, .field-billernamepnel .plain-text-wrapper, .field-nicknamepnel .plain-text-wrapper) { grid-column: span 6; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection {
+    padding: 27px 35px 30px;
+    margin: 0 0 40px;
+    order: 3; 
+  }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttimesection .field-setupspheadingmidsection.plain-text-wrapper.field-wrapper p { padding-top: 0; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsp { margin: 0; }
+  .siccdc .form .field-setupsmartpaywrapper .field-setupsmartpaysection { gap: 0; }
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-helpiconauthenticator.button-wrapper.field-wrapper { left: 42%; bottom: -79px; }
+  .siccdc .field-billerregistrationsection .field-promocode.col-6, .siccdc .field-billerregistrationsection .field-bankuseaction .field-wrapper.col-4 { grid-column: span 6; }
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billervaluetq p, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamevaluetq p {margin: 0 0 10px;}
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billerlabeltq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billervaluetq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamelabeltq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamevaluetq { padding-right: 35px; }
+  .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .repeat-wrapper .panel-wrapper { grid-column: span 6; }
+}
+@media (max-width: 766px) {
+  .siccdc .field-billerregistrationsection .field-idcompopup dialog { padding: 30px 16px 0; }
+  main .siccdc .form .field-billerregistrationsection .field-bankusewrapper { margin: 0 0 -4px; }
+  *::-webkit-scrollbar { display: none; }
+  body:has(.siccdc) header form { padding-bottom: 10px; }
+  body main .siccdc .form .button-wrapper.field-wrapper { max-width: 100%; }
+  body main .siccdc .form .button-wrapper.field-wrapper button, body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel .field-consentmodal .field-consentbutton1 button { max-width: 100%; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-loginpanel { display: grid; }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-typeofcard legend { font-size: var(--body-lg-font-size); }
+  body main .section.siccdc.form-container .field-loginwrapper .field-loginpanel, body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow { margin: 0; padding: 0 0 8px 5px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow:has(.field-stepstofollow) { margin: 0 0 30px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper {
+  display: grid;
+  margin-bottom: 15px;
+  }
+  .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .repeat-wrapper { margin-top: -20px;}
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-loginpanel .field-mobilenumberwrapper .field-countrycode { grid-column: span 2; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-loginpanel .field-mobilenumberwrapper .field-mobilenumber {
+  grid-column: span 10;
+  width: 71.5%;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-enterotpheading.plain-text-wrapper { margin: 30px 0 -30px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-enterotpheading.plain-text-wrapper p strong { font-size: var(--body-lg-font-size); }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .plain-text-wrapper p { 
+  font-size: var(--body-x-sm-font-size); 
+  margin-top: 4px;
+  }
+  body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-limitexhausttext { font-size: var(--body-x-sm-font-size); margin-top: -8px;}
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .field-description { font-size: var(--body-x-sm-font-size); }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-typeofcard { margin: -12px 0 -6px 5px; }
+  body main .siccdc .form .field-loginwrapper .field-prerequisitepanel > legend { font-size: var(--body-lg-font-size); }
+  body main .siccdc .form .field-loginwrapper .field-prerequisitepanel .plain-text-wrapper { padding: 32px 0 0; }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-typeofcard .radio-wrapper, body main .section.siccdc.form-container .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper { margin: 0 0 0 -2px; }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumber input { width: 140%; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccdigits { margin: 15px 0 -16px; }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-mandatoryconsentpanel { padding-top: 26px; margin-bottom: -11px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-getotp { margin: -10px 0 -25px; }
+  body main .siccdc .form .field-loginwrapper .field-prerequisitepanel .plain-text-wrapper p { font-weight: var(--font-weight-regular); }
+  body main .siccdc .form .field-loginwrapper .field-prerequisitepanel { margin: -6px 0 -2px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow > legend {
+    left: 14px;
+    top: 6%;
+    width: max-content;
+    padding-bottom: 17px;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow fieldset[class*="field-stepstofollowpanel"] {
+      display: grid;
+      gap: 0;
+      margin: -5px;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow fieldset[class*="field-stepstofollowpanel"] .image-wrapper {
+      width: fit-content;
+      grid-column: span 2;
+      justify-self: end;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow fieldset[class*="field-stepstofollowpanel"] .plain-text-wrapper {
+    width: fit-content;
+    grid-column: span 10;
+    margin: 0;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-stepstofollow fieldset[class*="field-stepstofollowpanel"] .plain-text-wrapper p {
+    padding: 1px 0 0 4px;
+    text-align: left;
+  }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-pandobpanel .field-dateofbirth { margin-left: -4px; width: 100.5%; }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-pandobpanel .field-dateofbirth input { width: 100%; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-maxattempts { margin: -9px -20px 0; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-maxattempts input { height: 55px; font-size: var(--body-x-sm-font-size); }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-attemptslefttxt { margin: 9px 0 0 6px; font-size: var(--body-x-sm-font-size); }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-attemptslefttxt p { margin: 0; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-editmobilenumber button, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-editmobilenumber button:hover, body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp button, body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp button:hover, .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons [class*="field-setupspicontxt"] p { font-size: var(--body-sm-font-size); }
+  .siccdc .form .field-smartpayvariationssection .field-eligibleforsp, .siccdc .form .field-smartpayvariationssection .field-smartpayenabledsection { 
+    padding: 0 0 3px 24px; 
+    display: block;
+  }
+  body main .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders .field-eligibleforspviewall, body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders .field-spenabledviewallbtn { padding-right: 20px; }
+  .siccdc .form .field-smartpayvariationssection .field-smartpayenabledsection:has(.field-spenabledviewallbtn[data-visible="false"]) { margin-top: 36px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayenabledheaders { margin: 0; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspicons {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px 0;
+  }
+  body main .siccdc .form .field-setupsmartpaywrapper .field-setupsmartpay { 
+  padding: 19px 24px 0; 
+  display: flex;
+  position: relative;
+  min-height: 50px;
+  }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection {
+  border-radius: 12px;
+  margin: -12px 0 50px;
+  padding: 0;
+  z-index: 99;
+  background: var(--color-interface-background-primary);
+  }
+  .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard .field-setupsmaprtpaysectiontxt2cc p, .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard .field-setupsmaprtpaysectiontxt2dc p { margin: -10px 0 -13px; }
+  .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection { margin: 0 0 62px; }
+  .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection:has(.field-eligibleforsp[data-visible="false"]) .field-setupspsection { margin: 34px 0 40px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmartpaycccard { z-index: 200; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection { z-index: 199; margin-bottom: 20px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-disclaimertext1, body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-disclaimertext2 { display: none; }
+  .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"]) .field-setupsmartpay { min-height: 65px; max-height: 50px; }
+  .siccdc .form .field-setupsmartpaysection:has(.field-gobacksetupsp[data-visible="true"]) .field-setupsmartpay { min-height: 50px; max-height: 50px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-gobackeligibleforsp::before, body main .siccdc .form .field-setupsmartpaysection .field-gobackenabledsp::before, body main .siccdc .form .field-setupsmartpaysection .field-gobacksetupsp::before { top: 6px; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobackmobtext { 
+  display: block; 
+  position: absolute;
+  left: 46px;
+  top: 12px;
+  color: var(--color-interface-text-tertiary);
+  font-size: var(--body-lg-font-size);
+  }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobackeligibleforsp button, body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobacksetupsp button, body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobackenabledsp button, body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobackeligibleforsp button:hover, body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobacksetupsp button:hover, body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-gobackenabledsp button:hover { 
+  width: 100%;
+  background-color: transparent;
+  color: transparent;
+  z-index: 100;
+  position: absolute;
+  top: 7px;
+  left: -18px;
+  }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-setupsmaprtpaysectioncard { display: none; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-gobackeligibleforsp[data-visible="true"], .field-gobacksetupsp[data-visible="true"], .field-gobackenabledsp[data-visible="true"]) .field-smartpayvariationssection { padding-top: 0; margin: 0; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsp { padding: 0; margin: -19px 0 0; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-smartpayenabledsection { padding: 0; margin: 0; background-color: var(--color-interface-background-quinary); }
+  body main .siccdc .form .field-setupsmartpaysection .field-disclaimertextenabledsection { margin: 24px 14px 5px 16px; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .repeat-wrapper { margin: 0 0 30px; padding: 16px 16px 11px 16px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpaytitle { display: none; }
+  body main .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-setupsmaprtpaysectioncard {
+  display: contents;
+  padding: 10px;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimespuserfeature { margin: 28px 0 -12px; }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-firsttimeuserlatepayment, .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-getinstantnotificationstextwrapper, .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-zerotransactionfeetaxwraper { display: block; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext { margin-top: 12px; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymentchargesbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationsbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeesbtn, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext { padding: 0 7px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard, .field-eligiblesmartpaycategorywrapper), body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard, .field-enabledsmartpaycategorywrapper) {
+  flex: 0 0 100%;
+  max-width: 74%;
+  }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-eligibleforsprepeatable .repeat-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-spenabledrepeatablesection .repeat-wrapper { gap: 8px;         margin-right: 0; }
+  .siccdc .field-smartpayvariationssection .field-enableddotrepeatable, .siccdc .field-smartpayvariationssection .field-eligibledotrepeatable { display: block; }
+  .siccdc .field-smartpayvariationssection .field-enableddotrepeatable .repeat-wrapper .repeat-actions, .siccdc .field-smartpayvariationssection .field-eligibledotrepeatable .repeat-actions { display: none; }
+  .siccdc .field-enableddotrepeatable .repeat-wrapper, .siccdc .field-eligibledotrepeatable .repeat-wrapper {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      margin-top: -30px;
+  }
+  .siccdc .field-enableddotrepeatable .repeat-wrapper .panel-wrapper, .siccdc .field-eligibledotrepeatable .repeat-wrapper .panel-wrapper {max-width: 8px;gap: 0;grid-template-rows: min-content;}
+  .siccdc .repeat-wrapper .field-enableddot {
+      height: 12px;
+      width: 8px;
+      margin: 0 4px;
+      background-color: #D9D9D9;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background 0.3s;
+  }
+  .siccdc .repeat-wrapper .field-enableddot legend {
+      margin: 0;
+      height: 8px;
+      color: transparent;
+  }
+  .siccdc .repeat-wrapper .field-enableddot.active {
+    background-color: #444444;
+  }
+  main .siccdc .form .field-billerregistrationsection .field-bankusetoggle { display: flex; margin-bottom: 0; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenablebillercard), body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection .repeat-wrapper .panel-wrapper.field-wrapper:not(.field-spenabledbillercard) { grid-column: span 12; }
+  .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders { margin-top: 70px; }
+  .siccdc .field-ntberrorscreen .field-ccportalbtn.button-wrapper.field-wrapper {
+  grid-column: span 12;
+  margin-left: 15px;
+  width: 100%;
+  } 
+  .siccdc .field-ntberrorscreen .field-tryothercardbtn.button-wrapper.field-wrapper {
+  grid-column: span 12;
+  width: 100%;
+  margin-top: -5px;
+  }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper .field-countrycode input { padding: 0 30px 0 10px; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeuserlatepayment .field-nolatepaymenttext p, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-zerotransactionfeetaxwraper .field-zerotransactionfeetext p, .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-getinstantnotificationstextwrapper .field-getinstantnotificationstext p { font-size: 14px; margin-top: 2px; }
+  body main .section.siccdc.form-container .field-returnjourneymodal .field-returnjourneyyes, body main .section.siccdc.form-container .field-returnjourneymodal .field-returnjourneyno { grid-column: span 12; }
+  body main .section.siccdc.form-container .field-returnjourneymodal .field-returnjourneyno { margin-top: 10px;}
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-ccnumber, .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-dcnumber { 
+  width: 100%; 
+  right: 0;
+  bottom: -28px;
+  z-index: 200;
+  padding: 0 15px;
+  }
+  .siccdc .form .field-setupsmartpaywrapper:has(.field-firsttimeusersection[data-visible="true"]) .field-setupsmartpay {
+  min-height: max-content;
+  padding-bottom: 83px;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection { display: grid; }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-mobviewfirsttimeudsericon {
+      grid-column: span 4;
+      background: url(../icons/smartpay-first-time-icon.png);
+      width: 159px;
+      height: 128px;
+      display: block;
+      position: absolute;
+      right: 13px;
+  }
+  .siccdc .form .field-setupsmartpaysection:has(.field-firsttimeusersection[data-visible="true"]) .field-firsttimeusersection .field-firsttimeuserlabelwrapper {
+  grid-column: span 7;
+  width: 100%;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-setupsmartpay .field-firsttimeuserlabel p { font-size: 22px; }
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimeusertext p { font-size: var(--body-sm-font-size); }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime {
+    display: grid;
+    /* display: flex; */
+    padding: 0 5px 0 17px;
+    gap: 0;
+    margin-top: 10px;
+  }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-gobacksetupsp[data-visible="true"]) .field-setupspfirsttime { padding: 0 4px 0 23px; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-gobacksetupsp[data-visible="false"]) .field-setupspfirsttime { padding-top: 40px;}
+  .siccdc .form .field-setupsmartpaywrapper:has(.field-setupsmartpay )
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-otherssectionwrapper.panel-wrapper, body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .field-othericonswrapper.panel-wrapper {
+    grid-column: span 12;
+    display: grid;
+    gap: 4px;
+    justify-content: stretch;
+    align-items: stretch;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .siccdc .field-billerregistrationsection { padding: 0 0 60px; }
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection, .siccdc .field-billerregistrationsection .field-billerrelationshippanel {
+    padding: 20px 20px 20px 0;
+    margin: -62px 1px 0 0;
+    background-color: var(--color-interface-background-primary);
+    z-index: 100;
+  }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="false"]) .field-setupspprepaidpostpaidsection, .siccdc .field-billerregistrationsection .field-billerrelationshippanel { padding: 24px; }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) { padding: 20px; }
+  .siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper:has(input[type='radio']:checked) label, .siccdc .field-billerregistrationsection .field-billownershipoptions.radio-group-wrapper .radio-wrapper  label { font-size: var(--body-sm-font-size); }
+  .siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper { width: 48%; }
+  .siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper { width: 100%; margin: 0 0 -3px; }
+  .siccdc .field-billerregistrationsection .field-billerrelationship {
+    top: 183px;
+    left: 41px;
+    width: 76%;
+  }
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-wrapper.col-4, .siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper .panel-wrapper, .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection .repeat-wrapper .panel-wrapper, .siccdc .field-billerregistrationsection .field-promocode.col-6, .siccdc .field-billerregistrationsection .field-bankuseaction .field-wrapper.col-4 { grid-column: span 12;  margin: 0; }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-prepaidrechargeamount, .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-smartpaystartdate, .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-frequency { grid-column: span 6; }
+  .siccdc .field-billerregistrationsection .field-listrepetablesection .repeat-wrapper .panel-wrapper {margin: -9px 0 -2px;}
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection:has(.field-authenticatorpanel > legend[data-visible="false"]) .field-authinputrepetablesection .repeat-wrapper { gap: 24px; }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) .field-setupspprepaidpostpaidsection:has(.field-authenticatorpanel > legend[data-visible="false"]) .field-authinputrepetablesection .repeat-wrapper {gap: 9px;margin-top: 15px;}
+  .siccdc .field-billerregistrationsection .field-billerdetailspanel { flex-direction: row-reverse; }
+  .siccdc .field-billerregistrationsection .field-reviewdetailslabel { margin-top: -27px; }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) .field-setupspprepaidpostpaidsection {
+    border-radius: 12px;
+    margin: -25px 2px 70px;
+    gap: 11px;
+  }
+  .siccdc .field-billerregistrationsection .field-billamounthelptext {margin: -4px 0 0 19px;}
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) { padding: 0 24px 60px; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-returnjourneypopup { padding: 20px; }
+  .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-billerdetailspanel { 
+    margin-left: 0;
+    width: calc(100% + 19px);
+    transform: translateY(-32px);
+  }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) .field-gobackmobtextsetupsp { 
+    min-height: 55px; 
+    margin-left: -25px;
+    width: calc(100% + 52px);
+  }
+  .siccdc .field-newbillerfragment .field-newbillercategory {
+      margin: -17px 0 0;
+      font-size: var(--body-lg-font-size);
+      border-radius: 24px 24px 0 0;
+      position: absolute;
+      top: 72px;
+      background-color: var(--color-interface-background-primary);
+      width: 100%;
+      padding: 20px 40px;
+  }
+  .siccdc .field-newbillerfragment .field-gobackmobaddnewbiller, .siccdc .field-billerregistrationsection .field-gobackmobtextsetupsp { 
+      display: block; 
+      background-color: var(--color-interface-fd-background-primary);
+      position: relative;
+      min-height: 75px;
+      margin: 0 0 20px;
+  }
+  .siccdc .field-newbillerfragment .field-gobackmobaddnewbiller p p, .siccdc .field-billerregistrationsection .field-gobackmobtextsetupsp p p { 
+      margin: 0; 
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 46px;
+      color: var(--color-interface-text-tertiary);
+      font-size: var(--body-lg-font-size);
+      font-weight: var(--font-weight-regular);
+  }
+  .siccdc .form .field-newbillerfragment .field-gobackfromnewbiller.button-wrapper.field-wrapper, .siccdc .form .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper,
+  .siccdc .form .field-billerregistrationsection .field-gobacktobillerregistration.button-wrapper.field-wrapper, .siccdc .form .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper {
+      position: absolute;
+      padding-top: 0;
+      top: 0;
+      height: 50px;
+  }
+  .siccdc .form .field-newbillerfragment .field-addnewbillermainsection .field-gobackfromnewbiller button, .siccdc .form .field-newbillerfragment .field-addnewbillermainsection .field-gobackfromnewbiller button:hover, .siccdc .form .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper button, .siccdc .form .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper button:hover, .siccdc .form .field-billerregistrationsection .field-gobacktobillerregistration.button-wrapper.field-wrapper button, .siccdc .form .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper button:hover, .siccdc .form .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper button {
+      width: 100%;
+      background-color: transparent;
+      color: transparent;
+      position: relative;
+      z-index: 100;
+      margin: -10px;
+      text-align: left;
+      height: 55px;
+  }
+  .siccdc .field-newbillerfragment .field-gobackmobaddnewbiller p p::before, .siccdc .field-billerregistrationsection .field-gobackmobtextsetupsp p p::before {
+      content: url(../../../../icons/right-arrow.png);
+      position: absolute;
+      left: -28px;
+      top: 5px;
+      transform: scaleX(-1);
+  }
+  .siccdc .form .field-newbillerfragment .field-addnewbillermainsection .field-gobackfromnewbiller button::after, .siccdc .form .field-billerregistrationsection .field-backtosetupspsection.button-wrapper.field-wrapper button::after, .siccdc .form .field-billerregistrationsection .field-gobacktobillerregistration.button-wrapper.field-wrapper button::after, .siccdc .form .field-billerregistrationsection .field-billerregistrationlabel, .siccdc .form .field-billerregistrationsection .field-backtonewbillercategorysearchlist.button-wrapper.field-wrapper button::after { display: none; }
+  .siccdc .field-billerregistrationsection .field-continuetoidcom { padding: 0 0 73px; }
+  .siccdc .field-billerregistrationsection .field-continuetoreviewscreen { padding: 0 20px 73px; }
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable .repeat-wrapper { margin-bottom: 30px; padding: 16px 16px 11px 16px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-successmessagepanel {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-successmessagepanel .field-mobnumsuccessmessagetext {
+    width: fit-content;
+    justify-self: center;
+    border-radius: 8px;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-successmessagepanel .field-mobnumsuccessmessagetext p { padding: 3px 4px 3px 2px; font-size: var(--body-md-font-size); }
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorfragment {position: relative;margin-top: 5px;}
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-helpiconauthenticator.button-wrapper.field-wrapper {
+    right: 7px;
+    left: auto;
+    top: 6px;
+    height: fit-content;
+  }
+  .siccdc .field-thankyousection .field-tqhelplabel { margin: 0; }
+  .siccdc .field-newbillerfragment .field-newbillerstatebutton.button-wrapper.field-wrapper button, .siccdc .field-newbillerfragment .field-newbillerstatebutton.button-wrapper.field-wrapper button:hover { font-size: var(--body-sm-font-size); }
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billerlabeltq, .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billervaluetq { padding-right: 19px; }
+  .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .repeat-wrapper .panel-wrapper:not(:last-child) { grid-column: span 6; }
+  .siccdc .form .field-billerregistrationsection:has(.field-setupspprepaidpostpaidsection > legend[data-visible="true"]) .field-setupspprepaidpostpaidsection .field-reviewpanelcontainer .repeat-wrapper .panel-wrapper:last-child { grid-column: span 12; }
+}
+@media (max-width: 640px) {
+  body main .section.siccdc.form-container .button-wrapper.field-wrapper {
+  position: static;
+  width: 100%;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-loginpanel .field-mobilenumberwrapper .field-countrycode { grid-column: span 3; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-loginpanel .field-mobilenumberwrapper .field-mobilenumber { grid-column: span 9; }
+  .siccdc .form .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput, .siccdc .form .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel { grid-column: span 12; margin-top: 0; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .field-resendotp, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .field-attemptsleftpanel, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-resendotp, body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel {
+    grid-column: span 6;
+    margin: -18px 0;
+  }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput .field-resendotp .field-maxattempts input {
+    font-size: var(--body-lg-font-size);
+    margin-top: 4px;
+  }
+  .siccdc .form .field-setupsmartpaysection .field-eligibleforspheaders { margin-top: 30px; }
+  .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspsection { margin: 0; }
+  body main .section.siccdc.form-container .field-billerregistrationsection .field-termsandconditionlink.button-wrapper.field-wrapper { left: 107px; }
+  .siccdc .field-billerregistrationsection .field-setupspprepaidpostpaidsection .field-authenticatorpanel .field-authinputrepetablesection:not(:disabled) .repeat-wrapper .panel-wrapper:not(:has(.text-wrapper[data-active="true"], [data-empty="false"])) .field-parameter-name { font-size: 15px; top: 20px; }
+  body main .siccdc .field-billerregistrationsection .field-termsandconditionlink.button-wrapper.field-wrapper button { margin-left: 15px; }
+}
+@media (min-width: 767px) {
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-loginpanel .field-mobilenumberwrapper { 
+  width: 80%; 
+  padding-bottom: 15px;
+  }
+  body main .siccdc .form .field-setupspicons .field-setupspiconwrapper7, body main .siccdc .form .field-setupspicons .field-setupspiconwrapper8, body main .siccdc .form .field-setupspicons .field-setupspiconwrapper9, body main .siccdc .form .field-setupspicons .field-setupspiconwrapper10, body main .siccdc .form .field-setupspicons .field-setupspiconwrapper11 { display: none; } 
+  body main .siccdc .form .field-setupsmartpaysection:has(.field-eligibleforsp > legend[data-visible="true"]) .field-eligibleforsprepeatable, body main .siccdc .form .field-setupsmartpaysection:has(.field-smartpayenabledsection > legend[data-visible="true"]) .field-spenabledrepeatablesection { max-height: fit-content; }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel .field-attemptsleftpanel .field-maxattempts input { margin-right: -24px; }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-pandobpanel input { width: 48%; }
+  .siccdc .form .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel { margin-top: -3px; }
+}
+@media (max-width: 900px) {
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-enterotpheading.plain-text-wrapper p { margin-bottom: 0; }
+  .siccdc .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput { grid-column: span 8; }
+  body main .section.siccdc.form-container .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpinput input {
+  max-width: 100%;
+  margin: 0;
+  }
+  .siccdc .field-loginwrapper .field-ccloginfragment .field-otppanel .field-otpsubpanel {
+  grid-column: span 10;
+  max-width: 96%;
+  }
+  body main .siccdc .field-loginwrapper .field-loginpanel .field-mobilenumberwrapper .field-countrycode::after { top: 12px; }
+  .siccdc .field-billerregistrationsection .field-registeredbillercategory { margin: -8px -11px 0 13px; }
+  body main .siccdc .form .field-setupsmartpaysection .field-gobackeligibleforsp::before, body main .siccdc .form .field-setupsmartpaysection .field-gobackenabledsp::before, body main .siccdc .form .field-setupsmartpaysection .field-gobacksetupsp::before { margin-top: 6px; }
+}
+@media (max-width: 479px) {
+  body main .section.siccdc.form-container div.form-wrapper .field-loginwrapper { padding: 0 20px 36px 14px; }
+  body main .siccdc .form .field-setupsmartpaywrapper .field-setupsmartpay { padding: 19px 20px 0 18px; }
+  body main .section.siccdc.form-container .field-errorpanel { padding: 20px 20px 36px; }
+  body .siccdc .checkbox-wrapper label, body .checkbox-wrapper label p { font-size: var(--body-x-sm-font-size); }
+  body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp button, body main .siccdc .field-loginwrapper .field-otppanel .field-otpsubpanel .field-resendotp button:hover { font-size: var(--body-x-sm-font-size); }
+  body main .siccdc .form .field-setupsmartpaysection .field-smartpayvariationssection .field-setupspfirsttime .panel-wrapper.field-wrapper { grid-column: span 3; }
+  .siccdc .field-billerregistrationsection .field-splimitoptions .radio-wrapper, .siccdc .field-billerregistrationsection .field-billownershipoptions .radio-wrapper { width: 100%; margin-bottom: 0; }
+  .siccdc .form .field-smartpayvariationssection .field-eligibleforsp, .siccdc .form .field-smartpayvariationssection .field-smartpayenabledsection { padding: 0 0 0 20px; }
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper:not(.field-referencenumbertq, .field-billernamepnel .plain-text-wrapper, .field-nicknamepnel .plain-text-wrapper) {grid-column: span 6;display: block;}
+  .siccdc .field-thankyousection .field-successlabeltextwrapper { padding-left: 20px; padding-right: 20px; }
+  .siccdc .field-thankyousection .field-thankyousuccesssection { padding: 0 20px;}
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper input, .siccdc .field-thankyousection .field-tqsuccessdetails .field-wrapper label {font-size: var(--body-x-sm-font-size);padding-top: 0;}
+  .siccdc .field-thankyousection .field-tqsuccessdetails { gap: 0; }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="false"]) .field-setupspprepaidpostpaidsection, .siccdc .field-billerregistrationsection .field-billerrelationshippanel { padding: 24px; }
+  body main .siccdc .form .field-navigationalertpopup .modal dialog .button-wrapper {
+    grid-column: span 12;
+    padding-top: 7px;
+    justify-self: center;
+  }
+  body main .siccdc .form .field-navigationalertpopup .modal dialog .button-wrapper button, body main .siccdc .form .field-navigationalertpopup .modal dialog .button-wrapper button:hover { width: 100%; }
+  .siccdc .field-loginwrapper .field-loginpanel .field-tncprivacypolicylinkwrapper .field-wrapper.button-wrapper.field-landingprivacypolicybutton { margin-top: -22px; }
+  body main .siccdc .form .field-wrapper .field-description, body main .siccdc .form .field-wrapper .field-description p { font-size: var(--body-sm-font-size); }
+  .siccdc .field-newbillerfragment .field-newbillercategory { padding: 20px 20px 0; }
+  .siccdc .field-newbillerfragment .field-newbillersearch, .siccdc .field-newbillerfragment .field-newbillerrepeatablesection { padding: 0 20px; }
+  .siccdc .field-newbillerfragment .field-newbillerrepeatablesection { margin-top: 0; }
+  .siccdc .field-newbillerfragment .panel-wrapper:has(.field-newbillerlogo):not(.field-parentsearchpanel) { margin-bottom: 7px; }
+  .siccdc .field-newbillerfragment .field-parentsearchpanel { margin-bottom: 40px; }
+  .siccdc .field-billerregistrationsection:has(.field-reviewdetailslabel[data-visible="true"]) { padding: 0 19px 60px 15px; }
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billerlabeltq p, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamelabeltq p { font-size: 12px; }
+  .siccdc .field-thankyousection .field-tqsuccessdetails .field-billernamepnel .field-billervaluetq p, .siccdc .field-thankyousection .field-tqsuccessdetails .field-nicknamepnel .field-nicknamevaluetq p {font-size: 12px;margin: 0 0 20px;}
+}
+
+@media (max-width: 420px) {
+  .siccdc .form .field-setupsmartpaysection .field-firsttimeusersection .field-firsttimespuserfeature { margin: 6px 0 -12px; }
+}
+
+@media (max-width: 349px) {
+  body:has(.siccdc) header .nav-wrapper { height: 60px; }
+  body:has(.siccdc) header nav, body:has(.siccdc) header form { padding: 0; }
+}

@@ -1,0 +1,92 @@
+{
+  "fieldType": "file-input",
+  "name": "documentUpload",
+  "id": "document-upload-1",
+  "label": {
+    "value": "Upload Document"
+  },
+  "properties": {
+    "variant": "file-input-v2",
+    "documentType": "",
+    "documentSide": "",
+    "description": "Only JPEG/PNG with file size less than 5MB",
+    "fd:buttonText": "Browse and upload",
+    "maxFileSize": "5MB",
+    "accept": "image/jpeg,image/png,application/pdf",
+    "allowedExtensions": [".jpg", ".jpeg", ".png", ".pdf"],
+    "hideDefaultLabels": false
+  },
+  "rules": {
+    "required": true
+  },
+  "constraintMessages": {
+    "accept": "Please upload a valid document type (JPEG/PNG/PDF only)",
+    "maxFileSize": "File size exceeds the maximum allowed size of 5MB",
+    "required": "Please upload a document"
+  },
+  "events": {
+    "fileValidationStatus": {
+      "detail": {
+        "isValid": "boolean",
+        "constraint": "string",
+        "errorMessage": "string"
+      }
+    }
+  },
+  "examples": [
+    {
+      "title": "Passport Front Upload",
+      "data": {
+        "fieldType": "file-input",
+        "name": "passportFront",
+        "id": "passport-front-upload",
+        "label": {
+          "value": "Upload Passport Front"
+        },
+        "properties": {
+          "variant": "file-input-v2",
+          "documentType": "passport",
+          "documentSide": "front",
+          "description": "Only JPEG/PNG with file size less than 5MB",
+          "fd:buttonText": "Browse and upload",
+          "maxFileSize": "5MB",
+          "accept": "image/jpeg,image/png,application/pdf"
+        }
+      }
+    },
+    {
+      "title": "Aadhaar Back Upload",
+      "data": {
+        "fieldType": "file-input",
+        "name": "aadhaarBack",
+        "id": "aadhaar-back-upload",
+        "label": {
+          "value": "Upload Aadhaar Back"
+        },
+        "properties": {
+          "variant": "file-input-v2",
+          "documentType": "aadhaar",
+          "documentSide": "back",
+          "description": "Only JPEG/PNG with file size less than 5MB",
+          "fd:buttonText": "Browse and upload",
+          "maxFileSize": "5MB",
+          "accept": "image/jpeg,image/png,application/pdf"
+        }
+      }
+    }
+  ],
+  "relatedFields": {
+    "isDocUploadSuccess": {
+      "fieldType": "checkbox",
+      "name": "isDocUploadSuccess",
+      "hidden": true,
+      "value": "off"
+    },
+    "doccount": {
+      "fieldType": "number",
+      "name": "doccount",
+      "hidden": true,
+      "value": 0
+    }
+  }
+}

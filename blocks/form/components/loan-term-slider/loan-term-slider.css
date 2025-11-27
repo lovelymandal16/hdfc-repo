@@ -1,0 +1,126 @@
+.loan-term-slider-container {
+  width: 100%;
+  padding: 10px 0 30px;
+  position: relative;
+}
+
+/* Track styling */
+.loan-term-slider-track-container {
+  position: relative;
+  height: 8px;
+  margin: 20px 0;
+}
+
+.loan-term-slider-track {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-image: linear-gradient(
+    to right, 
+    var(--active-color, #0044cc) var(--percentage, 0%), 
+    var(--inactive-color, #cccccc) var(--percentage, 0%)
+  );
+  border-radius: 4px;
+}
+
+/* Indicator styling */
+.loan-term-slider-indicator {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #0044cc;
+  border-radius: 50%;
+  top: -6px;
+  margin-left: -10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Terms styling */
+.loan-term-slider-terms {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.loan-term-slider-term {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loan-term-slider-marker {
+  width: 8px;
+  height: 8px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.loan-term-slider-term.active .loan-term-slider-marker {
+  background-color: #0044cc;
+}
+
+.loan-term-slider-label {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.loan-term-slider-term.active .loan-term-slider-label {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Disbursement label styling */
+.loan-term-slider-disbursement {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #008855;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Hide the original input but keep it accessible */
+.loan-term-slider-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .loan-term-slider-label {
+    font-size: 10px;
+  }
+  
+  .loan-term-slider-disbursement {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+/* Improve accessibility */
+.loan-term-slider-container:focus-within .loan-term-slider-indicator {
+  box-shadow: 0 0 0 3px rgba(0, 68, 204, 0.3);
+}
+
+/* Add hover effects */
+.loan-term-slider-indicator:hover {
+  transform: scale(1.1);
+}

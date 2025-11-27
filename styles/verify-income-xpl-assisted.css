@@ -1,0 +1,656 @@
+.panel-wrapper.field-selectbankaccount.field-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+  flex: 0 0 56%;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-accontnumberdetails .radio-wrapper label,
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-fipaccountnunber input {
+  text-wrap: nowrap !important;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-accontnumberdetails {
+  width: fit-content;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-custidtext p {
+  margin: 0px !important;
+  text-wrap: nowrap;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-custid input {
+  height: 20px;
+  padding-left: 0px;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 70px;
+  height: 110px;
+  padding: 0;
+  margin: 0;
+}
+
+.field-analysingcustomercreditpopup .modal dialog .modal-content {
+  padding-bottom: 0 !important;
+  height: fit-content !important;
+  max-height: calc(95dvh - 60px) !important;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 15px 0 0;
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-input-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button::before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5%;
+  padding: 5px;
+  border: 1px solid var(--color-interface-border-secondary);
+  border-radius: 10px;
+  background-color: #fff;
+  background-position: center;
+  background-size: 32px;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-hdfcbankbtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evhdfc.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-icicibankbtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evicici.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-axisbankbtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evaxis.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-kotakbankbtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evkotak.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-sbibankbtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evsbi.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-bankofbarodabtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evbob.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper.field-idfcfirstbankbtn button::before {
+  background-image: url(/content/dam/hdfc/pl-assisted/evidfc.png);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button::after {
+  display: none;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button::after {
+  content: "";
+  background-image: url(/content/dam/hdfc/pl-assisted/evactive.png);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 25px;
+  bottom: -20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button:focus::before,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button:active::before,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper .activeBank::before,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper .activeBank::before {
+  border-color: var(--color-action-border-primary-default);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button:focus,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button:active {
+  color: var(--color-input-border-focus);
+  font-weight: var(--font-weight-bold);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button.selected::before {
+  border-color: var(--color-action-border-primary-default);
+}
+
+.xplassisted .field-choiceall .field-e-verify-income :is(.field-hdfcbankbtn,
+  .field-icicibankbtn,
+  .field-axisbankbtn,
+  .field-kotakbankbtn,
+  .field-sbibankbtn,
+  .field-bankofbarodabtn,
+  .field-idfcfirstbankbtn) button:is(:focus, :active)::before {
+  border-color: var(--color-action-border-secondary-default);
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button:focus::after,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button:active::after,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper .activeBank::after,
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper .activeBank::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .drop-down-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 0 0 40%;
+  padding: 16px;
+  padding-left: 0;
+}
+
+.field-accountprepopultaionpanel {
+  border: 1px solid var(--color-interface-border-primary) !important;
+  border-radius: 8px;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.field-accountprepopultaionpanel .field-customeraccountpanel {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  padding: 24px 32px;
+  border-radius: 8px 8px 0px 0px;
+  background: linear-gradient(90deg, #F3F6FD 0%, #D0DDFC 100%);
+  font-weight: var(--font-weight-bold);
+  flex-wrap: nowrap !important;
+}
+
+.field-accountprepopultaionpanel .field-customeraccountpanel .field-customeraccountheading p {
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0px !important;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel>.field-wrapper>div>.field-wrapper {
+  border: 1px solid var(--color-interface-border-primary);
+  border-radius: 20px;
+  padding: 24px 14px;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.xplassisted .field-perfiosbuttonpanel,
+.xplassisted .field-perfiosconsentbutton,
+.xplassisted .field-perfiosbuttonwrapper {
+  display: flex !important;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.xplassisted .field-perfioscancelconsentbutton button,
+.xplassisted .field-perfioscancelconsentbutton button:hover {
+  background: var(--color-interface-background-primary) !important;
+  color: var(--color-action-background-primary-default) !important;
+  border: 1.5px solid var(--color-action-background-primary-default);
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-accontnumberdetails .radio-wrapper label {
+  font-size: var(--body-fd-md-font-size);
+  margin-left: -0.3rem;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-fipaccountnunber label {
+  display: none;
+}
+
+.xplassisted .field-accnumwrapper,
+.xplassisted .field-custidradiobuttonwrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-fipaccountnunber input {
+  font-size: var(--body-fd-md-font-size);
+  height: 30px;
+  border: none;
+  width: auto;
+  background: transparent;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-fipaccountnunber {
+  margin-left: -1rem;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-custidtext {
+  padding-left: 35px;
+  font-size: var(--body-fd-sm-font-size);
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-custid label {
+  display: none;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-custid input {
+  font-size: var(--body-fd-sm-font-size);
+  height: 20px;
+  border: none;
+  background: transparent;
+}
+
+.field-accountprepopultaionpanel .field-accountdetailspanel .field-custid {
+  margin-left: -1rem;
+}
+
+.field-suggestiontextpanel {
+  border: 1px solid var(--color-interface-feedback-mayberating) !important;
+  background: #FEF8E6;
+  padding: 0 12px !important;
+  border-radius: 8px;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.field-suggestiontextpanel .field-suggestiontext {
+  line-height: 20px;
+  color: #4B5563;
+  font-size: var(--body-fd-sm-font-size);
+}
+
+/***choice all screen***/
+.xplassisted .field-bank-selection-heading,
+.xplassisted .field-income-verification-heading {
+  width: 100%
+}
+
+.xplassisted .field-recommended3,
+.xplassisted .field-recommended2,
+.xplassisted .field-recommended1 {
+  position: relative;
+  background-color: var(--color-interface-toaster-text-primary);
+  /* Green background */
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  /* Rounded bottom corners */
+  overflow: visible;
+  /* Allow pseudo-element to overflow */
+  z-index: 1;
+  padding: 4px !important;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  padding-top: 12px !important;
+}
+
+.xplassisted .field-recommended3 p,
+.xplassisted .field-recommended2 p,
+.xplassisted .field-recommended1 p {
+  margin: 0px !important;
+  color: var(--color-interface-background-primary);
+}
+
+.xplassisted .field-everifyradiobuttonpanel .panel-wrapper:has(.field-recommended3)>.panel-wrapper:has(.checkbox-wrapper),
+.xplassisted .field-everifyradiobuttonpanel .panel-wrapper:has(.field-recommended2)>.panel-wrapper:has(.checkbox-wrapper),
+.xplassisted .field-everifyradiobuttonpanel .panel-wrapper:has(.field-recommended1)>.panel-wrapper:has(.checkbox-wrapper) {
+  transform: translatey(10px);
+  z-index: 3000;
+}
+
+.xplassisted .field-selectbankaccount,
+.xplassisted .field-everifymethod {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.xplassisted .field-everifyradiobuttonpanel label {
+  transform: none !important;
+  font-size: var(--body-x-lg-font-size) !important;
+  font-weight: var(--font-weight-bold) !important;
+  color: var(--color-input-text-default) !important;
+  background: none !important;
+}
+
+.xplassisted .field-everifyradiobuttonpanel input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* Size & shape */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  /* Make it round */
+  border: 2px solid #1c3fca;
+  /* Outer blue ring */
+  background-color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+  border-radius: 50% !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0;
+  flex: 0 0 24px !important;
+}
+
+.xplassisted .field-everifyradiobuttonpanel input[type="checkbox"]:checked {
+  background: none !important;
+  border: 2px solid #1c3fca !important;
+}
+
+.xplassisted .field-everifyradiobuttonpanel input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1c3fca;
+  transition: background-color 0.2s;
+}
+
+.xplassisted .field-everifyradiobuttonpanel .checkbox-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+}
+
+.xplassisted .field-everifyradiobuttonpanel:has(.checkbox-wrapper) .plain-text-wrapper {
+  font-size: var(--body-fd-md-font-size);
+  color: var(--color-input-text-primary);
+  font-weight: var(--font-weight-regular);
+  padding-left: 30px;
+}
+
+.xplassisted .field-everifymethod .field-everifyradiobuttonpanel {
+  display: flex !important;
+  flex-direction: row !important;
+  /* flex-wrap: nowrap  !important; */
+  padding: 20px;
+}
+
+.xplassisted .field-everifymethod .field-everifyradiobuttonpanel .panel-wrapper>.panel-wrapper:has(.checkbox-wrapper) {
+  border: 1px solid #D2D5DB;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: var(--color-interface-background-primary);
+}
+
+.xplassisted .field-everifymethod .field-everifyradiobuttonpanel .panel-wrapper>.panel-wrapper:has(.checkbox-wrapper):has(input:checked) {
+  border: 1px solid var(--color-interface-icon-highlight);
+  background: var(--color-interface-background-quinary);
+}
+
+.xplassisted .field-bank-selection-heading p,
+.xplassisted .field-income-verification-heading p {
+  margin: 0px !important;
+}
+
+.xplassisted .field-selectbankpanel,
+.xplassisted .field-everifypanel {
+  width: 100%;
+  padding: 24px 32px;
+  border-radius: 8px 8px 0px 0px;
+  background: linear-gradient(90deg, #F3F6FD 0%, #D0DDFC 100%);
+  font-weight: var(--font-weight-bold);
+}
+
+.xplassisted .field-everifypanel,
+.xplassisted .field-selectbankpanel {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+}
+
+.xplassisted .field-selectbankwrapper {
+  padding: 24px;
+}
+
+.panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper {
+  position: relative !important;
+  bottom: 0px !important;
+  margin-bottom: 20px;
+}
+
+.xplassisted .field-e-verify-income legend,
+.xplassisted .field-etbaccselectionmaintext p>p {
+  font-size: var(--body-xx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 34px;
+}
+
+.xplassisted .field-etbaccselectionsubtext p>p {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.xplassisted .field-etbaccselectionmaintext p>p {
+  margin-bottom: 12px;
+}
+
+.xplassisted .field-accountselectionwrapper .field-e-verify-income legend {
+  display: none;
+}
+
+.xplassisted .field-accountprepopultaionpanel .field-accountdetailspanel>.field-wrapper>div>.field-wrapper:has(.radio-wrapper input:checked) {
+  border: 1px solid var(--color-interface-icon-highlight);
+  background: var(--color-interface-background-quinary);
+}
+
+@media (min-width:992px) {
+
+  .field-accountprepopultaionpanel .field-accountdetailspanel .field-accontnumberdetails .radio-wrapper label,
+  .field-accountprepopultaionpanel .field-accountdetailspanel .field-fipaccountnunber input {
+    font-size: var(--body-x-lg-font-size);
+    padding-left: 0px;
+  }
+
+  .field-assistedetbaccount>div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 0 30px;
+  }
+
+  .field-everifymethod .field-everifyradiobuttonpanel {
+    flex-wrap: nowrap !important;
+  }
+
+  /* .field-everifymethod .field-everifyradiobuttonpanel .panel-wrapper>.panel-wrapper:has(.checkbox-wrapper) {
+    width: 31%;
+  } */
+
+  .xplassisted .field-selectbankwrapper,
+  .xplassisted .field-selectbankbtn {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .xplassisted .field-selectbankwrapper {
+    align-items: flex-start;
+  }
+
+  .xplassisted .field-selectbankbtn {
+    flex-wrap: nowrap !important;
+  }
+
+  .xplassisted .field-selectbankwrapper,
+  .field-everifymethod .field-everifyradiobuttonpanel {
+    background: linear-gradient(93.69deg, #FFFFFF 1.45%, #F3F6FD 100%);
+  }
+
+  .xplassisted .panel-wrapper.field-selectbankaccount.field-wrapper .drop-down-wrapper {
+    max-width: 350px;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .xplassisted .field-perfiosbuttonpanel,
+  .xplassisted .field-perfiosconsentbutton {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper {
+    width: 75px;
+    height: 90px;
+  }
+
+  .panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button::before {
+    height: 45px;
+    width: 45px;
+  }
+
+  .panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper button::after {
+    left: 25px;
+  }
+
+  .xplassisted .field-nextstepsproceed {
+    position: relative;
+    bottom: 0px !important;
+  }
+
+  .field-accountprepopultaionpanel .field-accountdetailspanel>.field-wrapper>div>.field-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .field-accountprepopultaionpanel .field-assistedetbaccount {
+    flex-direction: column;
+  }
+
+  .xplassisted .field-everifyradiobuttonpanel:has(.checkbox-wrapper) .plain-text-wrapper {
+    font-size: var(--body-sm-font-size);
+  }
+
+  .xplassisted .field-everifyradiobuttonpanel label,
+  .xplassisted .field-bank-selection-heading p>p,
+  .xplassisted .field-income-verification-heading p>p {
+    font-size: var(--body-fd-md-font-size) !important;
+    background: none !important;
+  }
+
+  .field-everifyradiobuttonpanel .panel-wrapper {
+    gap: 0px 0px !important;
+  }
+
+  /* 
+    .xplassisted .field-choiceall .field-e-verify-income .field-everifyradiobuttonpanel .button-wrapper {
+        width: 100%;
+    } */
+
+
+  .field-accountprepopultaionpanel .field-customeraccountpanel .field-customeraccountheading p {
+    font-size: var(--body-sm-font-size);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .field-accountprepopultaionpanel .field-accountdetailspanel .field-custidtext {
+    padding-left: 32px !important;
+  }
+
+  .field-accountprepopultaionpanel .field-accountdetailspanel .field-accontnumberdetails .radio-wrapper label {
+    margin-left: 0px;
+  }
+
+  /* .field-accountprepopultaionpanel .field-accountdetailspanel .field-fipaccountnunber input {
+    margin-left: -16px;
+  } */
+
+  .field-accountprepopultaionpanel .field-accountdetailspanel .field-custidtext {
+    font-size: var(--body-x-sm-font-size);
+    padding-top: 4px;
+  }
+
+  .xplassisted .field-accountprepopultaionpanel .field-accountdetailspanel .field-custid input,
+  .xplassisted .field-accountprepopultaionpanel .field-accountdetailspanel .field-custidtext p {
+    font-size: var(--body-x-sm-font-size);
+  }
+
+  .xplassisted .field-suggestiontextpanel {
+    margin-bottom: 70px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .panel-wrapper.field-selectbankaccount.field-wrapper {
+    flex-direction: column;
+  }
+
+  .panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper {
+    gap: 24px 0;
+    flex: 0 0 100%;
+    justify-content: stretch;
+  }
+
+  .panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper .button-wrapper {
+    width: 75px !important;
+  }
+
+  .panel-wrapper.field-selectbankaccount.field-wrapper .drop-down-wrapper {
+    flex: 0 0 100%;
+    padding: 32px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel-wrapper.field-selectbankaccount.field-wrapper .panel-wrapper.field-selectbankbtn.field-wrapper {
+    justify-content: space-between;
+  }
+
+}

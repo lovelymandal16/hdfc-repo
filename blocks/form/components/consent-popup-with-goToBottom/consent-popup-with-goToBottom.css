@@ -1,0 +1,84 @@
+/* Go to Bottom Button Styles */
+.go-to-bottom-btn {
+  position: absolute;
+  bottom: 20px !important;
+  color: #000 !important;
+  border: none !important;
+  font-size: 16px !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  min-width: 120px;
+  text-align: center;
+  background: none !important;
+  border: none  !important;
+  font-weight: 600 !important;
+  max-width: fit-content;
+}
+
+.go-to-bottom-btn::after {
+  content: "" !important;
+  background-image: url(/content/dam/hdfc/pl-assisted/gotobottom.png);
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #4F6FDF;
+  top: 25% !important;
+  right: -12px !important;
+  transform: translate(-50%, -50%);
+}
+
+.go-to-bottom-btn:hover {
+  background: none;
+  border: none;
+}
+
+.go-to-bottom-btn:active {
+  background: none;
+  border: none;
+}
+
+.go-to-bottom-btn:focus {}
+
+/* Ensure the button is visible within modal context */
+dialog .go-to-bottom-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .go-to-bottom-btn {
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 16px;
+    font-size: 13px;
+    min-width: 100px;
+  }
+
+  dialog .go-to-bottom-btn {
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .go-to-bottom-btn {
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 14px;
+    font-size: 12px;
+    min-width: 90px;
+  }
+
+  dialog .go-to-bottom-btn {
+    bottom: 10px;
+    left: 10px;
+  }
+}

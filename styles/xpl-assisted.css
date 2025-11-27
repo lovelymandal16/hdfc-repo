@@ -1,0 +1,1706 @@
+@import url('./loan-offer-page-xplassisted.css');
+@import url("./customer-details-xpl-assisted.css");
+@import url("./additional-details-xpl-assisted.css");
+
+.xplassisted .field-loginwrapper .field-xpllabel p,
+.xplassisted .field-rmdashboardheading p,
+.xplassisted .field-ekycfailurenote p,
+.xplassisted .field-customerheadingtitle p {
+  color: var(--color-interface-text-primary);
+  font-size: var(--body-xx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0px;
+}
+
+.xplassisted .field-loginwrapper .field-xpllogininformation p,
+.xplassisted .field-rmdashboardttilemessage p,
+.xplassisted .field-customertitlemessage p {
+  color: var(--color-input-text-primary);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.xplassisted .field-bankuseaccordian {
+  margin-top: 20px;
+}
+
+.xplassisted .field-bankusesection {
+  border: 1px solid var(--color-interface-border-primary);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.xplassisted .field-bankusesectionwrapper,
+.xplassisted .field-customerlogindetails {
+  display: flex !important;
+  gap: 10px !important;
+  margin-bottom: 20px;
+}
+
+.xplassisted .field-customerlogindetails {
+  /* border: 1px dotted var(--Primary-Colours-Neutral-300, #D2D5DB); */
+  padding-left: 20px;
+}
+
+.xplassisted .field-logindetailspanel .field-dobpanfragment {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 45px;
+  border-top: 1px dotted var(--Primary-Colours-Neutral-300, #D2D5DB);
+  padding-top: 20px;
+}
+
+.xplassisted .field-logindetailspanel .field-dobpanfragment .field-pannumber,
+.xplassisted .field-logindetailspanel .field-dobpanfragment .field-dateofbirth {
+  margin-top: 20px;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.xplassisted .field-bankusesectionwrapper .field-wrapper,
+.xplassisted .field-customerlogindetails .field-wrapper {
+  width: 48%;
+  margin-top: 20px;
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumber {
+  width: 100%;
+  margin-top: 0px;
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumber .field-description {
+  color: var(--color-input-text-msg-error);
+  margin-top: 1px;
+}
+
+.xplassisted .form fieldset.accordion legend.accordion-legend {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  font-weight: var(--font-weight-bold);
+  background: linear-gradient(90deg, #F3F6FD 0%, #D0DDFC 100%);
+}
+
+/* .xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-mobilenumber:is([data-active='true'], [data-empty='false'])>label {
+  padding: 0 6px 0 10px;
+  margin-left: -100px;
+} */
+
+.xplassisted .form .field-logindetailspanel legend,
+.xplassisted .form .field-rmdetailswrapper .field-customerdetailslabel p>p {
+  width: 100%;
+  padding: 24px 32px;
+  border-radius: 8px 8px 0px 0px;
+  background: linear-gradient(90deg, #F3F6FD 0%, #D0DDFC 100%);
+  font-weight: var(--font-weight-bold);
+}
+
+.xplassisted .field-rmdetailswrapper .field-customerdetailslabel p {
+  margin-bottom: 0px;
+}
+
+.xplassisted .field-bankusesectionwrapper .text-wrapper label:not(.xplassisted .field-customernamewrapper .field-customername label) {
+  transform: translateY(-28px) !important;
+  font-weight: var(--font-weight-regular);
+  background: var(--color-interface-background-primary);
+  z-index: 1;
+}
+
+.xplassisted .field-bankusesectionwrapper label {
+  color: var(--color-interface-text-secondary);
+}
+
+.xplassisted .form .field-logindetailspanel legend::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  background-image: url(/content/dam/hdfc/pl-assisted/customerdetails.png);
+  background-position: center;
+  position: relative;
+  top: 4px;
+}
+
+.xplassisted .form .field-tensecondofferloan legend::before,
+.xplassisted .form .field-loanoffersection  legend::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  background-image: url(/content/dam/hdfc/pl-assisted/kyc.png);
+  background-position: center;
+  position: relative;
+  top: 4px;
+}
+
+.xplassisted .form .field-bankusesection legend::before,
+.xplassisted .form .field-customerappstatussection legend::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  background-image: url(/content/dam/hdfc/pl-assisted/internalrefdetails.png);
+  background-position: center;
+  position: relative;
+  top: 4px;
+}
+
+
+.xplassisted .form .field-logindetailspanel {
+  border: 1px solid var(--color-interface-border-primary);
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.xplassisted .form .field-rmdetailspanel,
+.xplassisted .form .field-customerdasboardrmdetailssection {
+  margin-top: 0px;
+  border: 1px solid var(--color-interface-border-primary);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.xplassisted .form .field-rmdetailspanel,
+.xplassisted .form .field-customerdasboardrmdetailssection {
+  display: flex;
+  padding-bottom: 20px;
+  padding-left: 38px;
+  background: linear-gradient(153.75deg, #FFFFFF 7.61%, #F3F6FD 100%);
+
+}
+
+.xplassisted .field-rmdetailspanel .field-rmcustomername,
+.xplassisted .field-rmdetailspanel .field-rmmobilenumber,
+.xplassisted .field-rmdetailspanel .field-rmcusttype,
+.xplassisted .field-rmdetailspanel .field-rmoffertype,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmname,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmmobilenumber {
+  width: calc(48% - 20px);
+  gap: 10px;
+}
+
+
+.xplassisted .field-rmdetailspanel .field-rmcustomername input,
+.xplassisted .field-rmdetailspanel .field-rmmobilenumber input,
+.xplassisted .field-rmdetailspanel .field-rmcusttype input,
+.xplassisted .field-rmdetailspanel .field-rmoffertype input,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmname input,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmmobilenumber input {
+  border: none;
+  background: none;
+  border-radius: 0px !important;
+  height: 35px;
+  color: var(--color-interface-text-primary);
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.xplassisted .field-rmdetailspanel .field-rmcustomername label,
+.xplassisted .field-rmdetailspanel .field-rmmobilenumber label,
+.xplassisted .field-rmdetailspanel .field-rmcusttype label,
+.xplassisted .field-rmdetailspanel .field-rmoffertype label,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmname label,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmmobilenumber label {
+  color: var(--color-interface-text-secondary) !important;
+  font-size: var(--body-sm-font-size) !important;
+  font-weight: var(--font-weight-regular);
+  padding-left: 18px;
+  text-wrap-mode: nowrap;
+}
+
+.xplassisted .field-rmdetailspanel .field-rmcustomername,
+.xplassisted .field-rmdetailspanel .field-rmmobilenumber,
+.xplassisted .field-rmdetailspanel .field-rmcusttype,
+.xplassisted .field-rmdetailspanel .field-rmoffertype,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmname,
+.xplassisted .field-customerdashboardrmdetails .field-customerrmmobilenumber {
+  margin-top: 20px;
+  border-left: 3px solid #A3BAF9;
+}
+
+.xplassisted .field-rmcustoffertypedetailspanel {
+  display: flex !important;
+
+}
+
+.xplassisted .field-rmconsentwrapper,
+.xplassisted .field-loanofferwrapper,
+.xplassisted .field-tensecondofferloanwrapper {
+  margin-bottom: 20px;
+}
+
+.xplassisted .field-customernextstepspanel {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+}
+
+.xplassisted .field-customerreinitiatekyc {
+  padding-left: 20px;
+}
+
+.xplassisted .field-rmconsentwrapper .checkbox-wrapper,
+.xplassisted .field-nextsectionwrapper .checkbox-wrapper,
+.xplassisted .field-customerappstatussection .checkbox-wrapper,
+.xplassisted .field-customernextstepspanel .checkbox-wrapper,
+.xplassisted .field-loanoffersection .checkbox-wrapper ,
+.xplassisted .field-tensecondofferloanwrapper .checkbox-wrapper{ 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 0px;
+  flex-wrap: nowrap;
+}
+
+.xplassisted .field-loanoffersection .field-loanofferacceptedsection,
+.xplassisted .field-loanoffersection .field-loanofferrejectedsection{
+  display: flex;
+  align-items: center;
+
+}
+
+ .xplassisted .field-loanofferctaspanel{
+  display: flex;
+}
+
+.xplassisted .field-rmconsentstatussection .panel-wrapper:has(.checkbox-wrapper),
+.xplassisted .field-loanoffersection .panel-wrapper:has(.checkbox-wrapper),
+.xplassisted .field-nextsectionwrapper .panel-wrapper:has(.checkbox-wrapper),
+.xplassisted .field-tensecondofferloan .panel-wrapper:has(.checkbox-wrapper) {
+  padding-left: 32px;
+}
+
+.xplassisted .field-rmconsentwrapper,
+.xplassisted .field-nextsectionwrapper,
+.xplassisted .field-customerappstatussection,
+.xplassisted .field-loanoffersection,
+.xplassisted .field-tensecondofferloan  {
+  border: 1px solid var(--Primary-Colours-Neutral-200, #ECEDF3);
+  background: linear-gradient(93.69deg, #FFFFFF 1.45%, #F3F6FD 100%);
+  border-radius: 8px;
+
+}
+.xplassisted .field-loanoffersection{
+  padding-bottom: 20px;
+}
+
+.xplassisted .field-consentmodalmandatory .close-button{
+  display: none  !important;
+}
+
+.xplassisted .field-customerappstatussection {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.xplassisted .field-nextsectionwrapper,
+.xplassisted .field-tensecondofferloan {
+  padding-bottom: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.xplassisted .field-rmconsentwrapper .checkbox-wrapper input,
+.xplassisted .field-nextsectionwrapper .checkbox-wrapper input,
+.xplassisted .field-customerappstatussection .checkbox-wrapper input,
+.xplassisted .field-customernextstepspanel .checkbox-wrapper input,
+.xplassisted .field-loanoffersection .checkbox-wrapper input,
+.xplassisted .field-tensecondofferloan .checkbox-wrapper input {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  vertical-align: middle;
+  /* background-color: var(--color-interface-toaster-text-primary); */
+  /* background-image: url(../icons/verify_green_icon.svg); */
+  background-size: 110%;
+  background-position: center;
+  border-radius: 100% !important;
+  border: 2px solid var(--color-interface-border-secondary);
+}
+
+.xplassisted .field-rmconsentwrapper .checkbox-wrapper input[type="checkbox"],
+.xplassisted .field-nextsectionwrapper .checkbox-wrapper input[type="checkbox"],
+.xplassisted .field-customerappstatussection .checkbox-wrapper input[type="checkbox"],
+.xplassisted .field-customernextstepspanel .checkbox-wrapper input[type="checkbox"],
+.xplassisted .field-loanoffersection .checkbox-wrapper input[type="checkbox"],
+.xplassisted .field-tensecondofferloan .checkbox-wrapper input[type="checkbox"] {
+  background: var(--color-interface-border-secondary) url(../../../../icons/checkbox-checked-arrow.png) no-repeat center center;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+
+}
+
+.xplassisted .field-rmconsentwrapper .checkbox-wrapper input[type="checkbox"]:checked,
+.xplassisted .field-nextsectionwrapper .checkbox-wrapper input[type="checkbox"]:checked,
+.xplassisted .field-customerappstatussection .checkbox-wrapper input[type="checkbox"]:checked,
+.xplassisted .field-customernextstepspanel .checkbox-wrapper input[type="checkbox"]:checked,
+.xplassisted .field-loanoffersection .checkbox-wrapper input[type="checkbox"]:checked,
+.xplassisted .field-tensecondofferloan .checkbox-wrapper input[type="checkbox"]:checked  {
+  background: var(--color-interface-toaster-text-primary) url(../../../../icons/checkbox-checked-arrow.png) no-repeat center center;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.xplassisted .field-kyccompletederrorcheck,
+.xplassisted .field-consentlinksharederror,
+.xplassisted .field-customerkycstatusfailed,
+.xplassisted .field-customerconsentstatusfailure,
+.xplassisted .field-customerloanofferrejectcheck  {
+  padding-left: 32px !important;
+}
+
+.xplassisted .field-kyccompletederrorcheck input[type="checkbox"],
+.xplassisted .field-consentlinksharederror input[type="checkbox"],
+.xplassisted .field-customerkycstatusfailed input[type="checkbox"],
+.xplassisted .field-customerconsentstatusfailure input[type="checkbox"],
+.xplassisted .field-customerloanofferrejectcheck  input[type="checkbox"],
+.xplassisted .field-loanoffersharederrorcheck  input[type="checkbox"],
+.xplassisted .field-loanofferincomeeverificationerrorcheck  input[type="checkbox"] {
+  background: var(--color-interface-feedback-notlikelyrating) !important;
+  border: none !important;
+}
+
+.xplassisted .field-kyccompletederrorcheck input[type="checkbox"]::after,
+.xplassisted .field-consentlinksharederror input[type="checkbox"]::after,
+.xplassisted .field-customerkycstatusfailed input[type="checkbox"]::after,
+.xplassisted .field-customerconsentstatusfailure input[type="checkbox"]::after,
+.xplassisted .field-customerloanofferrejectcheck  input[type="checkbox"]::after,
+.xplassisted .field-loanoffersharederrorcheck  input[type="checkbox"]::after,
+.xplassisted .field-loanofferincomeeverificationerrorcheck  input[type="checkbox"]::after  {
+  content: "x";
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-left: 6px;
+  margin-left: -4px;
+  position: relative;
+  top: -8px;
+  right: 6px;
+}
+
+.xplassisted .field-rmconsentstatussection {
+  border: none !important;
+}
+
+.xplassisted .field-rmconsentstatussection legend::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 8px 1px;
+  background: url(/content/dam/hdfc/pl-assisted/securityicon.png) no-repeat center center;
+  background-position: center;
+  position: relative;
+  top: 7px;
+}
+
+.xplassisted .field-nextsectionwrapper legend::before,
+.xplassisted .field-customernextstepspanel legend::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 8px 1px;
+  background: url(/content/dam/hdfc/pl-assisted/nextstepspanelicon.png) no-repeat center center;
+  background-position: center;
+  position: relative;
+  top: 6px;
+}
+
+.xplassisted .field-customerdetailslabel p>p::before,
+.xplassisted .field-customerrmdetailsheading p>p::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  background: url(/content/dam/hdfc/pl-assisted/usericon.png) no-repeat center center;
+  background-position: center;
+}
+
+.xplassisted .field-rmconsentstatussection label,
+.xplassisted .field-nextsectionwrapper label,
+.xplassisted .field-customerappstatussection label,
+.xplassisted .field-customernextstepspanel label,
+.xplassisted .field-loanoffersection label ,
+.xplassisted .field-tensecondofferloan label,
+.xplassisted .field-loanoffersection .field-loanofferacceptedsection .field-customerloanofferamountaccept p,
+.xplassisted .field-loanoffersection .field-loanofferrejectedsection .field-customerloanofferamountreject p{
+  color: var(--color-interface-text-primary) !important;
+  font-size: var(--body-lg-font-size) !important;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0px;
+  max-width: fit-content !important;
+  margin-left: -8px;
+}
+
+.xplassisted .field-loanoffersection .field-loanofferacceptedsection .field-customerloanofferamountaccept ,
+.xplassisted .field-loanoffersection .field-loanofferrejectedsection .field-customerloanofferamountreject {
+  padding-left:0px !important;
+}
+
+.xplassisted .field-loanoffersection .field-loanofferacceptedsection .field-customerloanofferamountaccept p,
+.xplassisted .field-loanoffersection .field-loanofferrejectedsection .field-customerloanofferamountreject p {
+  margin-top:20px;
+}
+
+.xplassisted .field-rmconsentstatussection .plain-text-wrapper,
+.xplassisted .field-loanoffersection .plain-text-wrapper,
+.xplassisted .field-nextsectionwrapper .plain-text-wrapper {
+  color: var(--color-input-text-primary) !important;
+  font-size: var(--body-x-sm-font-size);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0px;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.xplassisted .field-rmconsentstatussection .plain-text-wrapper p,
+.xplassisted .field-loanoffersection .plain-text-wrapper p {
+  margin: 0px;
+}
+
+.xplassisted .field-rmconsentwrapper .field-consentlinkexpirytimer {
+  padding-left: 20px;
+}
+
+.xplassisted .field-rmconsentwrapper .field-consentlinkexpirytimer button,
+.xplassisted .field-rmconsentwrapper .field-consentlinkexpirytimer button:hover {
+  color: var(--color-input-text-primary) !important;
+  font-size: var(--body-sm-font-size) !important;
+  font-weight: var(--font-weight-regular) !important;
+}
+
+.xplassisted .field-rmconsentwrapper .field-reshareconsentlink {
+  padding-left: 20px;
+}
+
+
+/***mobile number***/
+.xplassisted .field-customerlogindetails .field-mobilenumberwrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-interface-border-secondary);
+  border-radius: 12px;
+  height: 62px;
+  width: 48%;
+
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-countrycode {
+  max-width: 108px !important;
+  position: relative;
+  margin-top: 0px !important;
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-countrycode select {
+  /* border-radius: 8px 0px 0px 8px; */
+  border: none !important;
+  background: url(../icons/india-flag.png) no-repeat 20px center;
+  appearance: none;
+  pointer-events: none;
+  width: 80px;
+  border-color: var(--color-interface-border-secondary);
+  border: none;
+  font-size: var(--body-lg-font-size);
+  color: var(--color-interface-text-secondary);
+  font-weight: var(--font-weight-regular);
+  padding: 0 0 0 45px;
+
+
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-countrycode::after {
+  content: '|';
+  color: #f0f0f0;
+  margin-left: 7px;
+  position: absolute;
+  top: 20px;
+  border-width: .5px;
+  z-index: 2;
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-mobilenumber {
+  margin: 1px;
+  padding-left: 12px;
+  height: 58px;
+  width: calc(100% - 10px);
+}
+
+.xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-mobilenumber input {
+  border: none !important;
+  width: calc(100% - 12px);
+  letter-spacing: 8px;
+  height: 58px;
+}
+
+.xplassisted .field-mobilehandytext {
+  width: 100% !important;
+  color: var(--color-interface-text-secondary);
+  margin-top: 0px !important;
+}
+
+
+
+.xplassisted .field-rmconsentwrapper .button-wrapper {
+  position: relative;
+  bottom: 0px;
+  padding-left: 25px;
+}
+
+.field-mobilenumberwrapper:has(.field-description) .field-mobilehandytext {
+  margin-top: 20px !important;
+}
+
+.field-logindetailspanel:has(.field-description) .field-dobpanfragment {
+  margin-top: 90px;
+}
+
+body:has(.xplassisted) .header-wrapper form {
+  display: flex;
+  justify-content: space-between;
+}
+
+body:has(.xplassisted) .header-wrapper form .image-wrapper {
+  width: fit-content;
+}
+
+
+
+/***XBL UI***/
+
+.xplassisted .field-emptypeheadingpanel .panel-wrapper {
+  border: 1px solid #D2D5DB;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  width: auto;
+}
+
+.xplassisted .field-emptypeheadingpanel .plain-text-wrapper,
+.xplassisted .field-customerkycstatusfailurenote {
+  padding-left: 40px;
+  color: var(--color-input-text-primary) !important;
+  font-size: var(--body-x-sm-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.xplassisted .field-emptypeheadingpanel .radio-group-wrapper {
+  padding-left: 0px;
+}
+
+
+
+
+/***customer screen consent page***/
+.xplassisted .field-importantinfolinkssection button,
+.xplassisted .field-importantinfolinkssection button:hover {
+  border: none !important;
+  background: none !important;
+  color: var(--color-interface-icon-highlight) !important;
+  padding: 0px;
+  text-align: left;
+}
+
+.xplassisted .field-importantinfolinkssection button::after {
+  display: none !important;
+}
+
+.xplassisted .button-wrapper button::after {
+  top: unset;
+  right: unset;
+  transform: unset;
+}
+
+.xplassisted .field-customerconsentsection .checkbox-wrapper label {
+  transform: none !important;
+  overflow: initial !important;
+  text-overflow: initial !important;
+  display: initial !important;
+}
+
+.xplassisted .field-importantlinkswrapper {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.xplassisted .field-importantlinkswrapper .panel-wrapper {
+  width: 30%;
+  display: flex;
+  align-items: center !important;
+  flex-wrap: nowrap;
+}
+
+.xplassisted .field-importantlinkswrapper .button-wrapper {
+  margin-top: 0px !important;
+  width: fit-content;
+}
+
+.field-dateofbirth.date-wrapper label {
+  top: unset !important;
+  position: absolute;
+}
+
+.xplassisted .form .field-customername>label {
+  margin: 20px;
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+  width: max-content;
+}
+
+.xplassisted .form .field-customername>label:has(p) p {
+  margin: 1px 0;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+}
+
+.xplassisted .form .field-customername>label:has(p) p {
+  margin: 1px 0;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+}
+
+.xplassisted .form .field-customername:is([data-active='true'], [data-empty='false'], .date-wrapper)>label:not(.xplassisted .field-customernamewrapper .field-customername label),
+.xplassisted .form .field-mobilenumber:is([data-active='true'], [data-empty='false'])>label {
+  color: var(--label-color);
+  transform: translateY(-28px) !important;
+  z-index: 1;
+  background-color: var(--color-interface-background-primary);
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.xplassisted .field-rmreshareconsentlink {
+  padding-left: 20px;
+}
+
+.xplassisted [data-required="true"]>label::after {
+  display: none;
+}
+
+.xplassisted .field-kycconsenttitle p p {
+  color: var(--color-interface-text-primary);
+  font-size: var(--body-xx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0px;
+}
+
+.xplassisted .field-kycconsentsubtitle p p {
+  color: var(--color-input-text-primary);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  margin: 0px;
+}
+
+.xplassisted .field-kycconsentsubtitle p {
+  margin-top: 0px;
+}
+
+.xplassisted .field-centralkycidentificationpanel,
+.xplassisted .field-aadhaaridentificationpanel {
+  border: 1px solid #D2D5DB;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  display: flex !important;
+  width: calc(48% - 40px);
+  margin-left: 0px;
+}
+
+.xplassisted .field-centralkycidentificationpanel .field-ckycradiopanel,
+.xplassisted .field-aadhaaridentificationpanel .field-aadhaarradiopanel {
+  /* width: 85%; */
+  width: calc(100% - 65px);
+}
+
+.xplassisted .field-centralkycidentificationpanel .radio-wrapper,
+.xplassisted .field-aadhaaridentificationpanel .radio-wrapper {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.xplassisted .field-centralkycidentificationpanel .radio-wrapper label,
+.xplassisted .field-aadhaaridentificationpanel .radio-wrapper label {
+  color: var(--color-input-text-focus);
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+.xplassisted .field-centralkycidentificationpanel .plain-text-wrapper,
+.xplassisted .field-aadhaaridentificationpanel .plain-text-wrapper {
+  /* padding-left:40px; */
+  color: var(--color-input-text-primary) !important;
+  font-size: var(--body-x-sm-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+
+.xplassisted .field-kycnotepanel {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  background-color: #FEF8E6;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.xplassisted .field-kycnote p p {
+  color: #D67D26;
+  font-size: var(--body-x-sm-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+
+.xplassisted .field-kycidentificationpanel {
+  display: flex !important;
+}
+
+.xplassisted .field-personalizedofferschannelcapture,
+.xplassisted .field-personaldataconsentcapture {
+  margin-bottom: 16px;
+}
+
+
+.xplassisted .field-consenttitleinfo p {
+  color: var(--color-interface-text-primary);
+  font-size: var(--body-xx-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0px;
+}
+
+.xplassisted .field-consentsubtitleinfo p {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-input-text-primary);
+}
+
+
+.xplassisted .field-customerrmdetailsheading p,
+.xplassisted .field-customerappstatussection legend,
+.xplassisted .field-customernextstepspanel legend {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px 8px 0px 0px;
+  background: linear-gradient(90deg, #F3F6FD 0%, #D0DDFC 100%);
+  margin-bottom: 0px;
+  font-weight: var(--font-weight-bold);
+}
+
+.xplassisted .field-customernextstepspanel {
+  border: 1px solid var(--Primary-Colours-Neutral-200, #ECEDF3);
+  background: linear-gradient(93.69deg, #FFFFFF 1.45%, #F3F6FD 100%);
+  border-radius: 8px;
+}
+
+.xplassisted .field-customerappstatussection .checkbox-wrapper,
+.xplassisted .field-customernextstepspanel .checkbox-wrapper,
+.xplassisted .field-customerkycstatusfailed,
+.xplassisted .field-customerconsentstatusfailure {
+  padding-left: 20px !important;
+}
+
+
+.xplassisted .field-customerdashboardfirststepnote p {
+  color: var(--color-input-text-primary);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  margin: 0px;
+}
+
+.xplassisted .field-customerrmdetailsheading>p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.xplassisted .field-otptimerpanel {
+  display: flex !important;
+}
+
+.xplassisted .field-resendotptimer {
+  margin-top: 16px;
+  margin-left: -16px;
+}
+
+.xplassisted .field-resendotptimer button,
+.xplassisted .field-resendotptimer button:hover {
+  width: fit-content;
+  border: none !important;
+  background: none !important;
+  color: black;
+  padding-left: 0px;
+  color: var(--color-interface-text-primary) !important;
+  font-size: var(--body-md-font-size) !important;
+  font-weight: var(--font-weight-bold) !important;
+
+}
+
+
+
+.xplassisted .field-otpmaintext p {
+  color: var(--color-input-text-primary);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  margin-top: -8px;
+}
+
+.xplassisted .field-optinputbox input::placeholder,
+.xplassisted .field-otpinput input::placeholder {
+  color: var(--color-input-text-primary) !important;
+  letter-spacing: 65px;
+}
+
+body:has(.xplassisted) .field-progressbanksection {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between;
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: var(--color-interface-fd-background-primary);
+  padding: 20px;
+}
+
+body:has(.xplassisted) .field-progressrighttoptext p,
+body:has(.xplassisted) .field-progresssteptext p {
+  color: var(--color-input-text-primary);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+
+body:has(.xplassisted) .field-progressrightbottomtext p,
+body:has(.xplassisted) .field-progressrighttoptext p {
+  text-align: right;
+}
+
+body:has(.xplassisted) .field-progresslefttitletext p,
+body:has(.xplassisted) .field-progressrightbottomtext p {
+  margin: 0px;
+}
+
+body:has(.xplassisted) .field-progresslefttitletext p>p,
+body:has(.xplassisted) .field-progressrightbottomtext p>p {
+  margin: 0px;
+  color: var(--color-interface-background-primary);
+}
+
+.xplassisted .field-customerappstatussection legend::after,
+.xplassisted .field-customerdetailslabel p>p::after {
+  content: "10%";
+  color: var(--color-interface-text-primary);
+  padding-inline-start: 9px;
+  display: flex;
+  text-align: right;
+  background-image: url(/content/dam/hdfc/pl-assisted/circle.png);
+  background-repeat: no-repeat;
+  height: 30px;
+  padding-top: 12px;
+  width: 50px;
+  font-size: 14px;
+  margin-top: -8px;
+  float: right;
+}
+
+body:has(.xplassisted) .field-progresssteptext p>p::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 12px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 6px;
+  /* Rounded corners on whole bar */
+  background:
+    linear-gradient(to right, #007BFF 0%, #007BFF 68%, transparent 68%, transparent 100%),
+    radial-gradient(circle 6px at 68% center, #007BFF 100%, transparent 101%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%;
+  background-position: left center, left center;
+  background-color: #ccc;
+  /* grey background */
+
+
+}
+
+body:has(.xplassisted) .field-progresslefttitletext p>p::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 1px;
+  background-image: url(/content/dam/hdfc/pl-assisted/infoicon.png);
+  background-position: center;
+  position: relative;
+  top: 4px;
+}
+
+body:has(.xplassisted) .fragment-container .form-wrapper:has(.field-progressbanksection),
+body:has(.xplassisted) .fragment-container .form-container:has(.field-progressbanksection) {
+  padding: 0px;
+}
+
+body:has(.xplassisted .field-progressbanksection) .fragment-container {
+  margin: 0px !important;
+}
+
+.xplassisted .field-dashboardrefreshcta button,
+.xplassisted .field-dashboardrefreshcta button:hover {
+  border: none !important;
+  background: none !important;
+  font-size: var(--body-lg-font-size);
+  color: var(--color-interface-icon-highlight) !important;
+  width: 100% !important;
+  text-align: left;
+  padding-left: 0px !important;
+  text-decoration: underline;
+}
+
+.xplassisted {
+  padding-top: 0px !important;
+}
+
+main:has(.xplassisted) div.form-wrapper {
+  max-width: none !important;
+}
+
+.xplassisted .field-dashboardproceed {
+  margin-top: 0px;
+}
+
+.xplassisted .field-consentlinkexpirytimer {
+  height: fit-content;
+}
+
+.xplassisted .field-resharecountdowntimersection {
+  display: flex !important;
+  align-items: flex-end !important;
+  margin-bottom: 20px;
+}
+
+@media (width >=992px) {
+
+  .xplassisted .field-centralkycidentificationpanel,
+  .xplassisted .field-aadhaaridentificationpanel {
+    flex-wrap: nowrap !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .xplassisted .field-kycidentificationpanel {
+    flex-direction: column !important;
+  }
+
+}
+
+
+@media (width <=768px) {
+
+  .xplassisted .field-centralkycidentificationpanel,
+  .xplassisted .field-aadhaaridentificationpanel {
+    flex-wrap: nowrap !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .xplassisted .field-customerlogindetails {
+    flex-direction: column;
+    padding-right: 20px;
+  }
+
+  .xplassisted .field-customerlogindetails .field-wrapper,
+  .xplassisted .field-logindetailspanel .field-dobpanfragment .field-pannumber,
+  .xplassisted .field-logindetailspanel .field-dobpanfragment .field-dateofbirth {
+    width: 100%;
+  }
+}
+
+.xplassisted .field-loanoffersharedsection .plain-text-wrapper p,
+.xplassisted .field-nextsectionwrapper .field-officeemailidverificationattempt p,
+.xplassisted .field-nextsectionwrapper .field-personalemailverificationattempt p {
+  color: var(--color-interface-text-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--body-sm-font-size);
+}
+
+
+.xplassisted .field-loanoffersharedsection .plain-text-wrapper,
+.xplassisted .field-nextsectionwrapper .field-officeemailidverificationattempt,
+.xplassisted .field-nextsectionwrapper .field-personalemailverificationattempt {
+  margin-bottom: 0px;
+}
+
+.xplassisted .field-errorscreenimage, .xplassisted .field-threeattemptotpfail {
+  display: flex;
+  justify-content: center;
+      margin-bottom: 16px;
+}
+
+.xplassisted .field-errortitle {
+  font-size: var(--body-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-interface-text-primary);
+}
+
+.xplassisted .field-tryagaincta, .xplassisted  .field-redirectcustomerdbscreencta{
+      display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+.xplassisted .field-tryagaincta button,
+.xplassisted  .field-redirectcustomerdbscreencta button{
+  max-width: 272px;
+}
+
+.xplassisted .field-errormessage {
+  color: var(--color-input-text-primary);
+  font-weight: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.xplassisted .field-errormessage p{
+  margin-top:0px;
+}
+
+.xplassisted .field-nextsectionwrapper .plain-text-wrapper p {
+  margin: 0px !important;
+}
+
+@media (width <=640px) {
+
+ .xplassisted .field-loanofferctaspanel{
+  display: flex;
+  position: relative !important;
+  bottom: 0px !important;
+}
+  .xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-mobilenumber input {
+    letter-spacing: 5px;
+    padding-left: 10px;
+  }
+
+  .field-dashboardrefreshcta {
+    position: relative !important;
+    bottom: 0px !important;
+  }
+
+  .xplassisted .field-nextsectionmainwrapper {
+    margin-bottom: 60px;
+  }
+
+  .xplassisted .field-notelanding {
+    margin-bottom: 40px;
+  }
+
+  body:has(.xplassisted) header .header,
+  body:has(.xplassisted) .field-progressbanksection {
+    padding: 0px !important;
+  }
+
+  .xplassisted .field-customerlogindetails {
+    flex-direction: column !important;
+    padding-right: 20px;
+  }
+
+  .xplassisted .field-rmconsentstatussection label,
+  .xplassisted .field-nextsectionwrapper label,
+  .xplassisted .field-customerappstatussection label,
+  .xplassisted .field-customernextstepspanel label,
+  .xplassisted .field-loanoffersection label {
+    font-size: var(--body-sm-font-size) !important;
+    ;
+  }
+
+
+
+  .xplassisted .field-customerlogindetails .field-wrapper,
+  .xplassisted .field-logindetailspanel .field-dobpanfragment .field-dateofbirth {
+    width: 100% !important;
+  }
+
+  /* .xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-mobilenumber {
+    width: calc(100% - 100px) !important;
+  } */
+
+  .xplassisted .field-mobilehandytext {
+    margin-top: 20px;
+  }
+
+  .field-shareconsentviasms {
+    max-width: 350px !important;
+  }
+
+  .xplassisted .form .field-rmdetailspanel,
+  .xplassisted .form .field-customerdasboardrmdetailssection {
+    flex-direction: column;
+  }
+
+  .xplassisted .field-rmconsentwrapper .field-consentlinkexpirytimer {
+    text-align: center;
+  }
+
+  /* .xplassisted .field-rmconsentwrapper .checkbox-wrapper {
+    padding-left: 0px;
+  } */
+
+  .xplassisted .field-rmdashboardheading p,
+  .xplassisted .field-loginwrapper .field-xpllabel p {
+    font-size: var(--body-lg-font-size);
+  }
+
+  .xplassisted .field-loginwrapper .field-xpllogininformation p,
+  .xplassisted .field-rmdashboardttilemessage p {
+    font-size: var(--body-x-sm-font-size);
+  }
+
+  .xplassisted .field-bankusesectionwrapper .field-wrapper {
+    width: 100%;
+  }
+
+  .xplassisted .field-customerlogindetails .field-mobilenumber .field-description {
+    margin-top: 16px;
+  }
+
+  .xplassisted .field-logindetailspanel .field-dobpanfragment .field-pannumber,
+  .xplassisted .field-logindetailspanel .field-dobpanfragment .field-dateofbirth {
+    width: 100%;
+  }
+
+  .xplassisted .field-rmcustoffertypedetailspanel {
+    flex-direction: column;
+  }
+
+
+  .xplassisted .field-resendotp button,
+  .xplassisted .field-attemptslefttxt p {
+    text-wrap-mode: nowrap;
+  }
+
+  .xplassisted .field-ekycfailurenote p {
+    font-size: var(--body-lg-font-size);
+    /*18px*/
+  }
+
+  .xplassisted .field-kycconsenttitle p p {
+    font-size: var(--body-x-lg-font-size);
+    /*20px*/
+  }
+
+  .xplassisted .field-otpmaintext p,
+  .xplassisted .field-kycconsentsubtitle p p {
+    font-size: var(--body-x-sm-font-size);
+    /*12px*/
+  }
+
+  .xplassisted .field-centralkycidentificationpanel,
+  .xplassisted .field-aadhaaridentificationpanel {
+    flex-wrap: nowrap !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .xplassisted .field-kycidentificationpanel .image-wrapper {
+    width: 35px;
+  }
+
+  .xplassisted .field-nextsectionwrapper {
+    margin-bottom: 20px;
+  }
+
+  .xplassisted .field-importantlinkswrapper {
+    flex-direction: column !important;
+  }
+
+  .xplassisted .field-importantlinkswrapper .button-wrapper,
+  .xplassisted .field-consentproceed {
+    position: relative !important;
+    bottom: 0px !important;
+  }
+
+  .xplassisted .field-importantlinkswrapper .panel-wrapper {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+}
+
+/* Wizard menu UI */
+
+body:has(.xplassisted .field-wizard) .header-wrapper {
+  height: 162px;
+}
+
+main .form form.xplassisted .field-wizard {
+  padding: 0;
+}
+
+main .form form.xplassisted .field-wizard:has(.field-selectaccountvariant[data-visible="true"]) .wizard-menu-items {
+  display: none;
+}
+
+.xplassisted .wizard-menu-items.hdfc-wizard {
+  margin-top: -120px;
+  z-index: 2;
+}
+
+.xplassisted .field-kycinfoimage img {
+  min-width: 20px;
+}
+
+@media (width <=768px) {
+  .xplassisted .wizard-menu-items.hdfc-wizard {
+    margin-top: -85px;
+  }
+}
+
+.xplassisted .menu-items-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.xplassisted .menu-items-container:nth-child(1).wizard-menu-active-item .wizard-step-text::after {
+  background-image: linear-gradient(90deg, #4f6fdf 33.3%, #202e4d 0%);
+}
+
+.xplassisted .menu-items-container:nth-child(1).wizard-menu-active-item .wizard-current-step::after {
+  right: -8px;
+}
+
+.xplassisted .menu-items-container:nth-child(2).wizard-menu-active-item .wizard-step-text::after {
+  background-image: linear-gradient(90deg, #4f6fdf 66.6%, #202e4d 0%);
+}
+
+.xplassisted .menu-items-container:nth-child(2).wizard-menu-active-item .wizard-current-step::after {
+  right: -25px;
+}
+
+.xplassisted .menu-items-container:nth-child(3).wizard-menu-active-item .wizard-step-text::after {
+  background-image: linear-gradient(90deg, #4f6fdf 100%, #202e4d 0%);
+}
+
+.xplassisted .menu-items-container:nth-child(3).wizard-menu-active-item .wizard-current-step::after {
+  right: -25px;
+}
+
+.xplassisted .wizard-step-text,
+.xplassisted .wizard-up-next-label {
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-regular);
+  color: #838b9c;
+  margin-bottom: 2px;
+}
+
+@media (width <=640px) {
+/* 
+  .xplassisted .field-kycinfoimage {
+    margin-bottom: 60px;
+  } */
+
+  .xplassisted .wizard-step-text,
+  .xplassisted .wizard-up-next-label {
+    font-size: var(--body-x-sm-font-size);
+  }
+}
+
+.xplassisted .wizard-step-text {
+  position: relative;
+}
+
+.xplassisted .wizard-step-text::after {
+  content: '';
+  width: 100px;
+  height: 5px;
+  border-radius: 20px;
+  background: #202e4d;
+  position: absolute;
+  top: 7px;
+  margin-left: 8px;
+}
+
+@media (width <=640px) {
+  .xplassisted .wizard-step-text::after {
+    width: 60px;
+    top: 6px;
+  }
+}
+
+.xplassisted .wizard-current-step,
+.xplassisted .wizard-up-next-content {
+  position: relative;
+  font-size: var(--body-x-lg-font-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-interface-text-tertiary);
+}
+
+@media (width <=640px) {
+
+  .xplassisted .wizard-current-step,
+  .xplassisted .wizard-up-next-content {
+    font-size: var(--body-md-font-size);
+  }
+}
+
+/* Wizard menu UI  end*/
+
+.xplassisted .field-otpinput,
+.xplassisted .field-emailotp {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+@media (width <=768px) {
+
+  .xplassisted .field-otpinput,
+  .xplassisted .field-emailotp {
+    width: 60%;
+  }
+}
+
+@media (width <=767px) {
+
+  .xplassisted .field-otpinput,
+  .xplassisted .field-emailotp {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (width <=640px) {
+
+  .xplassisted .field-otpinput,
+  .xplassisted .field-emailotp {
+    width: 100%;
+  }
+}
+
+.xplassisted .field-otpinput i,
+.xplassisted .field-emailotp i {
+  position: absolute;
+  top: 33%;
+  right: 15px;
+}
+
+.xplassisted .field-otpinput input,
+.xplassisted .field-emailotp input {
+  font-size: var(--body-xx-lg-font-size);
+  line-height: var(--font-linehight-regular);
+  letter-spacing: 55px;
+}
+
+@media (width >=992px) {
+
+  .xplassisted .field-otpinput input,
+  .xplassisted .field-emailotp input {
+    letter-spacing: 55px;
+  }
+}
+
+@media (width <=991px) {
+
+  .xplassisted .field-otpinput input,
+  .xplassisted .field-emailotp input {
+    letter-spacing: 35px;
+  }
+}
+
+@media (width <=480px) {
+
+  .xplassisted .field-otpinput input,
+  .xplassisted .field-emailotp input {
+    letter-spacing: 25px;
+  }
+}
+
+.xplassisted .field-otpinput input[type="password"],
+.xplassisted .field-emailotp input[type="password"] {
+  letter-spacing: 20px;
+}
+
+@media (width >=992px) {
+
+  .xplassisted .field-otpinput input[type="password"],
+  .xplassisted .field-emailotp input[type="password"] {
+    letter-spacing: 55px;
+  }
+}
+
+@media (width <=640px) {
+
+  .xplassisted .field-otpinput input[type="password"],
+  .xplassisted .field-emailotp input[type="password"] {
+    letter-spacing: 50px;
+  }
+}
+
+@media (width <=480px) {
+
+  .xplassisted .field-otpinput input[type="password"],
+  .xplassisted .field-emailotp input[type="password"] {
+    letter-spacing: 35px;
+  }
+}
+
+.xplassisted .field-otpinput input[type="password"]::-ms-reveal,
+.xplassisted .field-emailotp input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.xplassisted .field-otpinput input::placeholder,
+.xplassisted .field-emailotp input::placeholder {
+  color: var(--color-interface-border-primary);
+  font-size: var(--body-xx-lg-font-size);
+}
+
+@media (width >=992px) {
+
+  .xplassisted .field-otpinput input::placeholder,
+  .xplassisted .field-emailotp input::placeholder {
+    letter-spacing: 55px;
+  }
+}
+
+@media (width <=991px) {
+
+  .xplassisted .field-otpinput input::placeholder,
+  .xplassisted .field-emailotp input::placeholder {
+    letter-spacing: 35px;
+  }
+}
+
+@media (width <=640px) {
+
+  .xplassisted .field-otpinput input::placeholder,
+  .xplassisted .field-emailotp input::placeholder {
+    letter-spacing: 55px;
+  }
+}
+
+@media (width <=375px) {
+  .xplassisted .field-customerlogindetails .field-mobilenumberwrapper .field-mobilenumber input {
+    letter-spacing: 3px;
+  }
+
+}
+
+@media (width <=480px) {
+
+  .xplassisted .field-otpinput input::placeholder,
+  .xplassisted .field-emailotp input::placeholder {
+    letter-spacing: 35px;
+  }
+}
+
+.xplassisted .field-otpsubpanel {
+  display: flex !important;
+  text-align: center;
+  width: 50%;
+  flex-flow: row !important;
+}
+
+@media (width <=768px) {
+  .xplassisted .field-otpsubpanel {
+    width: 60%;
+  }
+}
+
+@media (width <=640px) {
+  .xplassisted .field-otpsubpanel {
+    width: 100%;
+  }
+}
+
+.xplassisted .field-otpsubpanel .plain-text-wrapper.field-wrapper,
+.xplassisted .field-otpsubpanel .field-attemptslefttxt {
+  margin-bottom: 0;
+}
+
+.xplassisted .field-otpsubpanel .plain-text-wrapper.field-wrapper p,
+.xplassisted .field-otpsubpanel .field-attemptslefttxt {
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-interface-text-secondary);
+  background: none;
+  border: none;
+  height: auto;
+  width: auto;
+}
+
+@media (width <=767px) {
+
+  .xplassisted .field-otpsubpanel .plain-text-wrapper.field-wrapper p,
+  .xplassisted .field-otpsubpanel .field-attemptslefttxt p {
+    font-size: var(--body-sm-font-size);
+  }
+}
+
+.xplassisted .field-otpsubpanel .field-maxattempts {
+  position: relative;
+}
+
+@media (width >=640px) {
+  .xplassisted .field-otpsubpanel .field-maxattempts {
+    left: 8px;
+  }
+}
+
+.xplassisted .field-otpsubpanel .field-maxattempts::before {
+  content: '';
+  position: absolute;
+  background: url('../icons/error_i_icon.svg') no-repeat left center;
+  width: 24px;
+  height: 24px;
+  top: -3px;
+  left: -27px;
+  display: none;
+}
+
+.xplassisted .field-otpsubpanel .field-maxattempts input,
+.xplassisted .field-resendotppanel .field-maxattemptspanel input {
+  position: absolute;
+  line-height: normal;
+  letter-spacing: 0;
+  padding: 0;
+  top: 0;
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-interface-text-secondary);
+  background: none;
+  border: none;
+  height: auto;
+  width: auto;
+  max-width: 15px;
+  left: 5px;
+}
+
+@media (max-width: 767px) {
+
+  .xplassisted .field-otpsubpanel .field-maxattempts input,
+  .xplassisted .field-resendotppanel .field-maxattemptspanel input {
+    font-size: var(--body-sm-font-size);
+  }
+}
+
+@media (max-width: 640px) {
+
+  .xplassisted .field-otpsubpanel .field-maxattempts input,
+  .xplassisted .field-resendotppanel .field-maxattemptspanel input {
+    left: 12px;
+  }
+}
+
+.xplassisted .field-otpsubpanel .field-resendotp,
+.xplassisted .field-resendotppanel .field-resendemailcounter {
+  text-align: left;
+  margin: 8px 0 0 0;
+  bottom: initial;
+  /* width: 50%;
+	 */
+}
+
+.xplassisted .field-otpsubpanel .field-resendotp:has(.countdown-timer-number) button,
+.xplassisted .field-resendotppanel .field-resendemailcounter:has(.countdown-timer-number) button,
+.xplassisted .field-otpsubpanel .field-resendotp:has(.countdown-timer-number) button:hover,
+.xplassisted .field-resendotppanel .field-resendemailcounter:has(.countdown-timer-number) button:hover {
+  color: var(--color-interface-text-secondary) !important;
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.xplassisted .field-otpsubpanel .field-resendotp button,
+.xplassisted .field-otpsubpanel .field-resendotp button:hover {
+  background: transparent !important;
+  padding: 0;
+  border: none !important;
+  text-align: left;
+  display: block;
+  color: var(--color-action-text-secondary-default) !important;
+  font-size: var(--body-md-font-size);
+  font-weight: var(--font-weight-bold);
+  height: auto;
+  width: auto;
+}
+
+@media (width <=767px) {
+  .xplassisted .field-otpsubpanel .field-resendotp button {
+    font-size: var(--body-sm-font-size);
+  }
+}
+
+.xplassisted .field-otpsubpanel .field-resendotp button:hover {
+  background: transparent;
+}
+
+.xplassisted .field-otpsubpanel .field-attemptsleftpanel,
+.xplassisted .field-resendotppanel .field-maxattemptspanel {
+  flex: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-flow: row;
+  margin-top: 8px;
+}
+
+.xplassisted .field-otpsubpanel .field-submitbutton {
+  margin-top: 60px;
+}
+
+.xplassisted .field-attemptslefttxt {
+  margin: 0px;
+}
+
+.xplassisted .field-attemptslefttxt p {
+  margin: 0px;
+}
+
+.xplassisted .field-sessionerrorimage {
+  display: flex;
+  justify-content: center;
+}
+
+.xplassisted .field-errortitle,
+.xplassisted .field-errormessage {
+  text-align: center;
+}
+
+/* OTP panel End */
+
+/* assisted journey loader CSS starts*/
+.xplassisted .field-loaderfragment[data-visible="true"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* full viewport width */
+  height: 100vh;
+  /* full viewport height */
+  background: rgb(255 255 255 / 80%);
+  /* backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border: none;
+  /* remove default fieldset border */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

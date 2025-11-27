@@ -1,0 +1,941 @@
+.xplassisted .field-customerdetailmainpanel .field-backbutton button,
+.xplassisted .field-additionalcustomerdetailssection .field-backfromadditionaldetails button,
+.xplassisted .field-etbaccselectiontextpanel .field-choosebankbackbutton button {
+    background: transparent;
+    color: var(--color-action-text-secondary-default);
+    font-weight: var(--form-title-font-weight);
+    width: auto;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.xplassisted .field-customernamewrapper .field-customername label,
+.xplassisted .field-customernamewrapper .field-pancardnumber label,
+.xplassisted .field-addressdetailwrapper .field-addressasperaadhar label {
+    transform: translateY(-28px) !important;
+}
+
+.xplassisted .field-customerdetailmainpanel .field-backbutton button::before,
+.xplassisted .field-additionalcustomerdetailssection .field-backfromadditionaldetails button::before,
+.xplassisted .field-etbaccselectiontextpanel .field-choosebankbackbutton button::before {
+    content: "←";
+    display: inline-block;
+    font-weight: 800;
+    transform: translate(-10px, 0) scale(1.25);
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customerdetailsheading p,
+.xplassisted .field-customerdetailbodypanel .field-addressdetailtext p>p {
+    color: var(--color-interface-text-primary);
+    font-size: var(--body-fd-x-lg-font-size);
+    font-weight: var(--form-title-font-weight);
+    margin: 20px 0;
+    position: relative;
+    text-indent: 40px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customerdetailsheading p::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/customersdetails.png);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext p>p::after {
+    content: "";
+    text-indent: 15px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    background-image: url(/content/dam/hdfc/pl-assisted/exclamation.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: translateX(2px);
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customername input,
+.xplassisted .field-customerdetailbodypanel .field-customername input:disabled,
+.xplassisted .field-customerdetailbodypanel .field-pancardnumber input,
+.xplassisted .field-customerdetailbodypanel .field-pancardnumber input:disabled {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-interface-text-primary);
+    border: 0;
+    background: no-repeat;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbstateprovince label {
+    background: #FFF !important;
+    transform: translateY(-28px) !important;
+    z-index: 1;
+    line-height: 20px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customername label,
+.xplassisted .field-customerdetailbodypanel .field-pancardnumber label,
+.xplassisted .field-addressdetailwrapper .field-addressasperaadhar label {
+    color: var(--color-input-text-primary) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    background: transparent !important;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-pannumbercheckpanel .field-pannumbercheck input {
+    width: 16px;
+    height: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background: url(/content/dam/hdfc/pl-assisted/checkverified.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-pancardnumber input {
+    width: 12.5ch;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customername,
+.xplassisted .field-customerdetailbodypanel .field-pannumbercheckpanel {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    background: var(--color-interface-error-cta-background);
+    padding: 40px 0 5px 30px !important;
+    margin: 0 !important;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customername {
+    border-radius: 0 0 20px 20px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-pannumbercheckpanel {
+    border-radius: 20px 20px 0 0;
+}
+
+.field-customernamewrapper:has(.field-pannumbercheckpanel[data-visible="false"]) .field-customername,
+.field-customernamewrapper:has(.field-customername[data-visible="false"]) .field-pannumbercheckpanel {
+    border-radius: 20px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-customername::before,
+.xplassisted .field-customerdetailbodypanel .field-pancardnumber::before {
+    content: "";
+    position: absolute;
+    border: 2px solid #CDBBFD;
+    height: 60px;
+    transform: translate(0, -20px);
+    border-radius: 10px;
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper,
+.xplassisted .form .field-customerdetailbodypanel .field-personaldetailswrapper {
+    margin: 30px 0;
+    width: 100%;
+    border: 1px solid var(--color-interface-border-primary);
+    border-radius: 10px;
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext,
+.xplassisted .form .field-customerdetailbodypanel .field-personaldetailswrapper legend {
+    width: 100%;
+    height: 76px;
+    border-radius: 8px 8px 0 0;
+    font-weight: var(--font-weight-bold);
+    background: linear-gradient(90deg, var(--color-interface-background-quinary) 0%, #D0DDFC 100%);
+    padding: 10px 30px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext p {
+    text-indent: 40px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/fullname.png);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+    top: 35%;
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-personaldetailswrapper legend {
+    text-indent: 15px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-personaldetailswrapper legend::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/cdpersonaldetails.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    width: 27px;
+    height: 25px;
+    display: inline-block;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .text-wrapper,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .text-wrapper.field-personaldetailspanno,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .date-wrapper.field-customerdateofbirth,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailsgenderselection,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailspanno,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper,
+.xplassisted .field-customerdetailbodypanel .field-typeofloanwrapper .field-typeofloan .field-loantypesection,
+.xplassisted .field-customerdetailbodypanel .field-workemailidwrapper .field-workemailid .field-workemailverification,
+.xplassisted .field-customerdetailbodypanel .field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverification {
+    grid-column: span 6;
+    padding: 32px 32px 0;
+}
+
+.xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .text-wrapper:last-child {
+    margin-top: -40px;
+    padding-top: 0;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper {
+    position: relative;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .field-emailverifybutton {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: auto;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .text-wrapper {
+    height: 24px;
+    margin: 10px 0;
+    width: min-content;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .text-wrapper input {
+    height: inherit;
+    font-size: var(--body-x-sm-font-size);
+    border-color: var(--color-action-text-secondary-default);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-width: 90px;
+    cursor: pointer;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .text-wrapper input::placeholder {
+    color: var(--color-action-text-secondary-default);
+    font-size: inherit;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .field-emailverifybutton button {
+    background: transparent;
+    color: var(--color-action-text-secondary-default);
+    opacity: 1;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .field-emailverifybutton button:disabled {
+    opacity: .5;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .field-emailverifybutton button::after {
+    content: none;
+}
+
+.field-customerpersonaldetailswrapper .field-personaldetailswrapper .field-personaldetailsgenderselection {
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+.panel-wrapper.field-addressdetailwrapper {
+    padding: 30px;
+    background: var(--color-interface-error-cta-background);
+    margin: 0 0 30px;
+    border-radius: 20px;
+}
+
+.panel-wrapper.field-employerdetails,
+.panel-wrapper.field-incomedetails,
+.panel-wrapper.field-workemailid,
+.panel-wrapper.field-typeofloan {
+    border-radius: 10px;
+}
+
+
+.panel-wrapper.field-addressdetailwrapper .field-addressasperaadhar {
+    border-left: 3px solid #CDBBFD;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.panel-wrapper.field-addressdetailwrapper .field-customeraadharaddressselection,
+.panel-wrapper.field-addressdetailwrapper .field-residentialaddressselection {
+    line-height: 30px;
+    margin-top: 24px;
+}
+
+.panel-wrapper.field-addressdetailwrapper .field-customeraadharaddressselection .radio-wrapper,
+.panel-wrapper.field-addressdetailwrapper .field-residentialaddressselection .radio-wrapper {
+    margin-top: 5px;
+}
+
+.panel-wrapper.field-addressdetailwrapper .field-customeraadharaddressselection legend,
+.panel-wrapper.field-addressdetailwrapper .field-residentialaddressselection legend {
+    font-weight: var(--font-weight-medium);
+}
+
+.panel-wrapper.field-addressdetailwrapper .field-addressasperaadhar input,
+.panel-wrapper.field-addressdetailwrapper .field-addressasperaadhar input:disabled {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--color-interface-background-quaternary);
+    font-weight: var(--font-weight-medium);
+}
+
+.panel-wrapper.field-addressdetailwrapper .field-addressasperaadhar label {
+    background: none !important;
+    color: var(--color-input-text-primary) !important;
+    font-weight: var(--font-weight-regular);
+}
+
+.panel-wrapper.field-addressdetailwrapper>legend {
+    transform: translate(30px, 30px);
+    color: var(--color-interface-background-quaternary);
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    text-indent: 10px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.panel-wrapper.field-addressdetailwrapper>legend::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/addressdetails.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    position: absolute;
+    left: -30px;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails .field-incomedetailswrapper.accordion,
+.field-workemailidwrapper,
+.field-otherworkemailidwrapper,
+.field-employerdetailswrapper,
+.field-incomedetailswrapper {
+    margin-bottom: 32px !important;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails .field-employercompanyname,
+.field-incomedetailswrapper.accordion fieldset>.text-wrapper,
+.field-workemailidwrapper .field-workemailid .email-wrapper.field-workemailverification,
+.field-otherworkemailidwrapper .field-workemailid .email-wrapper.field-workemailverification,
+.field-typeofloanwrapper .field-loantypesection {
+    padding: 32px;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails .field-employercompanyname,
+.field-customerpersonaldetailswrapper .field-employerdetails .field-employerindustrytype,
+.field-customerpersonaldetailswrapper .field-workemailid .field-workemailverification {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails .field-employercompanyname .field-description,
+.field-customerpersonaldetailswrapper .field-employerdetails .field-employerindustrytype .field-description,
+.field-customerpersonaldetailswrapper .field-workemailid .field-workemailverification .field-description {
+    order: 1;
+}
+
+.field-workemailid {
+    position: relative;
+}
+
+.field-workemailidwrapper .field-workemailid .field-workemailverification,
+.field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverification {
+    grid-column: span 6;
+    padding: 32px 32px 0;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails>.drop-down-wrapper,
+.field-customerpersonaldetailswrapper .field-employerdetails>.text-wrapper,
+.field-incomedetailswrapper.accordion fieldset>.text-wrapper {
+    grid-column: span 6;
+    padding: 0;
+    margin: 32px 32px 0;
+}
+
+.field-incomedetailswrapper .field-incomedetails legend {
+    position: relative;
+    text-indent: 35px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.field-incomedetailswrapper .field-incomedetails legend::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/incomedetailsmoney.png);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails>.drop-down-wrapper p,
+.field-workemailid p {
+    color: var(--color-interface-text-secondary);
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails>.field-industrytypetext {
+    margin: 0 20px;
+    color: var(--color-interface-text-secondary);
+}
+
+.field-customermiddlename p {
+    color: var(--color-interface-text-secondary);
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails .field-disclamertextpanel p {
+    background: var(--color-interface-background-quinary);
+    height: 40px;
+    border-radius: 10px;
+    color: var(--color-action-text-secondary-default);
+    line-height: 40px;
+    font-weight: var(--font-weight-medium);
+    padding: 0 10px;
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails legend {
+    text-indent: 35px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.field-customerpersonaldetailswrapper .field-employerdetails legend::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/internalrefdetails.png);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+}
+
+.field-workemailidwrapper .field-workemailid .field-workemailverifybutton {
+    position: absolute;
+    right: 50%;
+    top: 0;
+}
+
+.field-workemailidwrapper .field-workemailid .field-workemailverifybutton button {
+    background: none;
+    color: var(--color-action-text-secondary-default);
+    text-align: right;
+}
+
+.field-workemailidwrapper .field-workemailid .field-workemailverifybutton button:disabled {
+    opacity: .5;
+}
+
+.field-workemailidwrapper .field-workemailid legend,
+.field-otherworkemailidwrapper .field-otherworkemailid legend {
+    position: relative;
+    text-indent: 30px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.field-workemailidwrapper .field-workemailid legend::before,
+.field-otherworkemailidwrapper .field-otherworkemailid legend::before {
+    background-image: url(/content/dam/hdfc/pl-assisted/workemail.png);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+    content: "";
+}
+
+.field-typeofloanwrapper legend,
+.field-workemailidwrapper legend.accordion-legend,
+.field-otherworkemailidwrapper legend.accordion-legend {
+    text-indent: 35px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.field-typeofloanwrapper .field-loantypesection {
+    grid-column: span 6 !important;
+}
+
+.field-typeofloanwrapper legend {
+    position: relative;
+    text-indent: 34px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.field-typeofloanwrapper legend::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/typeofloan.png);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .button-wrapper:not(.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .button-wrapper.field-emailverifybutton) {
+    margin-top: 0.5rem;
+    width: fit-content;
+    grid-column: auto;
+}
+
+.field-personalemailwrapper>.field-emailsuggesstionspanel {
+    display: flex !important;
+    gap: 5px !important;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .button-wrapper:not(.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .button-wrapper.field-emailverifybutton) button {
+    background-color: #fff;
+    border: 2px solid var(--color-interface-icon-highlight);
+    border-radius: 5rem;
+    width: auto;
+    height: 25px;
+    padding: 3px;
+    font-size: var(--body-x-sm-font-size);
+    color: var(--color-action-background-primary-default);
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .button-wrapper:not(.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .button-wrapper.field-emailverifybutton) button::after {
+    content: none;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .number-wrapper {
+    grid-column: span 6;
+    padding: 32px;
+    padding-bottom: 0;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customerfirstname,
+.xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customerlastname,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailsgenderselection,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper,
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanyname,
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employerindustrytype,
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-industrytype,
+.xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-monthlynetincome,
+.xplassisted .field-customerdetailbodypanel .field-workemailidwrapper .field-workemailid .field-workemailverification,
+.xplassisted .field-customerdetailbodypanel .field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverification,
+.xplassisted .field-customerdetailbodypanel .field-typeofloanwrapper .field-typeofloan .field-loantypesection {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employerindustrytype,
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-industrytype {
+    margin-top: 12px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customermiddlename,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailspanno,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .date-wrapper.field-customerdateofbirth,
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanynamedetail,
+.xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-ongoingincome {
+    padding-left: 0 !important;
+    margin-left: 0;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customermiddlename,
+.xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customerlastname,
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper,
+.xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-disclamertextpanel,
+.xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-monthlynetincome,
+.xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-ongoingincome,
+.xplassisted .field-customerdetailbodypanel .field-typeofloanwrapper .field-typeofloan .field-loantypesection,
+.xplassisted .field-customerdetailbodypanel .field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverification {
+    margin-bottom: 32px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-workemailidwrapper .field-workemailid .field-workemailverification {
+    margin-bottom: 16px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb legend::before {
+    content: "";
+    background-image: url(/content/dam/hdfc/pl-assisted/addofficeaddress.png);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb legend {
+    text-indent: 34px;
+    font-size: var(--body-fd-x-lg-font-size);
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .text-wrapper,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .drop-down-wrapper {
+    grid-column: span 6;
+    padding: 32px 32px 0;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbaddressline1,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbaddressline3,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbcity,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-city,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbresidenttype {
+    padding-right: 0 !important;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbaddressline2,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbpincode,
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbstateprovince {
+    padding-left: 0 !important;
+}
+
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbresidenttype {
+    padding-top: 15px !important;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbcity {
+    display: flex;
+    flex-direction: column;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbcity .field-description {
+    order: 1;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb {
+    position: relative;
+    padding-bottom: 32px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+}
+
+.panel-wrapper.field-addressdetailwrapper>legend {
+    padding: 30px 0;
+}
+
+.xplassisted .field-employercompanyname>div input,
+.xplassisted .field-employerindustrytype>div input,
+.xplassisted .field-workemailverification>div input {
+    background: var(--color-interface-background-primary) url(../../../../icons/select_arrow.svg) no-repeat 95% center;
+}
+
+.xplassisted .field-customernamewrapper .field-pancardnumber label {
+    background-image: url(/content/dam/hdfc/pl-assisted/checkverified.png);
+    background-position: 60% center;
+    width: max-content;
+}
+
+.xplassisted .field-customernamewrapper .field-customername label {
+    background-image: url(/content/dam/hdfc/pl-assisted/checkverified.png);
+    background-position: 80% center;
+    width: max-content;
+}
+
+.xplassisted .form .field-customerdetailbodypanel fieldset .text-wrapper:has(input:read-only):not(.field-customername, .field-pancardnumber, .field-addressasperaadhar, .field-city, .field-currentetbstateprovince) label {
+    background: white !important;
+    transform: translateY(-28px) !important;
+    z-index: 1;
+    line-height: 20px;
+}
+
+.xplassisted .field-customerdetailbodypanel .panel-wrapper label:not(.xplassisted .field-customerdetailbodypanel .panel-wrapper.field-addressdetailwrapper label, .xplassisted .field-customerdetailbodypanel .panel-wrapper.field-customernamewrapper label) {
+    color: var(--color-interface-text-secondary) !important;
+}
+
+.xplassisted .field-customerdetailbodypanel .panel-wrapper.field-addressdetailwrapper label:not(.xplassisted .field-customerdetailbodypanel .field-customeraadharaddressselection label, .xplassisted .field-customerdetailbodypanel .field-residentialaddressselection label),
+.xplassisted .field-customerdetailbodypanel .panel-wrapper.field-customernamewrapper label {
+    color: var(--color-input-text-primary) !important;
+}
+
+
+.xplassisted .form .field-customerdetailbodypanel :is([data-active='true'], [data-empty='false'])>label {
+    transform: translateY(-28px) !important;
+}
+
+.panel-wrapper.field-addressdetailwrapper .field-customeraadharaddressselection .field-description {
+    flex: 0 0 100%;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="true"], .field-customerdateofbirth[data-visible="true"]):has(.field-personaldetailspanno[data-visible="false"], .field-customerdateofbirth[data-visible="false"]) .field-personalemailwrapper {
+    padding: 32px 32px 0;
+    padding-right: 0;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="true"], .field-customerdateofbirth[data-visible="true"]):not(:has(.field-personaldetailspanno[data-visible="false"], .field-customerdateofbirth[data-visible="false"])) .field-personalemailwrapper {
+    padding-left: 0;
+    padding-right: 32px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="false"], .field-customerdateofbirth[data-visible="false"]):not(:has(.field-personaldetailspanno[data-visible="true"], .field-customerdateofbirth[data-visible="true"])) .field-personalemailwrapper {
+    padding-left: 0;
+    padding-right: 32px;
+}
+
+.xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="true"]) .field-customerdateofbirth {
+    padding-right: 0;
+    margin-left: 32px;
+}
+
+@media (max-width: 640px) {
+
+    .button-wrapper:not(main .form .IS_Journey .field-yourdetailstablayout .field-verifybutton.button-wrapper),
+    .button-wrapper:not(main .form .IS_Journey .field-yourdetailstablayout .field-emaileditbutton.button-wrapper) {
+        max-width: none;
+        position: relative !important;
+        bottom: 0 !important;
+        z-index: 1;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .text-wrapper .field-description,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .text-wrapper.field-personaldetailspanno .field-description,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailsgenderselection .field-description,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailspanno .field-description,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .field-description,
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanynamedetail .field-description,
+    .field-workemailidwrapper .field-workemailid .email-wrapper.field-workemailverification .field-description,
+    .field-otherworkemailidwrapper .field-otherworkemailid .email-wrapper.field-otherworkemailverification .field-description,
+    .field-customerpersonaldetailswrapper .field-employerdetails>.drop-down-wrapper .field-description,
+    .field-incomedetailswrapper.accordion fieldset>.text-wrapper .field-description,
+    .field-customerpersonaldetailswrapper .field-employerdetails .field-disclamertextpanel p {
+        font-size: var(--body-sm-font-size);
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .field-emailverifybutton {
+        top: 5px;
+        right: 25px;
+    }
+
+    .field-workemailidwrapper .field-workemailid .email-wrapper.field-workemailverification,
+    .field-otherworkemailidwrapper .field-otherworkemailid .email-wrapper.field-otherworkemailverification {
+        grid-column: span 12;
+    }
+
+    .field-workemailidwrapper .field-workemailid .field-workemailverifybutton,
+    .field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverifybutton {
+        right: 10px;
+        top: 5px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .text-wrapper,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .text-wrapper.field-personaldetailspanno,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .date-wrapper.field-customerdateofbirth,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailsgenderselection,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailspanno,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper,
+    .field-customerpersonaldetailswrapper .field-employerdetails>.drop-down-wrapper,
+    .field-incomedetailswrapper.accordion fieldset>.text-wrapper {
+        grid-column: span 12 !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .text-wrapper input {
+        padding: 5px;
+        min-width: 90px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customerfirstname,
+    .xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customerlastname,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailsgenderselection,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper,
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanyname,
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employerindustrytype,
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-industrytype,
+    .xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-monthlynetincome,
+    .xplassisted .field-customerdetailbodypanel .field-workemailidwrapper .field-workemailid .field-workemailverification,
+    .xplassisted .field-customerdetailbodypanel .field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverification,
+    .xplassisted .field-customerdetailbodypanel .field-typeofloanwrapper .field-typeofloan .field-loantypesection {
+        padding-right: 32px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanynamedetail {
+        margin-top: 15px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-ongoingincome {
+        margin-top: 0 !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customermiddlename,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personaldetailspanno,
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .date-wrapper.field-customerdateofbirth,
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanynamedetail,
+    .xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-ongoingincome {
+        margin-left: 32px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-typeofloanwrapper .field-typeofloan .field-loantypesection,
+    .xplassisted .field-customerdetailbodypanel .field-employerdetailswrapper .field-employerdetails .field-employercompanynamedetail,
+    .xplassisted .field-customerdetailbodypanel .field-workemailidwrapper .field-workemailid .field-workemailverification,
+    .xplassisted .field-customerdetailbodypanel .field-otherworkemailidwrapper .field-otherworkemailid .field-otherworkemailverification {
+        grid-column: span 12 !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .text-wrapper,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .drop-down-wrapper {
+        grid-column: span 12 !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbaddressline1,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbaddressline3,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbcity,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-city,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbresidenttype {
+        padding-right: 32px !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbaddressline2,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbpincode,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbstateprovince {
+        padding-left: 32px !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbresidenttype {
+        padding-top: 32px !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbcity .field-description {
+        font-size: var(--body-fd-sm-font-size);
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb .field-currentetbstateprovince {
+        padding-top: 15px !important;
+    }
+
+    .field-customerpersonaldetailswrapper .field-employerdetails>.field-industrytypetext,
+    .field-workemailid p {
+        font-size: var(--body-x-sm-font-size);
+    }
+
+
+    .panel-wrapper.field-addressdetailwrapper .field-customeraadharaddressselection,
+    .panel-wrapper.field-addressdetailwrapper .field-residentialaddressselection {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+
+    .xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .text-wrapper:last-child,
+    .xplassisted .field-customerdetailbodypanel .field-permanentaddresswrapper .field-permanentaddress .field-permanentresidenttype {
+        padding-top: 32px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-nameasperpanwrapper .field-customerlastname {
+        padding-top: 15px !important;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-permanentaddresswrapper .field-permanentaddress .field-permanentstateprovince {
+        padding-top: 12px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .number-wrapper {
+        grid-column: span 12;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-incomedetailswrapper .field-incomedetails .field-monthlynetincome {
+        margin-bottom: 0;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-customerdetailsheading p,
+    .xplassisted .field-customerdetailbodypanel .field-addressdetailtext p>p,
+    .xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext p,
+    .xplassisted .form .field-customerdetailbodypanel .field-personaldetailswrapper legend,
+    .panel-wrapper.field-addressdetailwrapper>legend,
+    .field-incomedetailswrapper .field-incomedetails legend,
+    .field-customerpersonaldetailswrapper .field-employerdetails legend,
+    .field-workemailidwrapper .field-workemailid legend,
+    .field-otherworkemailidwrapper .field-otherworkemailid legend,
+    .field-typeofloanwrapper legend,
+    .field-workemailidwrapper legend.accordion-legend,
+    .field-otherworkemailidwrapper legend.accordion-legend,
+    .field-typeofloanwrapper legend,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb legend {
+        font-size: var(--body-md-font-size);
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-customerdetailsheading p::before,
+    .xplassisted .field-customerdetailbodypanel .field-addressdetailtext p>p::before,
+    .xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext p::before,
+    .xplassisted .form .field-customerdetailbodypanel .field-personaldetailswrapper legend::before,
+    .panel-wrapper.field-addressdetailwrapper>legend::before,
+    .field-incomedetailswrapper .field-incomedetails legend::before,
+    .field-customerpersonaldetailswrapper .field-employerdetails legend::before,
+    .field-workemailidwrapper .field-workemailid legend::before,
+    .field-otherworkemailidwrapper .field-otherworkemailid legend::before,
+    .field-typeofloanwrapper legend::before,
+    .field-workemailidwrapper legend.accordion-legend::before,
+    .field-otherworkemailidwrapper legend.accordion-legend::before,
+    .field-typeofloanwrapper legend::before,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddressetb legend::before {
+        background-size: 24px;
+    }
+
+    .field-incomedetailswrapper .field-incomedetails legend::before,
+    .field-customerpersonaldetailswrapper .field-employerdetails legend::before,
+    .field-workemailidwrapper .field-workemailid legend::before,
+    .field-otherworkemailidwrapper .field-workemailid legend::before,
+    .field-typeofloanwrapper legend::before,
+    .xplassisted .field-customerdetailbodypanel .field-currentaddresswrapper .field-currentaddress legend::before {
+        top: 30%;
+    }
+
+    .xplassisted .form .field-customerdetailbodypanel .field-nameasperpanwrapper .field-asperpannameheadingtext p>p::after {
+        top: 33%;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-customername input,
+    .xplassisted .field-customerdetailbodypanel .field-pancardnumber input {
+        font-size: var(--body-md-font-size);
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="true"], .field-customerdateofbirth[data-visible="true"]):has(.field-personaldetailspanno[data-visible="false"], .field-customerdateofbirth[data-visible="false"]) .field-personalemailwrapper {
+        padding-right: 32px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="true"], .field-customerdateofbirth[data-visible="true"]):not(:has(.field-personaldetailspanno[data-visible="false"], .field-customerdateofbirth[data-visible="false"])) .field-personalemailwrapper {
+        padding-left: 32px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="false"], .field-customerdateofbirth[data-visible="false"]):not(:has(.field-personaldetailspanno[data-visible="true"], .field-customerdateofbirth[data-visible="true"])) .field-personalemailwrapper {
+        padding-left: 32px;
+    }
+
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper:has(.field-personaldetailspanno[data-visible="true"]) .field-customerdateofbirth {
+        padding-right: 32px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .xplassisted .field-customerdetailbodypanel .field-personaldetailswrapper .field-personalemailwrapper .text-wrapper input {
+        min-width: 85px !important;
+    }
+}
+
+.xplassisted .field-customerdetailmainpanel .accordion legend::after {
+    transform: rotate(-45deg);
+    margin-top: -5px;
+    text-indent: 0;
+    text-shadow: 0 0 1px currentcolor;
+}

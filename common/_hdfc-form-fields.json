@@ -1,0 +1,59 @@
+{
+    "fields": [
+        {
+          "component": "text",
+          "name": "journeyName",
+          "label": "Journey Name",
+          "required": true,
+          "valueType": "string"
+        },
+        {
+            "component": "select",
+            "valueType": "string",
+            "name": "track",
+            "label": "Select track",
+            "options": [
+                {
+                    "name": "Assets",
+                    "value": "assets"
+                },
+                {
+                    "name": "Cards",
+                    "value": "cards"
+                },
+                {
+                    "name": "Liabilities",
+                    "value": "liabilities"
+                }
+            ]
+        },
+        {
+            "component": "text",
+            "name": "scenarioName",
+            "label": "API Integration Scenario",
+            "required": true,
+            "valueType": "string"
+        },
+        {
+            "component": "select",
+            "name": "journeyType",
+            "label": "Journey Type",
+            "valueType": "string",
+            "options": [
+                {
+                    "name": "ETB",
+                    "value": "etb"
+                },
+                {
+                    "name": "NTB",
+                    "value": "ntb"
+                },
+                {
+                    "name": "VRM",
+                    "value": "vrm"
+                }
+            ],
+            "value": "ntb"
+        }
+    ]
+}

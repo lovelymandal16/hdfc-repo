@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "title": "Default Content",
+      "id": "default",
+      "components": [
+        {
+          "...": "./_text.json#/definitions"
+        },
+        {
+          "...": "./_title.json#/definitions"
+        },
+        {
+          "...": "./_image.json#/definitions"
+        },
+        {
+          "...": "./_button.json#/definitions"
+        }
+      ]
+    },
+    {
+      "title": "Sections",
+      "id": "sections",
+      "components": [
+        {
+          "...": "./_section.json#/definitions"
+        }
+      ]
+    },
+    {
+      "title": "Blocks",
+      "id": "blocks",
+      "components": [
+        {
+          "...": "../blocks/*/_*.json#/definitions"
+        }
+      ]
+    },
+    {
+      "title": "Custom Form Components",
+      "id": "custom-components",
+      "components": [
+          { "...": "../blocks/form/components/analytics/_analytics.json#/definitions" },
+          { "...": "../blocks/form/components/card-choice/_card-choice.json#/definitions" },
+          { "...": "../blocks/form/components/consent-popup/_consent-popup.json#/definitions" },
+          { "...": "../blocks/form/components/consent-popup-with-goToBottom/_consent-popup-with-goToBottom.json#/definitions" },
+          { "...": "../blocks/form/components/countdown-timer/_countdown-timer.json#/definitions" },
+          { "...": "../blocks/form/components/custom-text/_custom-text.json#/definitions" },
+          { "...": "../blocks/form/components/dob-input/_dob-input.json#/definitions" },
+          { "...": "../blocks/form/components/dynamic-dropdown/_dynamic-dropdown.json#/definitions" },
+          { "...": "../blocks/form/components/file-input-v2/_file-input-v2.json#/definitions" },
+          { "...": "../blocks/form/components/hdfc-card-digit/_hdfc-card-digit.json#/definitions" },
+          { "...": "../blocks/form/components/hdfc-mobile-input/_hdfc-mobile-input.json#/definitions" },
+          { "...": "../blocks/form/components/kyc-consent/_kyc-consent.json#/definitions" },
+          { "...": "../blocks/form/components/loan-range-slider/_loan-range-slider.json#/definitions" },
+          { "...": "../blocks/form/components/loan-range-slider-with-ticks/_loan-range-slider-with-ticks.json#/definitions" },
+          { "...": "../blocks/form/components/loan-term-slider/_loan-term-slider.json#/definitions" },
+          { "...": "../blocks/form/components/pan-input/_pan-input.json#/definitions" },
+          { "...": "../blocks/form/components/regex-text-input/_regex-text-input.json#/definitions" },
+          { "...": "../blocks/form/components/review/_review.json#/definitions" },
+          { "...": "../blocks/form/components/single-account-card/_single-account-card.json#/definitions" },
+          { "...": "../blocks/form/components/state-button/_state-button.json#/definitions" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+/*
+ * Copyright 2020 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@import url('./typography.css');
+@import url('./color-palette.css');
+
+/* @import url('./bundled-journey.css'); */
+ @import url('./xpl-assisted.css');
+ @import url('./verify-income-xpl-assisted.css');
+
+:root {
+  /* colors */
+  --background-color: white;
+  --light-color: #f8f8f8;
+  --dark-color: #505050;
+  --text-color: #131313;
+  --link-color: #3b63fb;
+  --link-hover-color: #1d3ecf;
+
+  /* fonts */
+  --body-font-family: roboto, roboto-fallback, sans-serif;
+  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 22px;
+  --body-font-size-s: 19px;
+  --body-font-size-xs: 17px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 55px;
+  --heading-font-size-xl: 44px;
+  --heading-font-size-l: 34px;
+  --heading-font-size-m: 27px;
+  --heading-font-size-s: 24px;
+  --heading-font-size-xs: 22px;
+
+  /* nav height */
+  --nav-height: 64px;
+}
+
+/* fallback fonts */
+@font-face {
+  font-family: roboto-condensed-fallback;
+  size-adjust: 88.82%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: roboto-fallback;
+  size-adjust: 99.529%;
+  src: local('Arial');
+}
+
+@media (width >=900px) {
+  :root {
+    /* body sizes */
+    --body-font-size-m: 18px;
+    --body-font-size-s: 16px;
+    --body-font-size-xs: 14px;
+
+    /* heading sizes */
+    --heading-font-size-xxl: 45px;
+    --heading-font-size-xl: 36px;
+    --heading-font-size-l: 28px;
+    --heading-font-size-m: 22px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
+  }
+}
+
+body {
+  display: none;
+}
+
+body.appear {
+  display: block;
+}
+
+/*
+header {
+  height: var(--nav-height);
+}
+
+ header .header,
+footer .footer {
+  visibility: hidden;
+}
+
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  scroll-margin: 40px;
+}
+
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
+
+dl,
+ol,
+ul,
+pre,
+blockquote {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+}
+
+code,
+pre {
+  font-size: var(--body-font-size-s);
+}
+
+pre {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--light-color);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+main>div {
+  margin: 40px 16px;
+}
+
+/* input,
+textarea,
+select,
+button {
+  font: inherit;
+} */
+
+/* links */
+a:any-link {
+  color: var(--color-action-text-secondary-default);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* buttons */
+
+/* a.button:any-link,
+button {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 12px 0;
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  padding: 0.5em 1.2em;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--link-color);
+  color: var(--background-color);
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: var(--light-color);
+  cursor: unset;
+} */
+
+a.button.secondary,
+button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+/* sections */
+main>.section {
+  margin: 40px 0;
+}
+
+/* main>.section>div {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+} */
+
+main>.section:first-of-type {
+  margin-top: 0;
+}
+
+/* @media (width >=900px) {
+  main>.section>div {
+    padding: 0 32px;
+  }
+} */
+
+/* section metadata */
+main .section.light,
+main .section.highlight {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 40px 0;
+}
+
+
+/* Base style for labels */
+main .form :not(.checkbox-wrapper,
+  .radio-wrapper,
+  .field-joiningrenewalfee,
+  .field-nooffds,
+  .field-creditlimit,
+  .field-rmcustomername , 
+  .field-rmmobilenumber,
+  .field-customerrmname,
+  .field-customerrmmobilenumber,
+  .field-rmcusttype,
+  .field-rmoffertype,
+  .field-fdnumber,
+  .field-selectedfdamount,
+  .field-maturingdate,
+  .field-eligiblecreditlimitamount,
+  .field-joiningfeeamt,
+  .field-renewalfeeamt,
+  .field-loansummarysection .text-wrapper)>label {
+  margin: 20px;
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+  width: max-content;
+}
+
+main .form :not(.checkbox-wrapper,
+  .radio-wrapper,
+  .field-joiningrenewalfee,
+  .field-nooffds,
+  .field-rmcustomername , 
+  .field-rmmobilenumber,
+  .field-customerrmname,
+  .field-customerrmmobilenumber,
+  .field-rmcusttype,
+  .field-rmoffertype,
+  .field-creditlimit,
+  .field-fdnumber,
+  .field-selectedfdamount,
+  .field-maturingdate,
+  .field-loansummarysection .text-wrapper)>label:has(p) p {
+  margin: 1px 0;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--body-sm-font-size);
+}
+
+/* Style for labels when input is active or not empty */
+main .form :is([data-active='true'], [data-empty='false'], .date-wrapper):not(.field-joiningrenewalfee,
+  .field-nooffds,
+  .field-customername,
+  .field-creditlimit,
+  .field-fdnumber,
+  .field-selectedfdamount,
+  .field-maturingdate,
+  .field-eligiblecreditlimitamount,
+  .field-joiningfeeamt,
+  .field-renewalfeeamt,
+  .field-rmcustomername , 
+  .field-rmmobilenumber,
+  .field-customerrmname,
+  .field-customerrmmobilenumber,
+  .field-rmcusttype,
+  .field-rmoffertype,
+  .field-loansummarysection .text-wrapper)>label {
+  color: var(--label-color);
+  transform: translateY(-22px);
+  z-index: 1;
+  background-color: var(--color-interface-background-primary);
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button Styling */
+
+/* .button-wrapper {
+  text-align: center;
+
+  .button {
+    max-width: 400px;
+    border-radius: 13px;
+    width: 100%;
+    height: 52px;
+    line-height: 24px;
+    letter-spacing: 0 em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: var(--form-button-font-size);
+    font-weight: var(--form-button-font-weight);
+    background: var(--color-action-background-primary-default);
+    border: var(--color-action-border-primary-default);
+    color: var(--color-action-text-primary-default);
+  }
+
+  :hover {
+    background: var(--color-action-background-primary-default) !important;
+    border: var(--color-action-border-primary-default);
+    color: var(--color-action-text-primary-default);
+  }
+
+  :disabled {
+    background-color: var(
+      --color-action-background-primary-disabled
+    ) !important;
+    border: var(--color-action-border-primary-disabled) !important;
+    color: var(--color-action-text-primary-disabled) !important;
+  }
+} */

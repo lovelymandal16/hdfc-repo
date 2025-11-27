@@ -1,0 +1,102 @@
+{
+  "definitions": [
+    {
+      "title": "Loan Range Slider with Ticks",
+      "id": "loan-range-slider-with-ticks",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+            "template": {
+              "jcr:title": "Loan Range Slider with Ticks",
+              "fieldType": "number-input",
+              "fd:viewType": "loan-range-slider-with-ticks",
+              "enabled": true,
+              "visible": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "loan-range-slider-with-ticks",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Basic",
+          "name": "basic"
+        },
+        {
+          "...": "../../models/form-common/_basic-input-fields.json#/fields"
+        },
+        {
+          "...": "../../models/form-common/_help-container.json#/fields"
+        },
+        {
+          "component": "tab",
+          "label": "Validation",
+          "name": "validation"
+        },
+        {
+          "...": "../../models/form-common/_number-validation-fields.json#/fields"
+        },
+        {
+          "component": "tab",
+          "label": "Custom Properties",
+          "name": "custom"
+        },
+        {
+          "component": "number",
+          "name": "splitValue",
+          "label": "Split Value",
+          "valueType": "number",
+          "description": "Value at which color changes from blue to orange",
+          "value": 400000
+        },
+        {
+          "component": "number",
+          "name": "stepValue",
+          "label": "Step value",
+          "valueType": "number",
+          "description": "slider step size",
+          "value": 1000
+        },
+        {
+          "component": "number",
+          "name": "maxValue",
+          "label": "max value",
+          "valueType": "number",
+          "description": "slider slider max value",
+          "value": 1250000
+        },
+        {
+          "component": "number",
+          "name": "minValue",
+          "label": "min Value",
+          "valueType": "number",
+          "description": "slider min value",
+          "value": 50000
+        },
+        {
+          "component": "text",
+          "name": "offerText",
+          "label": "Offer Badge Text",
+          "valueType": "string",
+          "description": "Text displayed in the offer badge",
+          "value": "Pre-approved offer"
+        },
+        {
+          "component": "number",
+          "name": "tickValues",
+          "label": "Tick Values",
+          "description": "Array of values where tick marks should appear",
+          "valueType": "number",
+          "multi": true,
+          "value": [12,24,36,48,60,72,84]
+        }
+      ]
+    }
+  ]
+}

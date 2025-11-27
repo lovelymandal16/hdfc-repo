@@ -1,0 +1,109 @@
+{
+  "definitions": [
+    {
+      "title": "Loan Range Slider",
+      "id": "loan-range-slider",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+            "template": {
+              "jcr:title": "Loan Range Slider",
+              "fieldType": "number-input",
+              "fd:viewType": "loan-range-slider",
+              "enabled": true,
+              "visible": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "loan-range-slider",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Basic",
+          "name": "basic"
+        },
+        {
+          "...": "../../models/form-common/_basic-input-fields.json#/fields"
+        },
+        {
+          "...": "../../models/form-common/_help-container.json#/fields"
+        },
+        {
+          "component": "tab",
+          "label": "Validation",
+          "name": "validation"
+        },
+        {
+          "...": "../../models/form-common/_number-validation-fields.json#/fields"
+        },
+        {
+          "component": "tab",
+          "label": "Custom Properties",
+          "name": "custom"
+        },
+        {
+          "component": "number",
+          "name": "splitValue",
+          "label": "Split Value",
+          "valueType": "number",
+          "description": "Value at which color changes from blue to orange",
+          "value": 400000
+        },
+        {
+          "component": "number",
+          "name": "stepValue",
+          "label": "Step value",
+          "valueType": "number",
+          "description": "slider step size",
+          "value": 1000
+        },
+        {
+          "component": "number",
+          "name": "maxValue",
+          "label": "max value",
+          "valueType": "number",
+          "description": "slider slider max value",
+          "value": 1000
+        },
+        {
+          "component": "number",
+          "name": "minValue",
+          "label": "min Value",
+          "valueType": "number",
+          "description": "slider min value",
+          "value": 1000
+        },
+        {
+          "component": "text",
+          "name": "minLabel",
+          "label": "Minimum Label",
+          "valueType": "string",
+          "description": "Label for minimum value",
+          "value": "₹50K"
+        },
+        {
+          "component": "text",
+          "name": "maxLabel",
+          "label": "Maximum Label",
+          "valueType": "string",
+          "description": "Label for maximum value",
+          "value": "₹12.5L"
+        },
+        {
+          "component": "text",
+          "name": "offerText",
+          "label": "Offer Badge Text",
+          "valueType": "string",
+          "description": "Text displayed in the offer badge",
+          "value": "Pre-approved offer"
+        }
+      ]
+    }
+  ]
+}

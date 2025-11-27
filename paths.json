@@ -1,0 +1,12 @@
+{
+    "mappings": [
+      "/content/showcase/:/",
+      "/content/showcase/configuration:/.helix/config.json",
+      "/content/hdfc-bank/metadata:/metadata.json"
+    ],
+    "includes": [
+      "/content/",
+      "/content/dam/"
+    ]
+  }
+  

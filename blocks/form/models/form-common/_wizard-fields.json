@@ -1,0 +1,24 @@
+{
+    "fields": [
+        {
+            "...": "./_basic-input-fields.json#/fields"
+        },
+        {
+            "component": "select",
+            "name": "variant",
+            "label": "Variant",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Default",
+                "value": "default"
+              },
+              {
+                "name": "HDFC Wizard",
+                "value": "hdfc-wizard"
+              }
+            ],
+            "value": "default"
+          }
+    ]
+}

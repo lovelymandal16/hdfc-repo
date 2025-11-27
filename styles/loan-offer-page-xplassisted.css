@@ -1,0 +1,692 @@
+ .field-everifybackbutton button {
+     background: none !important;
+     color: var(--color-action-background-primary-default) !important;
+     font-size: var(--form-button-font-size);
+ }
+
+ .field-everifybackbutton button::after {
+     display: none;
+ }
+
+ .xplassisted .field-everifybackbutton button {
+     background: transparent;
+     color: var(--color-action-text-secondary-default);
+     font-weight: var(--form-title-font-weight);
+     width: auto;
+     padding: 0;
+     margin: 0;
+     height: auto;
+ }
+
+ .field-customereligibilitypanel,
+ .xplassisted .field-loaneligibilitypanel {
+     display: flex !important;
+     background: #EBFCFE;
+     padding: 20px !important;
+     border-radius: 8px;
+     flex-direction: row !important;
+     flex-wrap: nowrap !important;
+     align-items: center;
+ }
+
+ .xplassisted .field-customereligibilitymaintext p,
+ .xplassisted .field-incomeverificationmainheading p,
+ .xplassisted .field-loaneligibilitytext p,
+ .xplassisted .field-loantitle p,
+ .xplassisted .field-incomeeverification legend,
+ .field-income-e-verification-failed-alert p>p {
+     font-weight: var(--font-weight-bold);
+     font-size: var(--body-x-lg-font-size);
+     margin-bottom: 8px;
+ }
+
+ .xplassisted .field-customereligibilitymaintext p {
+     margin: 0px;
+ }
+
+ .xplassisted .field-customereligibilitymaintext {
+     margin-top: 16px;
+     margin-bottom: 16px;
+ }
+
+ .xplassisted .field-customereligibilitytextpanel {
+     display: flex !important;
+     flex-direction: column !important;
+ }
+
+ .xplassisted .field-income-e-verification-failed-alert p:first-child {
+     margin: 0px !important;
+ }
+
+ .xplassisted .field-reinitiatehelpertext {
+     border-top: 1.5px dotted #D2D5DB;
+     padding-top: 12px;
+ }
+
+ .xplassisted .field-income-e-verification-failed-alert {
+     display: flex;
+     flex-wrap: nowrap;
+     align-items: center;
+ }
+
+ .xplassisted .field-income-e-verification-failed-alert::before {
+     content: "";
+     display: inline-block;
+     width: 26px;
+     height: 26px;
+     margin: 0 8px 1px;
+     background-image: url(/content/dam/hdfc/pl-assisted/closecircle.png);
+     background-position: center;
+     position: relative;
+     /* top: 6px; */
+ }
+
+ .xplassisted .field-reinitateincomewrapper {
+     display: flex;
+ }
+
+
+ .xplassisted .field-loanamtandtenuretitle p {
+     font-weight: var(--font-weight-bold);
+     font-size: var(--body-xx-lg-font-size);
+ }
+
+ .field-customereligibilitybodytext p,
+ .field-incomeverificationsubheading p,
+ .xplassisted .field-etbaccselectionsubtext p>p,
+ .xplassisted .field-additionaldocumentstext p,
+ .xplassisted .field-incomeeverificationdescription p,
+ .field-accountprepopultaionpanel .field-accountdetailspanel .field-custidtext p,
+ .field-accountprepopultaionpanel .field-accountdetailspanel .field-custid input {
+     color: var(--color-input-text-primary);
+     font-size: var(--body-md-font-size);
+     font-weight: var(--font-weight-regular);
+     margin: 0px !important;
+ }
+
+ .xplassisted .field-reinitiatehelpertext p>p,
+ .xplassisted .field-reinitiateverificationreason p>p {
+     color: var(--color-input-text-primary);
+     font-size: var(--body-md-font-size);
+     font-weight: var(--font-weight-regular);
+     margin-left: 38px;
+ }
+
+ .field-incomeverificationpanel,
+ .xplassisted .field-incomeeverification {
+     background: var(--color-interface-toaster-background-primary);
+     padding: 20px !important;
+     margin-top: 20px !important;
+     border-radius: 20px;
+ }
+
+ .xplassisted .field-loansummarysection {
+     background: var(--color-interface-toaster-background-primary);
+     border-radius: 8px;
+     padding: 24px;
+     padding-bottom: 0px;
+     margin-bottom: 20px;
+ }
+
+ .xplassisted .field-loansummarysection .text-wrapper input {
+     background: none;
+     border: none;
+ }
+
+ .xplassisted .field-loansummarysection .text-wrapper {
+     border-left: 3px solid var(--color-interface-toaster-text-primary);
+     margin-bottom: 12px;
+ }
+
+ .xplassisted .field-emitopsection,
+ .xplassisted .field-emibottomsection {
+     display: flex !important;
+     flex-wrap: wrap;
+     border-top: 1.5px dotted var(--color-interface-border-secondary);
+     padding-top: 20px;
+     padding-bottom: 10px;
+ }
+
+ .xplassisted .field-emitopsection .text-wrapper,
+ .xplassisted .field-emibottomsection .text-wrapper {
+     width: 47%;
+ }
+
+ .xplassisted .field-emitopsection .text-wrapper label,
+ .xplassisted .field-emibottomsection .text-wrapper label {
+     color: var(--color-input-text-primary);
+     font-size: var(--body-sm-font-size);
+     font-weight: var(--font-weight-regular);
+     margin-left: 18px;
+     text-wrap: nowrap;
+ }
+
+
+ .xplassisted .field-emitopsection .text-wrapper input,
+ .xplassisted .field-emibottomsection .text-wrapper input {
+     color: var(--color-interface-text-primary);
+     font-size: var(--body-lg-font-size);
+     font-weight: var(--font-weight-regular);
+     height: 35px;
+ }
+
+ .xplassisted .field-loanamount p {
+     font-size: var(--font-linehight-x-large);
+     margin-top: 22px;
+     margin-bottom: 22px;
+ }
+
+ .xplassisted .field-loantitle p {
+     margin-bottom: 0px;
+     margin-top: 4px;
+ }
+
+ .xplassisted .field-instantdisbursementtext,
+ .xplassisted .field-recalculateoffernote {
+     background: #2DB780;
+     margin-left: -22px;
+     margin-right: -23px;
+     text-align: center;
+     color: #fff;
+     border-bottom-right-radius: 12px;
+     border-bottom-left-radius: 12px;
+ }
+
+ .xplassisted .field-emirecalculateoffercta {
+     display: flex;
+     max-width: 100%;
+     justify-content: center;
+     margin-bottom: 24px;
+ }
+
+ .xplassisted .field-emirecalculateoffercta button,
+ .xplassisted .field-emirecalculateoffercta button:hover {
+     max-width: 272px;
+     color: var(--color-action-background-primary-default);
+     border: 1px solid var(--color-action-background-primary-default);
+     background: var(--color-interface-background-primary);
+ }
+
+ .xplassisted .field-shareoffertocustomernote p>p {
+     background: #FEF8E6;
+     border: 1px solid var(--Primary-Colours-Warning-500, #F99F35);
+     border-radius: 12px;
+     padding: 12px;
+ }
+
+ .xplassisted .field-loanoffertenureandslider {
+     display: flex !important;
+     flex-direction: column !important;
+     margin-bottom: 100px;
+ }
+
+ .xplassisted .field-loanamountpanel {
+     margin-bottom: 44px;
+ }
+
+ .xplassisted .field-loanamtvalue label {
+     display: none !important;
+ }
+
+ .xplassisted .field-loanamttext p,
+ .xplassisted .field-loantenuretext p {
+     font-weight: var(--font-weight-bold);
+     font-size: var(--body-x-lg-font-size);
+ }
+
+ .xplassisted .field-loanamtandtenuretitle {
+     margin-bottom: 18px;
+     margin-top: 18px;
+ }
+
+ .xplassisted .field-loansummarysection:has(.field-emirecalculateoffercta[data-visible="true"]) {
+     background: #FEF8E6;
+ }
+
+ .xplassisted .field-loansummarysection:has(.field-emirecalculateoffercta[data-visible="true"]) .text-wrapper {
+     border-left: 3px solid var(--color-interface-feedback-mayberating);
+ }
+
+ .xplassisted .field-loansummarysection:has(.field-emirecalculateoffercta[data-visible="true"]) .field-instantdisbursementtext,
+ .xplassisted .field-loansummarysection:has(.field-emirecalculateoffercta[data-visible="true"]) .field-recalculateoffernote {
+     background: var(--color-interface-feedback-mayberating);
+ }
+
+ .xplassisted .field-childloanamt .field-wrapper,
+ .xplassisted .field-childloantenure .field-wrapper {
+     grid-column: span 6 !important;
+ }
+
+ .xplassisted .field-everifynow button,
+ .xplassisted .field-everifybutton button,
+ .xplassisted .field-everifynow button:hover,
+ .xplassisted .field-everifybutton button:hover {
+     border: 1.5px solid var(--color-action-background-primary-default);
+     background: none !important;
+     color: var(--color-action-background-primary-default);
+ }
+
+ .xplassisted .field-incomeeverification .button-wrapper,
+ .xplassisted .field-choosebankbackbutton {
+     position: relative !important;
+     bottom: 0px !important;
+ }
+
+ .xplassisted .field-incomeeverification .button-wrapper button::after {
+     display: none;
+ }
+
+ .xplassisted .field-greatnewstitle p,
+ .xplassisted .field-everifyheadingtext p {
+     color: var(--color-interface-text-primary) !important;
+     font-size: var(--body-xx-lg-font-size);
+     font-weight: var(--font-weight-bold);
+
+ }
+
+ .xplassisted .field-everifyheadingtext p>p::before,
+ .xplassisted .field-greatnewstitle p>p::before {
+     content: "";
+     display: inline-block;
+     width: 22px;
+     height: 22px;
+     margin: 0 8px 1px;
+     background-image: url(/content/dam/hdfc/pl-assisted/benefitconfetti.png);
+     background-position: center;
+     position: relative;
+     top: 4px;
+ }
+
+
+
+ .xplassisted .field-recalculatesubmitbtn button:hover,
+ .xplassisted .field-recalculatesubmitbtn button {
+     color: var(--color-action-background-primary-default);
+     border: 1.5px solid var(--color-action-background-primary-default);
+     background: var(--color-interface-background-primary);
+     margin-top: 20px;
+ }
+
+ .xplassisted .field-recalculateheading p {
+     font-size: var(--body-xx-lg-font-size);
+     font-weight: var(--body-lg-font-size);
+     margin-top: 0px;
+ }
+
+ .xplassisted .field-emirecalculatetitle p,
+ .xplassisted .field-increcalculatetitle p {
+     font-size: var(--body-lg-font-size);
+     font-weight: var(--font-weight-bold);
+ }
+
+ .xplassisted .field-increcalculatenote p {
+     font-size: var(--body-md-font-size);
+     color: var(--color-interface-text-secondary);
+     font-weight: var(--font-weight-regular);
+ }
+
+ .xplassisted .field-reinitateincomewrapper {
+     background: var(--color-interface-error-box-primary);
+     border-radius: 12px;
+     padding: 20px;
+ }
+
+ /**bre loading screen**/
+
+ .xplassisted .field-offerimage {
+     display: flex;
+     justify-content: center;
+ }
+
+ .xplassisted .field-assistedeverifybuttonpannel .button-wrapper {
+     position: relative !important;
+     bottom: 0px !important;
+ }
+
+ .xplassisted .field-generateoffertext1 p {
+     font-size: var(--body-xx-lg-font-size);
+     font-weight: var(--font-weight-bold);
+     text-align: center;
+     margin-bottom: 8px !important;
+ }
+
+ .xplassisted .field-progressbar {
+     display: flex !important;
+     justify-content: center;
+     margin-bottom: 24px;
+ }
+
+ .xplassisted .field-progressbar::before {
+     content: "";
+     display: inline-block;
+     vertical-align: middle;
+     height: 12px;
+     width: 300px;
+     margin-left: 10px;
+     border-radius: 6px;
+     background: linear-gradient(to right, #1C3FCA 0%, #1C3FCA 68%, transparent 68%, transparent 100%), radial-gradient(circle 6px at 68% center, #ECEDF3 100%, transparent 101%);
+     background-repeat: no-repeat;
+     background-size: 100% 100%, 100% 100%;
+     background-position: left center, left center;
+     background-color: #ECEDF3;
+ }
+
+ .xplassisted .field-generateoffertext2 p {
+     color: var(--color-input-text-primary);
+     font-size: var(--body-md-font-size);
+     font-weight: var(--font-weight-regular);
+     text-align: center;
+     margin: 0px;
+ }
+
+ .xplassisted .field-generateoffertext2 {
+     margin-bottom: 20px;
+     ;
+ }
+
+ .xplassisted .field-generateoffersubpanel {
+     background: var(--color-interface-error-cta-background);
+     border-radius: 16px;
+     padding: 12px;
+     display: flex !important;
+     flex-direction: row !important;
+     flex-wrap: nowrap !important;
+     align-items: center;
+     width: fit-content;
+     margin: 0 auto;
+ }
+
+ .field-generateoffersubtext {
+     margin-left: -16px;
+ }
+
+ .xplassisted .field-generateoffersubtext p {
+     font-size: var(--body-sm-font-size);
+     font-weight: var(--font-weight-bold);
+ }
+
+ .xplassisted .field-riskometerproceedpanel {
+     display: flex !important;
+     flex-direction: row;
+     gap: 10px !important;
+ }
+
+ .xplassisted .field-loanriskometerpopup.weakRating .field-riskometerproceedpanel {
+     flex-direction: row-reverse;
+ }
+
+ .xplassisted .field-offerimage {
+     display: flex !important;
+     justify-content: center !important;
+ }
+
+
+
+ @media (width >=992px) {
+     .xplassisted .field-assistedeverifybuttonpannel {
+         justify-content: flex-start;
+     }
+
+     .xplassisted .field-loandetailanddescription {
+         display: flex !important;
+         flex-wrap: nowrap !important;
+     }
+ }
+
+ @media (width <=640px) {
+     .xplassisted .field-progressbar::before {
+         width: 60%;
+     }
+
+     .xplassisted .field-greatnewstitle p,
+     .xplassisted .field-everifyheadingtext p {
+         font-size: var(--body-lg-font-size);
+     }
+
+     .xplassisted .field-customereligibilitymaintext p,
+     .xplassisted .field-loaneligibilitytext p,
+     .xplassisted .field-incomeverificationmainheading p,
+     .field-income-e-verification-failed-alert p>p {
+         font-size: var(--body-md-font-size);
+     }
+
+     .xplassisted .field-generateoffertext2 p,
+     .xplassisted .field-incomeeverificationdescription p,
+     .xplassisted .field-incomeverificationsubheading p,
+     .xplassisted .field-reinitiatehelpertext p>p,
+     .xplassisted .field-reinitiateverificationreason p>p {
+         font-size: var(--body-x-sm-font-size);
+     }
+
+     .xplassisted .field-income-e-verification-failed-alert::before {
+         top: 2px;
+     }
+
+     .xplassisted .field-generateoffertext1 p {
+         font-size: var(--body-lg-font-size);
+     }
+
+     .xplassisted .field-riskometerproceedpanel {
+         display: flex !important;
+         flex-direction: column;
+     }
+
+     .xplassisted .field-loanriskometerpopup.weakRating .field-riskometerproceedpanel {
+         flex-direction: column-reverse;
+     }
+
+     .xplassisted .field-riskometerproceedpanel .field-loanriskoproceed button {
+         margin-bottom: 8px !important;
+     }
+
+     .xplassisted .field-reinitiatebuttonwrapper {
+         position: fixed;
+         bottom: 60px;
+     }
+
+     .xplassisted .field-re-initiate-income-verification,
+     .xplassisted .field-skip-verification {
+         position: relative !important;
+         bottom: 0px !important;
+     }
+
+     .xplassisted .field-emirecalculatetitle p,
+     .xplassisted .field-increcalculatetitle p,
+     .xplassisted .field-increcalculatenote p {
+         font-size: var(--body-sm-font-size);
+     }
+
+     .xplassisted .field-recalculateheading p {
+         font-size: var(--body-lg-font-size);
+         font-weight: var(--body-lg-font-size);
+     }
+
+     .field-customereligibilitypanel,
+     .xplassisted .field-loaneligibilitypanel {
+         flex-direction: column !important;
+     }
+
+     .xplassisted .field-emitopsection .text-wrapper,
+     .xplassisted .field-emibottomsection .text-wrapper {
+         width: 45%;
+     }
+
+     .xplassisted .field-loanamount p {
+         font-size: var(--body-fd-xxx-lg-font-size);
+     }
+
+     .xplassisted .field-emirecalculateoffercta {
+         position: relative;
+         bottom: 0px;
+     }
+
+     .field-childloanamt .field-wrapper,
+     .field-childloantenure .field-wrapper {
+         grid-column: span 6 !important;
+     }
+
+     .field-childloanamt .text-wrapper,
+     .field-childloantenure .text-wrapper {
+         display: flex;
+         justify-content: flex-end;
+     }
+
+     .field-childloanamt .text-wrapper input,
+     .field-childloantenure .text-wrapper input {
+         width: 90%;
+     }
+
+     .xplassisted .field-loanamttext p,
+     .xplassisted .field-loantenuretext p {
+         font-size: var(--body-md-font-size);
+         text-wrap: nowrap;
+     }
+
+     .xplassisted .field-loanamtandtenuretitle p {
+         font-size: var(--body-lg-font-size);
+     }
+ }
+
+ /*Risk O meter UI**/
+
+ .xplassisted .field-loanriskometerpopup .text-wrapper {
+     background: var(--color-interface-toaster-background-primary);
+     padding: 16px 12px;
+     margin-bottom: 20px;
+     border-radius: 12px;
+ }
+
+ .xplassisted .field-loanriskometerpopup.moderateRating .text-wrapper {
+     background: #FEF8E6;
+ }
+
+ .xplassisted .field-loanriskometerpopup.weakRating .text-wrapper {
+     background: var(--color-interface-error-box-primary);
+ }
+
+ .xplassisted .field-loanriskometerpopup .text-wrapper label {
+     transform: none !important;
+     padding: 0px;
+     margin: 0px;
+     position: relative !important;
+     color: var(--color-input-text-primary) !important;
+     font-weight: var(--font-weight-regular) !important;
+     font-size: var(--body-sm-font-size) !important;
+     background: none !important;
+     margin-bottom: 0px !important;
+     margin-top: 0px !important;
+ }
+
+ .xplassisted .field-loanriskometerpopup .text-wrapper input {
+     border: none !important;
+     background: none !important;
+     color: var(--color-interface-background-quaternary) !important;
+     font-weight: var(--font-weight-bold) !important;
+     font-size: var(--body-sm-font-size) !important;
+     padding-left: 20px !important;
+     height: 30px;
+ }
+
+ .xplassisted .field-analysingcustomercreditpopup .field-analysingcustomercrediticon {
+     display: flex;
+     justify-content: center;
+ }
+
+ .xplassisted .field-analysingcustomercreditpopup .close-button,
+  .xplassisted .field-loanriskometerpopup .close-button {
+     display: none !important;
+ }
+
+ .xplassisted .field-creditanalysistitle p {
+     color: var(--color-interface-background-quaternary) !important;
+     font-weight: var(--font-weight-bold) !important;
+     font-size: var(--body-xx-lg-font-size) !important;
+     text-align: center
+ }
+
+ .xplassisted .field-everifybackbutton button::before {
+     content: "←";
+     display: inline-block;
+     font-weight: 800;
+     transform: translate(-10px, 0) scale(1.25);
+ }
+
+ .xplassisted .field-creditanalysissubtext p {
+     color: var(--color-input-text-primary);
+     font-size: var(--body-md-font-size);
+     font-weight: var(--font-weight-regular);
+     text-align: center
+ }
+
+ .xplassisted .field-creditanalysiswarning p {
+     color: #555555;
+     font-size: var(--body-lg-font-size);
+     font-weight: var(--font-weight-regular);
+     font-style: italic;
+     text-align: center;
+     margin-top: 32px;
+     margin-bottom: 0px !important;
+ }
+
+ .xplassisted .field-loanriskodrop button,
+ .xplassisted .field-skip-verification button,
+ .xplassisted .field-loanriskodrop button:hover,
+ .xplassisted .field-skip-verification button:hover,
+ .xplassisted .field-loanriskometerpopup.weakRating .loanRiskoProceed button:hover,
+  .xplassisted .field-loanriskometerpopup.weakRating .loanRiskoProceed button {
+     color: var(--color-action-background-primary-default);
+     background: var(--color-interface-background-primary);
+     border: 1.5px solid var(--color-action-background-primary-default);
+ }
+
+ .xplassisted .field-loanriskometerpopup.weakRating .field-loanriskodrop button,
+  .xplassisted .field-loanriskometerpopup.weakRating .field-loanriskodrop button:hover{
+     color: var(--color-interface-background-primary);
+     background: var(--color-action-background-primary-default);
+     border: none;
+ }
+
+ .xplassisted .field-loanriskodrop button::after,
+ .xplassisted .field-skip-verification button::after,
+ .xplassisted .field-recalculatesubmitbtn button::after,
+ .xplassisted .field-everifynow button::after,
+ .xplassisted .field-everifybutton button::after,
+ .xplassisted .field-emirecalculateoffercta button::after,
+ .xplassisted .field-perfioscancelconsentbutton button::after {
+     content: url(/content/dam/hdfc/pl-assisted/arrowright.png) !important;
+
+ }
+
+ .xplassisted .field-reinitiatebuttonwrapper {
+     display: flex !important;
+ }
+
+ .xplassisted .field-loanriskodrop button::after,
+ .xplassisted .field-loanriskoproceed button::after {
+     display: none;
+ }
+
+ .xplassisted .field-recalculatepanel .modal .modal-content,
+ .xplassisted .field-loanriskometerpopup .modal .modal-content {
+     padding-bottom: 20px;
+ }
+
+ .xplassisted .field-incvarificationbtns,
+ .xplassisted .field-assistedeverifybuttonpannel {
+     display: flex !important;
+     justify-content: center;
+ }
+
+ .xplassisted .field-everifybackbutton button::before {
+     content: "";
+     display: inline-block;
+     width: 22px;
+     height: 22px;
+     margin: 0 8px 1px;
+     background-image: url(/content/dam/hdfc/pl-assisted/backIcons.png);
+     background-position: center;
+     position: relative;
+     top: 4px;
+
+ }
+ 

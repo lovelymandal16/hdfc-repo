@@ -1,0 +1,103 @@
+{
+  "definitions": [
+    {
+      "title": "Loan Term Slider",
+      "id": "loan-term-slider",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+            "template": {
+              "jcr:title": "Loan Term Slider",
+              "fieldType": "range",
+              "fd:viewType": "loan-term-slider",
+              "enabled": true,
+              "visible": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "loan-term-slider",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Basic",
+          "name": "basic"
+        },
+        {
+          "...": "../../models/form-common/_basic-input-fields.json#/fields"
+        },
+        {
+          "component": "multifield",
+          "name": "terms",
+          "label": "Loan Terms",
+          "description": "Define the available loan terms",
+          "fields": [
+            {
+              "component": "number",
+              "name": "value",
+              "label": "Value (months)",
+              "valueType": "number",
+              "description": "Term value in months"
+            },
+            {
+              "component": "text",
+              "name": "label",
+              "label": "Label",
+              "valueType": "string",
+              "description": "Display label for the term (e.g., '12m', '24m')"
+            }
+          ],
+          "default": [
+            {"value": 12, "label": "12m"},
+            {"value": 24, "label": "24m"},
+            {"value": 36, "label": "36m"},
+            {"value": 48, "label": "48m"},
+            {"value": 60, "label": "60m"},
+            {"value": 72, "label": "72m"},
+            {"value": 84, "label": "84m"}
+          ]
+        },
+        {
+          "component": "text",
+          "name": "disbursementLabel",
+          "label": "Disbursement Label",
+          "valueType": "string",
+          "description": "Label for the disbursement type",
+          "default": "Direct disbursement"
+        },
+        {
+          "component": "color",
+          "name": "activeColor",
+          "label": "Active Color",
+          "valueType": "string",
+          "description": "Color for the active part of the slider",
+          "default": "#0044cc"
+        },
+        {
+          "component": "color",
+          "name": "inactiveColor",
+          "label": "Inactive Color",
+          "valueType": "string",
+          "description": "Color for the inactive part of the slider",
+          "default": "#cccccc"
+        },
+        {
+          "...": "../../models/form-common/_help-container.json#/fields"
+        },
+        {
+          "component": "tab",
+          "label": "Validation",
+          "name": "validation"
+        },
+        {
+          "...": "../../models/form-common/_number-validation-fields.json#/fields"
+        }
+      ]
+    }
+  ]
+}
